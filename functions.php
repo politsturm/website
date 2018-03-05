@@ -187,9 +187,3 @@ function artabr_add_button_share2($content){
 	return $content . $button_share;
 }
 add_filter('the_content', 'artabr_add_button_share2' );
-/*
-echo get_num_queries();
-echo " queries in ";
-timer_stop(1);
-echo " seconds.";
-*/
