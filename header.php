@@ -26,6 +26,7 @@
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <meta name="apple-mobile-web-app-title" content="Politsturm">
 <meta name="application-name" content="Politsturm">
+<meta name="yandex-verification" content="9749765212bb996c" />
 
 
 <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
