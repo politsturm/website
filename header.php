@@ -9,6 +9,8 @@
  * @package politsturm
  */
 
+$theme_url = get_template_directory_uri();
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -16,20 +18,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
-<link href="<?php echo get_template_directory_uri(); ?>/favicon.ico"  rel="shortcut icon" type="image/x-icon" />
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $theme_url; ?>/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/favicon-16x16.png" sizes="16x16">
 <meta name="apple-mobile-web-app-title" content="Politsturm">
 <meta name="application-name" content="Politsturm">
 <meta name="yandex-verification" content="9749765212bb996c" />
 
 
-<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $theme_url; ?>/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic-ext" rel="stylesheet">
 
@@ -37,6 +36,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php include_once( 'assets/svg/sprite.php'); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'politsturm' ); ?></a>
 

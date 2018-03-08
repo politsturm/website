@@ -102,7 +102,7 @@ get_header(); ?>
 
 				</div>
 				<div class="mnews">
-				    <?php echo do_shortcode("[the-post-grid id='89' title='Новости']"); ?>
+                    <span class="svg_icon_container large"><svg><use xlink:href="#facebook"></use></svg></span>
 				</div>
 			</div>
 			

@@ -71,6 +71,8 @@ function politsturm_setup() {
 endif;
 add_action( 'after_setup_theme', 'politsturm_setup' );
 
+require_once ('core/customs.php');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -175,8 +177,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 
 add_action( 'wp_print_styles',     'my_deregister_styles', 100 );
 
-function my_deregister_styles()    { 
-   //wp_deregister_style( 'amethyst-dashicons-style' ); 
+function my_deregister_styles()    {
    wp_deregister_style( 'dashicons' ); 
 }
 function artabr_add_button_share2($content){ 
