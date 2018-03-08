@@ -25,7 +25,6 @@
 	</div>
 </div>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic-ext" rel="stylesheet">
 <?php wp_footer(); ?>
 
 </body>

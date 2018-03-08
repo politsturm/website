@@ -85,21 +85,6 @@
 		</div>
 		
 	</div>
-	
-	<!--<div class="share">
-	
-		<span class="share-label">Поделиться</span>
-		
-		<div class="ljs">
-			<form method="post" action=http://www.livejournal.com/update.bml name="updateForm" class="lj-repost"><div style="display:none;visible:false"><input type="text" maxlength="100" tabindex="15" value="<?php /* echo the_title(); */ ?>" name="subject" class="text" size="43" /><textarea rows="1" cols="1" name="event"><?php /* echo the_content(''); */ ?><br/>Источник: <a href="<?php /* echo the_permalink(); */?>">Xren.su</a><p><lj-repost></lj-repost><p><lj-like>
-			</textarea></div><input class="lj-repost-button" type="submit" value="Перепост в ЖЖ"></form><br></a>
-		</div>
-		
-		<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-		<script src="//yastatic.net/share2/share.js"></script>
-		<div class="ya-share2" style="display:inline-block;vertical-align:top;" data-services="vkontakte,facebook,odnoklassniki,gplus" data-counter=""></div>		
-	
-	</div>-->
 		
 	<?php comments_template( '', true ); ?>
 		
