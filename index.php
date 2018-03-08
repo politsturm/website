@@ -102,7 +102,7 @@ get_header(); ?>
 
 				</div>
 				<div class="mnews">
-                    <span class="svg_icon_container large"><svg><use xlink:href="#facebook"></use></svg></span>
+<!--                    <span class="svg_icon_container large"><svg><use xlink:href="#facebook"></use></svg></span>-->
 				</div>
 			</div>
 			

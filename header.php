@@ -27,9 +27,6 @@ $theme_url = get_template_directory_uri();
 <meta name="application-name" content="Politsturm">
 <meta name="yandex-verification" content="9749765212bb996c" />
 
-
-<link href="<?php echo $theme_url; ?>/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&subset=cyrillic-ext" rel="stylesheet">
 
 <?php wp_head(); ?>
