@@ -1004,7 +1004,7 @@ a:active {
 		float: right;
 		width: 14px;
 		height: 14px;
-		background-image: url('images/menu-children-icon.png');
+		background: url('images/menu-children-icon.svg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
