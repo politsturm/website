@@ -978,13 +978,12 @@ a:active {
 
 	.mmul-close {
 		display: block;
-		width: 19px;
+		width: 20px;
 		height: 20px;
 		top: 20px;
 		right: 20px;
-		background-image: url('images/icon-close.png');
+		background: url('images/icon-close.svg') no-repeat;
 		background-size: cover;
-		background-repeat: no-repeat;
 		position: absolute;
 		cursor: pointer;
 	}
