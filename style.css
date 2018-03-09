@@ -1201,7 +1201,10 @@ End of Header. Start of Main Page First Block
 }
 
 .send a.send-mat {
-	background: url('images/send.png') no-repeat;
+	background: red;
+	padding: 10px 13px;
+	margin: 5px;
+	box-shadow: 3px 3px 5px #BBB;
 	color: #fff;
 	font-size: 15px;
     text-transform: uppercase;
