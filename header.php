@@ -39,11 +39,10 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'politsturm' ); ?></a>
-
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-wrap">
-
-                <div class="logo"><a href="<?php echo home_url( '/' ); ?>" title="Вернуться на главную">&nbsp;</a></div>
+			<div class="header-left">
+				<div class="logo"><a href="<?php echo home_url( '/' ); ?>" title="Вернуться на главную">&nbsp;</a></div>
 				
 				<div class="mob-menu-button">
 					<ul class="mmul">
@@ -54,41 +53,39 @@
 						'items_wrap'      => '<span>%3$s</span>'
 						) ); 
 					?>
-					<div class="mmul-close"> </div>
+					<div class="mmul-close"></div>
 					</ul>
 				</div>
-
-                <div class="header-right">
-                <div class="menuTop">
-                    <?php
+			</div>
+			<div class="header-right">
+				<div class="menuTop">
+					<?php
 						wp_nav_menu( array(
 						'theme_location'  => 'primary',
 						'container'       => false,
 						'items_wrap'      => '<ul>%3$s</ul>'
 						) ); 
 					?>
-                </div>	
-				
-                <div class="search">
-                    <form id="searchform" name="search" action="<?php echo home_url( '/' ) ?>" role="search" method="get" class="search-form">
-                        <input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="" id="s" class="search-input">
-                        <button type="submit" id="searchsubmit" class="search-button"></button>
-                    </form>
-                </div>
-                <!--<div class="social">
-                    <ul>
+				</div>
+				<div class="search">
+					<form id="searchform" name="search" action="<?php echo home_url( '/' ) ?>" role="search" method="get" class="search-form">
+						<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="" id="s" class="search-input">
+						<button type="submit" id="searchsubmit" class="search-button"></button>
+					</form>
+				</div>
+				<!--<div class="social">
+					<ul>
 						<a class="header-fb" href="https://www.facebook.com/politsturm/" target="_blank" title="Facebook"></a>
 						<a class="header-vk" href="https://vk.com/politsturm" target="_blank" title="Вконтакте"></a>
 						<a class="header-tw" href="https://twitter.com/politshturm" target="_blank" title="Twitter"></a>
 						<a class="header-lj" href="http://politshturm.livejournal.com/" target="_blank" title="LiveJournal"></a>
-                    </ul>
-                </div>-->
-                <div class="send">
+					</ul>
+				</div>-->
+				<div class="send">
 					<a class="send-mat" href="/vash-material/">// Прислать материал</a>
-                </div>
-
-                </div>
-            </div>
+				</div>
+	        </div>
+        </div>
 	</header><!-- #masthead -->
 	
 	<div class="site-branding" style="display:none;">

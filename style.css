@@ -526,6 +526,8 @@ a:active {
 .header-wrap {
 	max-width: 1720px;
 	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
 	margin-left: auto;
 	position: relative;
 	height: 100%;
@@ -563,11 +565,15 @@ a:active {
 	display: none;		
 }
 
-.header-right {
-	display: inline-block;
+.header-left {
+	display: flex;
+	justify-content: space-between;
 }
 
-
+.header-right {
+	display: inline-block;
+	align-self: center;
+}
 
 .menuTop {
 	display: inline-block;
@@ -941,7 +947,6 @@ a:active {
 		background-position: center;
 		background-repeat: no-repeat;
 		cursor: pointer;
-		float: left;
 		margin-left: 20px;
 		position: relative;	
 		margin-top: 9px;	
@@ -962,8 +967,8 @@ a:active {
 		display: block;
 		width: 19px;
 		height: 20px;
-		top: 7px;
-		right: 7px;
+		top: 20px;
+		right: 20px;
 		background-image: url('images/icon-close.png');
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -1076,19 +1081,25 @@ a:active {
 	}
 }
 
+@media screen and (max-width:450px) {
+	.header-left {
+		width: 100%;
+	}
+}
+
 @media screen and (max-width:399px) {
 	.header-right .search {
 		display: none;
 	}
 	.mob-menu-button ul {
 		display: none;
-		position: absolute;
-		top: 32px;
-		width: 320px;
-		padding: 22px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		padding: 35px 22px 0 22px;
 		height: auto;
-		left: -210px;
-		z-index: 457893459;
+		left: 0;
+		z-index: 6;
 		background-color: #111;
 	}
 
