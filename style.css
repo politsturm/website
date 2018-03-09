@@ -545,8 +545,11 @@ a:active {
 .logo a {
 	width: 180px;
 	height: 70px;
-	background: url('images/logo-black.png') no-repeat;
 	display: block;
+}
+
+.logo-text {
+	fill: black;
 }
 
 .mobileMenu {
@@ -955,8 +958,8 @@ a:active {
 		background-color: #111;
 	}
 
-	.logo a {
-		background: url('images/logo-white.png') no-repeat;
+	.logo-text {
+		fill: white;
 	}
 	.site-header {
 		background: #080808;
