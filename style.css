@@ -526,6 +526,8 @@ a:active {
 .header-wrap {
 	max-width: 1720px;
 	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
 	margin-left: auto;
 	position: relative;
 	height: 100%;
@@ -563,11 +565,15 @@ a:active {
 	display: none;		
 }
 
-.header-right {
-	display: inline-block;
+.header-left {
+	display: flex;
+	justify-content: space-between;
 }
 
-
+.header-right {
+	display: inline-block;
+	align-self: center;
+}
 
 .menuTop {
 	display: inline-block;
@@ -927,6 +933,28 @@ a:active {
 		padding-top: 0px;
 		float: left;
 	}
+
+	.header-right .search,
+	.header-right .send {
+		display: none;
+	}
+
+	.header-left {
+		width: 100%;
+	}
+
+	.mob-menu-button ul {
+		display: none;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		padding: 35px 22px 0 22px;
+		height: auto;
+		left: 0;
+		z-index: 1000;
+		background-color: #111;
+	}
+
 	.logo a {
 		background: url('images/logo-white.png') no-repeat;
 	}
@@ -941,29 +969,17 @@ a:active {
 		background-position: center;
 		background-repeat: no-repeat;
 		cursor: pointer;
-		float: left;
 		margin-left: 20px;
 		position: relative;	
 		margin-top: 9px;	
 	}
-	
-	.mob-menu-button ul {
-		display: none;
-		position: absolute;
-		top: 32px;
-		width: 400px;
-		padding: 22px;
-		height: auto;
-		left: -210px;
-		z-index: 457893459;
-		background-color: #111;
-	}
+
 	.mmul-close {
 		display: block;
 		width: 19px;
 		height: 20px;
-		top: 7px;
-		right: 7px;
+		top: 20px;
+		right: 20px;
 		background-image: url('images/icon-close.png');
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -1057,11 +1073,12 @@ a:active {
 	body .site-header {
 		/*height: 150px;*/
 	}
-.site-header {
-	background-color: #080808;
-	height: 100px;
-	width: 100%;
-}
+
+	.site-header {
+		background-color: #080808;
+		height: 100px;
+		width: 100%;
+	}
 }
 
 @media screen and (max-width:600px) {
@@ -1079,17 +1096,6 @@ a:active {
 @media screen and (max-width:399px) {
 	.header-right .search {
 		display: none;
-	}
-	.mob-menu-button ul {
-		display: none;
-		position: absolute;
-		top: 32px;
-		width: 320px;
-		padding: 22px;
-		height: auto;
-		left: -210px;
-		z-index: 457893459;
-		background-color: #111;
 	}
 
 	.mnews .rt-tpg-container .rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height {
