@@ -1479,12 +1479,13 @@ Footer
 #footer .textwidget{
 	max-width: 250px;
 }
+
 #footer .sendpost-link {
-	width: 204px;
-	height: 54px;
-	background: url('images/fonniz.png') no-repeat;
+	background: red;
+	padding: 10px 13px;
+	margin: 5px;
+	box-shadow: 3px 3px 5px #BBB;
 	font-size: 15px;
-	line-height: 50px;
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
@@ -1493,11 +1494,11 @@ Footer
 }
 
 #footer .sup-btn {
-	width: 204px;
-	height: 54px;
-	background: url('images/fonniz.png') no-repeat;
+	background: red;
+	padding: 10px 13px;
+	margin: 5px;
+	box-shadow: 3px 3px 5px #BBB;
 	font-size: 15px;
-	line-height: 50px;
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
