@@ -1099,7 +1099,7 @@ a:active {
 		padding: 35px 22px 0 22px;
 		height: auto;
 		left: 0;
-		z-index: 6;
+		z-index: 1000;
 		background-color: #111;
 	}
 
