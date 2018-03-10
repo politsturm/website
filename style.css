@@ -694,6 +694,7 @@ a:active {
 
 #searchform {
 	position: relative;
+	display: flex;
 }
 
 .header-right .search input {
@@ -712,9 +713,6 @@ a:active {
 }
 
 .header-right .search button {
-	position: absolute;
-	top: 0;
-	right: 0;
 	background: transparent;
 	padding: 0;
 	outline: none;
