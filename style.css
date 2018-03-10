@@ -715,6 +715,7 @@ a:active {
 	position: absolute;
 	top: 0;
 	right: 0;
+	background: transparent;
 	padding: 0;
 	outline: none;
 	cursor: pointer;
