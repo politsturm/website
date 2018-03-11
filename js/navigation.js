@@ -44,8 +44,6 @@
 
 			// prevent form submit
 			e.preventDefault();
-
-			isActive ? closeSearch() : openSearch();
 		}
 
 		function openSearch() {
@@ -53,7 +51,6 @@
 
 			// focus after input becomes visible, it takes 200ms for animation to finish
 			setTimeout(function () {
-				console.log('tries to focus')
 				SEACH_INPUT.focus();
 			}, 300);
 		}
