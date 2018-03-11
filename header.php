@@ -75,7 +75,7 @@
 				<div class="search">
 					<form id="searchform" name="search" action="<?php echo home_url( '/' ) ?>" role="search" method="get" class="search-form">
 						<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="Поиск" id="s" class="search-input">
-						<button type="submit" id="searchsubmit" class="search-button">
+						<button id="searchsubmit" class="search-button">
 							<span class="search-icon"></span>
 						</button>
 					</form>

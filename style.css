@@ -531,8 +531,8 @@ a:active {
 	max-width: 1720px;
 	display: flex;
 	flex-wrap: wrap;
-	/* 20 (grid margin) + 24 (grid padding) = 44 */
-	margin: 0 44px;
+	/* 24 (grid padding) */
+	margin: 0 24px;
 	position: relative;
 	height: 100%;
 	padding-top: 10px;
@@ -582,9 +582,9 @@ a:active {
 }
 
 .menuTop {
-	margin-left: 40px;
+	margin-left: 70px;
 	vertical-align: middle;
-	font-family: 'ProximaNovaT-Thin';
+	font-family: "Roboto", sans-serif;
 }
 
 .menuTop > ul {
@@ -593,7 +593,7 @@ a:active {
 
 .menuTop li {
 	display: block;
-	margin-right: 20px;
+	margin-right: 30px;
 	position: relative;
 }
 
@@ -610,9 +610,9 @@ a:active {
 	color: #080808;
 	text-decoration: none;
 	text-transform: capitalize;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 21px;
-	font-weight: bold;
+	font-weight: 500;
 	outline: none;
 }
 
@@ -688,8 +688,18 @@ a:active {
 .header-right .search {
 	display: inline-block;
 	vertical-align: middle;
+	width: 50px;
+	padding: 5px;
+	transition: .2s ease-in-out;
+}
+
+.header-right .search.active {
+	box-shadow: 0 0 0 1px lightgray;
 	width: 250px;
-	position: relative;
+}
+
+.header-right .search.active input {
+	display: block;
 }
 
 #searchform {
@@ -701,8 +711,9 @@ a:active {
 	background-color: #fff;
 	border-top: none;
 	border-right: none;
+	display: none;
 	border-left: none;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 0;
 	width: 100%;
 	font-family: 'ProximaNovaT-Thin';
 	font-size: 14px;
@@ -817,9 +828,6 @@ a:active {
 	}
 	.header-tw {
 		margin-right: 8px;
-	}
-	.menuTop li a {
-		font-size: 16px;
 	}
 	.menuTop li:after {
 		margin: 0 15px;
