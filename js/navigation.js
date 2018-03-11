@@ -44,6 +44,7 @@
 
 			// prevent form submit
 			e.preventDefault();
+			openSearch();
 		}
 
 		function openSearch() {
