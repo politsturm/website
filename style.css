@@ -512,11 +512,6 @@ a:active {
 /*--------------------------------------------------------------
 ## Theme Styles
 --------------------------------------------------------------*/
-#page {
-	max-width: 1280px;
-	margin: 0 auto;
-}
-
 .site-header {
 	height: 70px;
 	width: 100%;
@@ -582,9 +577,9 @@ a:active {
 }
 
 .menuTop {
-	margin-left: 70px;
+	margin-left: 52px;
 	vertical-align: middle;
-	font-family: "Roboto", sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 .menuTop > ul {
@@ -592,8 +587,7 @@ a:active {
 }
 
 .menuTop li {
-	display: block;
-	margin-right: 30px;
+	margin-right: 40px;
 	position: relative;
 }
 
@@ -610,14 +604,22 @@ a:active {
 	color: #080808;
 	text-decoration: none;
 	text-transform: capitalize;
-	font-size: 18px;
+	font-size: 19px;
 	line-height: 21px;
-	font-weight: 500;
+	font-weight: 600;
 	outline: none;
 }
 
-.menuTop li a:hover {
-	color: #ff0000;
+.menuTop li:not(.menu-item-has-children) a:hover {
+	border-bottom: 2px solid #000;
+}
+
+.menuTop li .sub-menu li a:hover {
+	border-bottom: none;
+}
+
+.sub-menu li a:hover {
+	opacity: .8;
 }
 
 .menuTop li.current > a {
@@ -692,10 +694,11 @@ a:active {
 	padding: 5px;
 	border: 1px solid transparent;
 	transition: all .2s;
+	border-radius: 4px;
 }
 
 .header-right .search.active {
-	border-color: #000;
+	border-color: rgba(0,0,0,.5);
 }
 
 .header-right .search.active input {
@@ -709,6 +712,7 @@ a:active {
 	display: flex;
 	justify-content: space-between;
 	overflow: hidden;
+	margin: 0;
 }
 
 .header-right .search input {
@@ -722,10 +726,9 @@ a:active {
 	border-bottom: 0;
 	opacity: 0;
 	width: 10px;
-	font-family: "Roboto", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
-	font-weight: 300;
 	color: #000;
 	outline: none;
 }
@@ -810,10 +813,6 @@ a:active {
 }
 
 @media screen and (max-width:1720px) {
-	
-	body .padhed {
-		width: 98.5%;
-	}
 	body .mp-top-container {
 		max-width: calc(100% - 382px);
 		width: auto;
@@ -1068,12 +1067,6 @@ End of Header. Start of Main Page First Block
 	background-color: #fff;
 	font-family: 'ProximaNova-Regular';
 	box-shadow: #d0d0d0 0px 0px 50px;
-}
-
-.padhed {
-	padding-top:0px;
-	width: 1720px;
-	margin: 0 auto;
 }
 
 .top-white-background {
