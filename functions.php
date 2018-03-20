@@ -17,3 +17,4 @@ require_once( 'core/customs.php' );
 require_once( 'core/widgets.php' );
 require_once( 'core/filters.php' );
 require_once( 'core/deregister.php' );
+require_once( 'core/main_news.php' );
