@@ -48,6 +48,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 .grid-post {
 	width: 30%;
 	display: inline-block;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 0px 0px 3px #BBB;
 }
 
 .grid-post > p {
