@@ -107,8 +107,23 @@ get_header(); ?>
 			</div>
 			
 			<div class="main-news">
-
-				<?php echo do_shortcode('[the_grid name="GridTest1"]'); ?>
+<?php
+						if ( have_posts() ) {
+							while ( have_posts() ) {
+?>
+								<article class="grid-post">
+									<?php the_post(); ?>
+									<img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' );?>" width="100%"  hspace="0" vspace="0" style="display:block;">
+									<h2><?php the_title(); ?></h2>
+									<?php
+										$c = the_content();
+										echo substr($c, 0, 10);
+?>
+								</article>
+<?php
+						}
+					}
+?>
 
 			</div>
 

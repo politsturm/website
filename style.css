@@ -45,6 +45,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 @import "assets/css/svg_icons.css";
 
+.grid-post {
+	width: 30%;
+	display: inline-block;
+}
+
+.grid-post > p {
+	font-size: 17px;
+}
+
 @font-face {
   font-family: 'ProximaNovaT-Thin';
   src: url('fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),  url('fonts/ProximaNovaT-Thin.otf')  format('opentype'),
