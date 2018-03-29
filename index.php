@@ -106,24 +106,14 @@ get_header(); ?>
 				</div>
 			</div>
 			
-			<div class="main-news js-masonry" data-masonry-options='{ "columnWidth": 20, "itemSelector": ".grid-post" }'>
-<?php
-				if ( have_posts() ) {
-					while ( have_posts() ) {
-?>
-						<article class="grid-post">
-							<?php the_post(); ?>
-							<img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' );?>" 
-								 width="100%"  hspace="0" vspace="0" style="display:block;">
-							<h2><?php the_title(); ?></h2>
-							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>">Читать далее...</a>
-						</article>
-<?php
+			<div class="main-news">
+				<?php
+					while (have_posts()) {
+						POLITSTURM_MAIN_NEWS::print_post();
 					}
-				}
-?>
+				?>
 			</div>
+			<div class="news-loadmore">Загрузить ещё</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

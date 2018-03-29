@@ -45,9 +45,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 @import "assets/css/svg_icons.css";
 
+.news-loadmore {
+	background: red;
+	padding: 10px 13px;
+	width: 200px;
+	margin: 35px auto;
+	box-shadow: 3px 3px 5px #BBB;
+	color: #fff;
+	font-size: 15px;
+	padding: 7px 18px 8px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
 .main-news {
-	display: flex;
-	flex-flow: column wrap;
 	max-width: 100%;
 }
 
@@ -56,8 +68,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	padding: 10px;
 	margin: 10px;
 	box-shadow: 0px 0px 3px #BBB;
-	flex: 1 0 auto;
-	overflow:hidden;
 }
 
 .grid-post > p {
