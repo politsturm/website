@@ -43,6 +43,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
+@import "assets/css/svg_icons.css";
+
 @font-face {
   font-family: 'ProximaNovaT-Thin';
   src: url('fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),  url('fonts/ProximaNovaT-Thin.otf')  format('opentype'),
@@ -753,65 +755,6 @@ a:active {
 	background-repeat: no-repeat;
 }
 
-.header-fb {
-	width: 14px;
-	height: 26px;
-	display: block;
-	background-image: url('images/header/fb.png');
-	margin-right: 15px;
-}
-
-.header-fb:hover {
-	background-image: url('images/header/fbr.png');
-}
-
-.header-vk {
-	width: 26px;
-	height: 16px;
-	display: block;
-	background-image: url('images/header/vk.png');
-	margin-right: 15px;
-}
-
-.header-vk:hover {
-	background-image: url('images/header/vkr.png');
-}
-
-.header-tw {
-	width: 26px;
-	height: 22px;
-	display: block;
-	background-image: url('images/header/twit.png');
-	margin-right: 15px;
-}
-
-.header-tw:hover {
-	background-image: url('images/header/twitr.png');
-}
-
-.header-lj {
-	width: 26px;
-	height: 26px;
-	display: block;
-	background-image: url('images/header/lj.png');
-	margin-right: 15px;
-}
-
-.header-lj:hover {
-	background-image: url('images/header/ljr.png');
-}
-
-.header-tel {
-	width: 26px;
-	height: 26px;
-	display: block;
-	background-image: url('images/header/icon-telegram-white-26px.png');
-}
-
-.header-tel:hover {
-	background-image: url('images/header/icon-telegram-red-26px.png');
-}
-
 @media screen and (max-width:1720px) {
 	body .mp-top-container {
 		max-width: calc(100% - 382px);
@@ -1478,53 +1421,6 @@ Footer
 	display: inline-block;
 	font-size: 1.5vw;
 	color: #fff;
-}
-
-.footer-fb {
-	width: 14px;
-	height: 26px;
-	display: block;
-	background-image: url('images/header/fb.png');
-	margin-right: 15px;
-}
-
-.footer-fb:hover {
-	background-image: url('images/header/fbr.png');
-}
-
-.footer-vk {
-	width: 26px;
-	height: 16px;
-	display: block;
-	background-image: url('images/header/vk.png');
-	margin-right: 15px;
-}
-
-.footer-vk:hover {
-	background-image: url('images/header/vkr.png');
-}
-
-.footer-tw {
-	width: 26px;
-	height: 22px;
-	display: block;
-	background-image: url('images/header/twit.png');
-	margin-right: 15px;
-}
-
-.footer-tw:hover {
-	background-image: url('images/header/twitr.png');
-}
-
-.footer-lj {
-	width: 26px;
-	height: 26px;
-	display: block;
-	background-image: url('images/header/lj.png');
-}
-
-.footer-lj:hover {
-	background-image: url('images/header/ljr.png');
 }
 
 @media screen and (max-width:1366px) {
