@@ -22,25 +22,6 @@ class POLITSTURM_MAIN_NEWS {
 		) );
 	}
 
-	public static function print_post() {
-		echo '<article class="grid-post">';
-		{
-			the_post();
-			$image = get_the_post_thumbnail_url($post->ID, 'large');
-			if ($image) {
-				echo '<img src="' . $image. '" width="100%"  hspace="0" vspace="0" style="display:block;">';
-			}
-			echo '<h2>';
-			the_title();
-			echo '</h2>';
-			the_excerpt();
-			echo '<a href="';
-			the_permalink();
-			echo '">Читать далее...</a>';
-		}
-		echo '</article>';
-	}
-	 
 	public static function load_more_ajax_handler(){
 		$args = json_decode( stripslashes( $_POST['query'] ), true );
 		$args['paged'] = $_POST['page'] + 1;
@@ -49,7 +30,7 @@ class POLITSTURM_MAIN_NEWS {
 		query_posts($args);
 	 
 		while (have_posts()) {
-			POLITSTURM_MAIN_NEWS::print_post();
+			get_template_part( 'template-parts/article' );
 		}
 		die;
 	}

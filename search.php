@@ -19,7 +19,7 @@ get_header(); ?>
 			<div class="main-news">
 				<?php
 					while (have_posts()) {
-						POLITSTURM_MAIN_NEWS::print_post();
+						get_template_part( 'template-parts/article' );
 					}
 				?>
 			</div>
