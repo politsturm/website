@@ -13,18 +13,21 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="">
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+				<header class="page-header">
+					<?php
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="archive-description">', '</div>' );
+					?>
+				</header><!-- .page-header -->
 
-			<?php
-						
-			The_Grid('Archive Grid', true);
-
-			?>
+				<div class="main-news">
+					<?php
+						while (have_posts()) {
+							POLITSTURM_MAIN_NEWS::print_post();
+						}
+					?>
+				</div>
+				<div class="news-loadmore">Загрузить ещё</div>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

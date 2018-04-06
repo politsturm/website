@@ -16,11 +16,14 @@ get_header(); ?>
 				<h1 class="page-title"><?php printf( esc_html__( 'Результаты поиска: %s', 'politsturm' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
-			<?php
-						
-			The_Grid('Archive grid', true);
-
-			?>
+			<div class="main-news">
+				<?php
+					while (have_posts()) {
+						POLITSTURM_MAIN_NEWS::print_post();
+					}
+				?>
+			</div>
+			<div class="news-loadmore">Загрузить ещё</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
