@@ -1,0 +1,33 @@
+.news-post {
+	background: url(/wp-content/themes/politsturm/images/botnews.png) bottom no-repeat;
+	padding: 10px;
+}
+
+.news-title span {
+	color: red;
+}
+
+.news-title {
+	font-size: 25px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin: auto;
+	padding: 10px;
+}
+
+.news-post-body {
+	font-size: 22px;
+}
+
+.news-post-body a {
+	text-decoration: none;
+	color: #000;
+}
+
+.news-post-body 
+	a:hover,
+	a:focus,
+	a:active {
+	color: #333;
+}
+

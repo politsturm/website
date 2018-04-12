@@ -102,7 +102,21 @@ get_header(); ?>
 
 				</div>
 				<div class="mnews">
-<!--                    <span class="svg_icon_container large"><svg><use xlink:href="#facebook"></use></svg></span>-->
+					<div class="news-title">
+						<span>//</span>
+						Новости
+					</div>
+
+					<?php
+						global $post;
+						$args = array( 'numberposts' => 5, 'category' => 'news' );
+						$posts = get_posts( $args );
+						foreach( $posts as $post ) {
+							setup_postdata($post);
+							get_template_part( 'template-parts/news-post' );
+						}
+						wp_reset_postdata();
+					?>
 				</div>
 			</div>
 			

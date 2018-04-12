@@ -44,6 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 @import "assets/css/svg_icons.css";
+@import "assets/css/news.css";
 
 .news-loadmore {
 	background: red;
