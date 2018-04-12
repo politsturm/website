@@ -28,7 +28,7 @@ jQuery(function($){
 				var imagesLoaded = 0;
 				$('.main-news img').load(function () {
 					imagesLoaded++;
-					if (imagesLoaded == imageCount) {
+					if (imagesLoaded === imageCount) {
 						$('.main-news')
 							.masonry('reloadItems')
 							.masonry('layout'); 
@@ -36,7 +36,7 @@ jQuery(function($){
 				})
 				load_more_params.current_page++;
 
-				if (load_more_params.current_page == load_more_params.max_page) {
+				if (load_more_params.current_page === load_more_params.max_page) {
 					button.remove();
 				}
 			}
