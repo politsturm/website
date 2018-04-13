@@ -57,6 +57,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+	cursor: pointer;
+	transition: opacity .2s ease-in-out;
+}
+
+.news-loadmore:hover {
+	opacity: .8;
 }
 
 .main-news {
@@ -64,14 +70,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 .grid-post {
-	width: 30%;
-	padding: 10px;
-	margin: 10px;
-	box-shadow: 0px 0px 3px #BBB;
+	width: calc(50% - 15px);
+	font-family: Open Sans, sans-serif;
+	margin-bottom: 10px;
 }
 
-.grid-post > p {
-	font-size: 17px;
+.grid-post > h2 {
+	font-weight: normal;
+	text-align: center;
+	font-size: 30px;
 }
 
 @font-face {
@@ -543,6 +550,11 @@ a:active {
 /*--------------------------------------------------------------
 ## Theme Styles
 --------------------------------------------------------------*/
+#page {
+	max-width: 1360px;
+	margin: 0 auto;
+}
+
 .site-header {
 	height: 70px;
 	width: 100%;
@@ -1038,10 +1050,10 @@ End of Header. Start of Main Page First Block
 	width: 100%;
 	display: block;
 	overflow: hidden;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 	position: relative;
 	background-color: #fff;
-	font-family: 'ProximaNova-Regular';
+	font-family: Open Sans, sans-serif;
 	box-shadow: #d0d0d0 0px 0px 50px;
 }
 
@@ -1196,7 +1208,6 @@ End of Header. Start of Main Page First Block
 .top-hitem .figcaption h2,
 .top-vitem .figcaption h2 {
 	color: #fff;
-	font-size: 175%;
 	padding: 20px 1.5em;
 	opacity: 0;
 	top: 30px;
@@ -1211,7 +1222,6 @@ End of Header. Start of Main Page First Block
 .top-hitem .figcaption p,
 .top-vitem .figcaption p {
 	color: #fff;
-	font-size: 110%;
 	opacity: 0;
 	-webkit-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
@@ -1493,9 +1503,9 @@ Content-Single
 ------------------------------------*/
 
 .content-post-single {
-	max-width: 1200px;
-	margin: 20px auto;
-	font-family: Open Sans,sans-serif;
+	max-width: 650px;
+	margin: 0 auto;
+	font-family: Open Sans, sans-serif;
 	word-wrap: break-word;
 }
 
