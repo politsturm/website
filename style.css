@@ -1517,10 +1517,12 @@ Content-Single
 
 .content-post-single p {
 	font-size: 19px;
+	padding-left: 20px;
 }
 
 .content-image-single {
 	text-align: center;
+	margin: 45px 0;
 }
 
 .content-summary-single {
