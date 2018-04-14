@@ -62,20 +62,9 @@
 			<?php the_title(); ?>
 		</h1>
 
-		<?php $cho = get_post_meta($post->ID, 'choce', true);
-		if ($cho == 's1') { ?>
-	
 		<div class="content-image-single">
-		<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
+			<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
 		</div>
-		
-		<?php } else { ?>
-		
-		<div class="content-image-single-v">
-		<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
-		</div>
-			
-		<?php } ?>	
 		
 		<div itemprop="articleBody">
 		<?php the_content(); ?>
