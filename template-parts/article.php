@@ -2,7 +2,6 @@
 	<a href="<?php the_permalink();?>">
 		<?php
 			the_post();
-			$link = get_the_permalink();
 			$image = get_the_post_thumbnail_url($post->ID, 'large');
 			if ($image) {
 				?>

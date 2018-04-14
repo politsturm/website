@@ -1505,8 +1505,12 @@ Content-Single
 .content-post-single {
 	max-width: 650px;
 	margin: 0 auto;
-	font-family: Open Sans, sans-serif;
+	font-family: 'PT Serif', serif;
 	word-wrap: break-word;
+}
+
+.content-post-single p {
+	font-size: 19px;
 }
 
 .content-image-single {

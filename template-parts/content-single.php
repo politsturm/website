@@ -12,23 +12,7 @@
 <article itemscope itemtype=http://schema.org/Article id="post-<?php the_ID(); ?>" class="content-post-single">
 <meta itemprop="inLanguage" content="ru" />
 	
-	<div class="content-upmeta-single">
-	
-		<?php $cho = get_post_meta($post->ID, 'choce', true);
-		if ($cho == 's1') { ?>
-	
-		<div class="content-image-single">
-		<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
-		</div>
-		
-		<?php } else { ?>
-		
-		<div class="content-image-single-v">
-		<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
-		</div>
-			
-		<?php } ?>
-		
+	<div class="content-upmeta-single">		
 		<!-- Начало микроразметки -->
 		<div class="microrazmetka" style="display:none;">
 		
@@ -76,7 +60,22 @@
 		
 		<h1 itemprop="headline name" class="content-title-single">
 			<?php the_title(); ?>
-		</h1>		
+		</h1>
+
+		<?php $cho = get_post_meta($post->ID, 'choce', true);
+		if ($cho == 's1') { ?>
+	
+		<div class="content-image-single">
+		<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
+		</div>
+		
+		<?php } else { ?>
+		
+		<div class="content-image-single-v">
+		<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
+		</div>
+			
+		<?php } ?>
 	
 		<?php echo get_the_tag_list('<ul class="content-tags-single"><li class="content-tag">','&nbsp;</li><li class="content-tag">','</li></ul>'); ?>	
 		
