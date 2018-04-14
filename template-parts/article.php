@@ -1,7 +1,7 @@
 <article class="grid-post">
+	<?php the_post(); ?>
 	<a href="<?php the_permalink();?>">
 		<?php
-			the_post();
 			$image = get_the_post_thumbnail_url($post->ID, 'large');
 			if ($image) {
 				?>
