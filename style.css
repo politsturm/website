@@ -71,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 .grid-post {
 	width: calc(50% - 15px);
-	font-family: Open Sans, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 10px;
 }
 
@@ -315,7 +315,7 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: Open Sans,sans-serif;
+	font-family: 'Open Sans' ,sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -1053,7 +1053,7 @@ End of Header. Start of Main Page First Block
 	margin-bottom: 30px;
 	position: relative;
 	background-color: #fff;
-	font-family: Open Sans, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	box-shadow: #d0d0d0 0px 0px 50px;
 }
 
@@ -1507,6 +1507,12 @@ Content-Single
 	margin: 0 auto;
 	font-family: 'PT Serif', serif;
 	word-wrap: break-word;
+}
+
+.content-title-single {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 40px;
+	font-weight: 600;
 }
 
 .content-post-single p {
