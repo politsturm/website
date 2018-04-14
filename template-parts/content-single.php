@@ -75,9 +75,7 @@
 		<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
 		</div>
 			
-		<?php } ?>
-	
-		<?php echo get_the_tag_list('<ul class="content-tags-single"><li class="content-tag">','&nbsp;</li><li class="content-tag">','</li></ul>'); ?>	
+		<?php } ?>	
 		
 		<div itemprop="articleBody">
 		<?php the_content(); ?>
