@@ -1683,17 +1683,6 @@ Content-Single
 	text-decoration: none;
 }
 
-@media screen and (max-width:1450px) {
-	.content-post-single {
-		width: 75%;
-		max-width: none;
-	}
-	.related-container {
-		width: 75%;
-		max-width: none;
-	}
-}
-
 @media screen and (max-width:1100px) {
 	.content-post-single {
 		width: auto;
