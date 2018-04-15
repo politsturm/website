@@ -1683,19 +1683,6 @@ Content-Single
 	text-decoration: none;
 }
 
-@media screen and (max-width:1100px) {
-	.content-post-single {
-		width: auto;
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-	.related-container {
-		width: auto;
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-}
-
 @media screen and (max-width:700px) {
 	.related-post-image,
 	.related-post-content {
