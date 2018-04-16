@@ -24,6 +24,7 @@ $theme_url = get_template_directory_uri();
 <link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/favicon-16x16.png" sizes="16x16">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 <meta name="apple-mobile-web-app-title" content="Politsturm">
 <meta name="application-name" content="Politsturm">
 <meta name="yandex-verification" content="9749765212bb996c" />
