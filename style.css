@@ -1054,7 +1054,8 @@ End of Header. Start of Main Page First Block
 
 .mp-top {
 	width: 100%;
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
 	overflow: hidden;
 	margin-bottom: 30px;
 	position: relative;
@@ -1073,18 +1074,13 @@ End of Header. Start of Main Page First Block
 }
 
 .mp-top-container {
-	max-width: calc(1720px - 382px);
-	float: left;
+	max-width: calc(100% - 382px);
 	z-index: 555;
 	position: relative;
 }
 
 .rt-holder .post-meta-user .fa-calendar:before {
 	display: none;
-}
-
-.rt-detail {
-
 }
 
 .rt-holder {
@@ -1112,8 +1108,8 @@ End of Header. Start of Main Page First Block
 
 .mnews {
 	width: 382px;
-	float: left;
 }
+
 .mnews .rt-tpg-isotope div.rt-equal-height:first-child .rt-holder .rt-detail h2 {
 	font-size: 26px !important;
 }
