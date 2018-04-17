@@ -1055,6 +1055,7 @@ End of Header. Start of Main Page First Block
 .mp-top {
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	overflow: hidden;
 	margin-bottom: 30px;
 	position: relative;
