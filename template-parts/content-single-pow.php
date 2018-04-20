@@ -86,8 +86,6 @@
 		
 	</div>
 		
-	<?php comments_template( '', true ); ?>
-		
 </article><!-- #article -->
 
 
