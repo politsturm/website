@@ -1381,7 +1381,7 @@ Footer
 	position: relative;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	font-size: 0.9vw;
+	font-size: 12pt;
 	color: #707070;
 	font-family: "Roboto", sans-serif;
 }
@@ -1399,7 +1399,7 @@ Footer
 }
 
 #footer .widgettitle {
-	font-size: 1.3vw;
+	font-size: 16pt;
 	font-weight: 500;
 	color: #080808;
 	text-transform: uppercase;
