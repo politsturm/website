@@ -8,15 +8,24 @@
 }
 
 .news-title {
-	font-size: 25px;
+	font-size: 20px;
 	letter-spacing: 3px;
-	text-transform: uppercase;
 	margin: auto;
 	padding: 10px;
+	text-align: center;
+}
+
+.news-post:last-child {
+	background: none;
 }
 
 .news-post-body {
-	font-size: 22px;
+	font-size: 18px;
+}
+
+.news-post-date {
+	font-size: 14px;
+	color: #666;
 }
 
 .news-post-body a {

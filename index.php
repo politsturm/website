@@ -102,10 +102,7 @@ get_header(); ?>
 
 				</div>
 				<div class="mnews">
-					<div class="news-title">
-						<span>//</span>
-						Новости
-					</div>
+					<div class="news-title">Новости</div>
 
 					<?php
 						global $post;
