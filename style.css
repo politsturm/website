@@ -575,8 +575,6 @@ a:active {
 	max-width: 1720px;
 	display: flex;
 	flex-wrap: wrap;
-	/* 24 (grid padding) */
-	margin: 0 24px;
 	position: relative;
 	height: 100%;
 	padding-top: 10px;
@@ -893,6 +891,10 @@ a:active {
 	.logo {
 		padding-top: 0px;
 		float: left;
+	}
+
+	.header-wrap {
+		margin: 0 24px;
 	}
 
 	.header-right .search,
