@@ -924,11 +924,15 @@ a:active {
 	}
 	.mob-menu-button {
 		display: block;
-		width: 23px;
 		background: url('images/hamburger.svg') no-repeat;
 		background-position: center;
+		background-size: cover;
 		cursor: pointer;
-		position: relative;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 20px;
+		right: -3px;;
 	}
 
 	.mmul-close {
