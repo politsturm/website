@@ -47,14 +47,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "assets/css/news.css";
 
 .news-loadmore {
-	background: red;
-	padding: 10px 13px;
-	width: 200px;
+	background: #e8003c;
+	width: 216px;
 	margin: 35px auto;
 	box-shadow: 3px 3px 5px #BBB;
 	color: #fff;
 	font-size: 15px;
-	padding: 7px 18px 8px;
+	padding: 20px 30px;
+	letter-spacing: 0.9px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -71,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 .grid-post {
-	width: calc(50% - 15px);
+	width: calc(33.33% - 17px);
 	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 10px;
 }
@@ -79,7 +79,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 .grid-post > h2 {
 	font-weight: normal;
 	text-align: center;
-	font-size: 30px;
+	font-size: 19.5px;
+	letter-spacing: 0.6px;
+}
+
+.grid-post img {
+	border-radius: 10px;
 }
 
 @font-face {
@@ -552,7 +557,7 @@ a:active {
 ## Theme Styles
 --------------------------------------------------------------*/
 #page {
-	max-width: 1360px;
+	max-width: 1260px;
 	margin: 0 auto;
 }
 
@@ -648,7 +653,8 @@ a:active {
 	color: #080808;
 	text-decoration: none;
 	text-transform: capitalize;
-	font-size: 19px;
+	font-size: 17px;
+	letter-spacing: 0.6px;.top-hitems
 	line-height: 21px;
 	font-weight: 600;
 	outline: none;
@@ -1056,8 +1062,9 @@ End of Header. Start of Main Page First Block
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	border-radius: 10px;
 	overflow: hidden;
-	margin-bottom: 30px;
+	margin-bottom: 70px;
 	position: relative;
 	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
@@ -1183,11 +1190,17 @@ End of Header. Start of Main Page First Block
 .top-hitems {
 	width: 58.01%;
 	float: left;
+	box-sizing: border-box;
+	padding-right: 5px;
 }
 
 .top-hitem {
 	float: left;
 	position: relative;
+}
+
+.top-hitem:first-child {
+	margin-bottom: 5px;
 }
 
 .top-vitem {
