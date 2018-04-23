@@ -1447,6 +1447,7 @@ Footer
 
 #footer .textwidget{
 	max-width: 250px;
+	display: inline-block;
 }
 
 #footer .sendpost-link {
@@ -1478,6 +1479,7 @@ Footer
 #footer .widget_text {
 	margin-bottom: 20px;
 	position: relative;
+	text-align: center;
 }
 
 #footer .widget_text:last-child {
