@@ -26,10 +26,6 @@ get_header(); ?>
 					
 					<div class="top-hitem" itemscope itemtype=http://schema.org/Article>
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' );?>" width="100%"  hspace="0" vspace="0" style="display:block;">
-						<div class="figcaption">
-							<h2><?php the_title(); ?></h2>
-							<p><?php echo get_the_excerpt(); ?></p>
-						</div></a>
 						
 						<!-- Начало микроразметки -->
 							<div class="microrazmetka" style="display:none;">
