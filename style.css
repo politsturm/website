@@ -1215,8 +1215,8 @@ End of Header. Start of Main Page First Block
 	position: relative;
 }
 
-.top-hitem .figcaption,
-.top-vitem .figcaption {
+.figcaption,
+.figcaption {
 	display:block;
 	position:absolute;
 	width: 100%;
@@ -1224,75 +1224,71 @@ End of Header. Start of Main Page First Block
 	z-index: 9999;
 	top: 0;
 	left: 0;
+	opacity: 0;
+	transition: .2s ease-in-out .25s;
 }
 
 .top-hitem .figcaption h2,
 .top-vitem .figcaption h2 {
 	color: #fff;
 	padding: 20px 1.5em;
-	opacity: 0;
 	top: 30px;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,20px,0);
-	transform: translate3d(0,20px,0);
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+	opacity: 0;
+	transition: opacity .2s ease-in-out .1s;
 }
 
 .top-hitem .figcaption p,
 .top-vitem .figcaption p {
 	color: #fff;
 	opacity: 0;
-	-webkit-transform: translate3d(0,100%,0);
-	transform: translate3d(0,100%,0);
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+	transition: opacity .2s ease-in-out .1s;
 }
 
 .top-hitem .figcaption h2:after,
 .top-vitem .figcaption h2:after {
 	position: absolute;
-	bottom: -10px;
 	left: 0;
 	width: 90%;
 	height: 4px;
 	background: #fff;
-	content: ' ';
+	content: '';
 	display: block;
-	-webkit-transform: translate3d(0,40px,0);
-	transform: translate3d(0,40px,0);
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
 	margin-left: 5%;
 	margin-right: 5%;
+	transform: translateY(5px);
 }
 
 .top-hitem p,
 .top-vitem p {
 	padding: 20px 2.5em;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,20px,0);
-	transform: translate3d(0,20px,0);
+}
+
+.top-hitem,
+.top-vitem {
+	overflow: hidden;
+}
+
+.top-hitem img,
+.top-vitem img {
+	transition: transform .2s ease-in-out;
+}
+
+.top-hitem:hover img,
+.top-vitem:hover img {
+	transform: scale(1.05);
+}
+
+.figcaption:hover {
+	transition: .2s ease-in-out .2s;
+	background-color: rgba(0,0,0,0.7);
+	opacity: 1;
 }
 
 .top-hitem:hover h2,
-.top-vitem:hover h2,
-.top-hitem:hover h2:after,
-.top-vitem:hover h2:after,
+.top-vitem:hover p,
 .top-hitem:hover p,
-.top-vitem:hover p {
+.top-vitem:hover h2 {
 	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-.top-hitem:hover .figcaption,
-.top-vitem:hover .figcaption {
-	background-color: rgba(0,0,0,0.8);
 }
 
 .top-hitem a:hover,
