@@ -918,12 +918,6 @@ a:active {
 		background-color: #111;
 	}
 
-	.logo-text {
-		fill: white;
-	}
-	.site-header {
-		background: #080808;
-	}
 	.mob-menu-button {
 		display: block;
 		background: url('images/hamburger.svg') no-repeat;
@@ -1028,13 +1022,6 @@ a:active {
 	}
 	.mob-menu-button .sub-menu li:after {
 		display: none;
-	}
-}
-
-@media screen and (max-width:810px) {
-	.site-header {
-		background-color: #080808;
-		width: 100%;
 	}
 }
 
