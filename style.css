@@ -906,6 +906,16 @@ a:active {
 		width: 100%;
 	}
 
+	.mp-top {
+		box-shadow: none !important;
+		background-color: none !important;
+	}
+
+	.site-header {
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+	}
+
 	.mob-menu-button ul {
 		display: none;
 		position: fixed;
