@@ -1,4 +1,6 @@
 .news-post {
+	display: flex;
+	flex-direction: column;
 	background: url(/wp-content/themes/politsturm/images/botnews.png) bottom no-repeat;
 	padding: 10px;
 }
@@ -38,5 +40,24 @@
 	a:focus,
 	a:active {
 	color: #333;
+}
+
+@media screen and (max-width:950px) {
+	.news-post {
+		background: none;
+		flex-direction: row;
+	}
+
+	.news-post-date {
+		display: flex;
+	}
+
+	.news-post-date span {
+		align-self: flex-end;
+	}
+
+	.news-post-body {
+		padding-left: 10px;
+	}
 }
 
