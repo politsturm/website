@@ -807,7 +807,7 @@ a:active {
 }
 
 @media screen and (max-width:1720px) {
-	body .mp-top-container {
+	.mp-top-container {
 		max-width: calc(100% - 382px);
 		width: auto;
 	}
@@ -858,7 +858,7 @@ a:active {
 	.mnews {
 		width: 262px !important;
 	}
-	body .mp-top-container {
+	.mp-top-container {
 		max-width: calc(100% - 262px);
 	}
 	.menuTop li a {
@@ -989,8 +989,8 @@ a:active {
 		top: 25px;
 		margin-left: 10px;
 	}
-	body .mp-top-container {
-		max-width: 100%;
+	.mp-top-container {
+		display: none;
 	}
 	body .mnews {
 		width: 100% !important;
