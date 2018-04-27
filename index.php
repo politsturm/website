@@ -110,6 +110,12 @@ get_header(); ?>
 						}
 						wp_reset_postdata();
 					?>
+
+					<div class="news-more">
+						<a href="/category/news/">
+							Больше новостей <span class="news-more-arrow">&gt;</span>
+						</a>
+					</div>
 				</div>
 			</div>
 			

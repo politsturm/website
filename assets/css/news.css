@@ -1,3 +1,8 @@
+.mnews {
+	display: flex;
+	flex-direction: column;
+}
+
 .news-post {
 	display: flex;
 	flex-direction: column;
@@ -12,7 +17,7 @@
 .news-title {
 	font-size: 20px;
 	letter-spacing: 3px;
-	margin: auto;
+	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
 }
@@ -37,13 +42,14 @@
 }
 
 .news-post-body 
-	a:hover,
-	a:focus,
-	a:active {
+ a:hover,
+ a:focus,
+ a:active {
 	color: #333;
 }
 
 .news-post-date-mobile {
+	/* Disabled on desktop */
 	display: none;
 }
 
@@ -51,10 +57,24 @@
 	display: block;
 }
 
+.news-more {
+	/* Disabled on desktop */
+	display: none;
+	width: auto;
+	height: 40px;
+	margin: 0 10px;
+}
+
+.news-more-arrow {
+	color: red;
+}
+
+.news-more a {
+}
+
 @media screen and (max-width:950px) {
 	.news-post {
 		background: none;
-		flex-direction: row;
 	}
 
 	.news-post-date-mobile {
@@ -68,6 +88,11 @@
 
 	.news-post-body {
 		padding-left: 10px;
+	}
+
+	.news-more {
+		display: flex;
+		flex-direction: row-reverse;
 	}
 }
 
