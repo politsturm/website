@@ -30,8 +30,8 @@
 	font-size: 18px;
 }
 
-.news-post-date {
-	display: flex;
+.news-post-date-desktop {
+	display: block;
 	font-size: 14px;
 	color: #666;
 }
@@ -53,10 +53,6 @@
 	display: none;
 }
 
-.news-post-date-desktop {
-	display: block;
-}
-
 .news-more {
 	/* Disabled on desktop */
 	display: none;
@@ -69,17 +65,16 @@
 	color: red;
 }
 
-.news-more a {
-}
-
 @media screen and (max-width:950px) {
 	.news-post {
 		background: none;
+		flex-direction: row;
 	}
 
 	.news-post-date-mobile {
-		align-self: flex-end;
-		display: block;
+		font-size: 14px;
+		color: #666;
+		display: inline;
 	}
 
 	.news-post-date-desktop {
