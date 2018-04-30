@@ -653,7 +653,7 @@ a:active {
 	text-decoration: none;
 	text-transform: capitalize;
 	font-size: 17px;
-	letter-spacing: 0.6px;.top-hitems
+	letter-spacing: 0.6px;
 	line-height: 21px;
 	font-weight: 600;
 	outline: none;
@@ -695,7 +695,61 @@ a:active {
 	min-width:100%;
 	left: 0;
 	margin: 0 -15px;
-	background-color: #1D2025;
+	margin-top: 8px;
+	background-color: #fff;
+	box-shadow: 0 0 0.2px 0.5px rgba(0,0,0,.2);
+	border-radius: 5px;
+}
+
+.menu-item-has-children:before,
+.menu-item-has-children:after {
+	bottom: -8px;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    z-index: 1002;
+    content: '';
+}
+
+.menu-item-has-children:before {
+    border: 10px solid;
+    border-color: #ccc transparent;
+    border-top-width: 0;
+    margin-left: -9px;
+}
+
+.menu-item-has-children:after {
+	border: 9px solid;
+    border-top-width: 0;
+    border-color: #fff transparent;
+    margin-left: -8px;
+    margin-top: 2px;
+}
+
+.menu-item-has-children:hover:before,
+.menu-item-has-children:hover:after {
+	opacity: 1;
+}
+
+/* to prevent hover cancel */
+.menu-item-has-children:hover .sub-menu:before {
+    content: '';
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: -10px;
+    left: 0;
+}
+
+.menuTop ul.sub-menu a {
+	font-family: 'Open Sans',sans-serif;
+	color: rgba(0,0,0,.6);
+	font-size: 16px;
+}
+
+.menuTop ul.sub-menu a:hover {
+	color: rgba(0,0,0,.9);
 }
 
 .menuTop li:hover > ul {
@@ -812,9 +866,6 @@ a:active {
 		max-width: calc(100% - 382px);
 		width: auto;
 	}
-	.menuTop li:after {
-		margin: 0 24px;
-	}
 	.send {
 		margin-left: 40px;
 	}
@@ -830,9 +881,6 @@ a:active {
 	}
 	.header-tw {
 		margin-right: 8px;
-	}
-	.menuTop li:after {
-		margin: 0 15px;
 	}
 	.mnews .rt-tpg-container .rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height {
 		display: none;
