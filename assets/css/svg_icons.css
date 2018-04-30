@@ -10,7 +10,7 @@
 }
 
 .svg_icon_container:hover svg {
-    fill: #ff0018;
+	opacity: .8;
 }
 
 .svg_icon_container.small {
