@@ -423,7 +423,7 @@ q {
 /*blockquote:before,
 q:before {
 	color: #bbb;
-	content: "\201C"; 
+	content: "\201C";
 	font-size: 3em;
 	line-height: 0.1em;
 	margin-right: 0.2em;
@@ -515,7 +515,7 @@ a {
 }
 
 a:visited {
-	
+
 }
 
 a:hover,
@@ -600,15 +600,15 @@ a:active {
 }
 
 .fa-bars {
-	display: none;	
+	display: none;
 }
 
 .mobileCol {
-	display: none;	
+	display: none;
 }
 
 .fa-columns {
-	display: none;		
+	display: none;
 }
 
 .header-left {
@@ -695,7 +695,7 @@ a:active {
 	min-width:100%;
 	left: 0;
 	margin: 0 -15px;
-	background-color: #1D2025;	
+	background-color: #1D2025;
 }
 
 .menuTop li:hover > ul {
@@ -968,7 +968,7 @@ a:active {
 	}
 	.mnews .rt-tpg-container .rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height {
 		display: block;
-	}	
+	}
 	.mob-menu-button ul .menu-item-has-children:before {
 		content: " ";
 		display:block;
@@ -1268,7 +1268,7 @@ End of Header. Start of Main Page First Block
 			margin: 0px auto;
 			text-align: center;
 		}
-		
+
 		ul.tabs li{
 			background: none;
 			color: #fff;
@@ -1460,11 +1460,11 @@ Footer
 	#footer {
 		font-size: 16px;
 	}
-	
+
 	#footer .sup-btn {
 		font-size: 14px;
 	}
-	
+
 	#footer .widgettitle {
 		font-size: 22px;
 	}
@@ -1685,7 +1685,7 @@ Content-Single
 }
 .nftitle {
 	font-size: 36px;
-	text-align: center;	
+	text-align: center;
 }
 .nfdesc {
 	font-size: 22px;
