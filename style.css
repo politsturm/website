@@ -876,8 +876,7 @@ a:active {
 
 @media screen and (max-width:950px) {
 	#content {
-		max-width: 600px;
-		margin: 0 auto;
+		margin: 0 15px;
 	}
 
 	.grid-post {
