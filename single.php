@@ -25,7 +25,9 @@ get_header(); ?>
 			<div class="related-container">
 					<?php
 					$this_id = get_the_ID();
-					$tagss = wp_get_post_terms($this_id, 'post_tag', array("fields" => "ids"));
+					$tagss = array_map(function($tag) {
+						return $tag->term_id;
+					}, get_tags());
 
 					$args = array(
 						'post_type' => 'post',
