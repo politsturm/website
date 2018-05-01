@@ -13,11 +13,12 @@ Class POLITSTURM_FILTERS {
 	public static function tags( $content ) {
 		if( !is_single() ) return $content;
 
+		$tags = wp_get_post_tags(get_the_ID());
 		$tags = implode(' ', array_map(function($tag) {
 			$url = '/tag/' . $tag->slug;
 			$name = $tag->name;
 			return '<a href="' . $url . '" class="tag">' . $name . '</a>';
-		}, get_tags()));
+		}, $tags));
 
 		$tags = '<div class="tags">' . $tags . '</div>';
 
