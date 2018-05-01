@@ -1,3 +1,12 @@
+.main-support {
+	text-align: center;
+	margin: 75px 0;
+}
+
+.main-support a {
+	text-decoration: underline;
+}
+
 .tags {
 	display: flex;
 	flex-direction: row;

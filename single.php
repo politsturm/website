@@ -18,7 +18,10 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-			<h2 class="related-title"> Похожие материалы </h2>
+			<h2 class="main-support">
+				Понравился материал? <a href="/podderzhat-nas">Поддержи издание</a>
+			</h2>
+
 			<div class="related-container">
 					<?php
 					$this_id = get_the_ID();
