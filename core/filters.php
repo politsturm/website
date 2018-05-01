@@ -10,10 +10,36 @@ Class POLITSTURM_FILTERS {
 		return 30;
 	}
 
+	public static function tags( $content ) {
+		if( !is_single() ) return $content;
+
+		$tags = implode(' ', array_map(function($tag) {
+			$url = '/tag/' . $tag->slug;
+			$name = $tag->name;
+			return '<a href="' . $url . '" class="tag">' . $name . '</a>';
+		}, get_tags()));
+
+		$tags = '<div class="tags">' . $tags . '</div>';
+
+		return $content . $tags;
+	}
+
 	public static function ya_share( $content ) {
 		if( !is_single() ) return $content;
 
-		$button_share = '<div class="share-ya"><script async="async" src="https://yastatic.net/share2/share.js"></script><div class="ya-share2" data-counter="" data-services="vkontakte,facebook,odnoklassniki,twitter,lj,telegram" data-lang="ru" data-size="s" data-url="'.get_permalink().'" data-title="'. get_the_title().'" data-description="" data-image=""></div></div>';
+		$button_share = '<div class="share-ya">
+			<script async="async" src="https://yastatic.net/share2/share.js"></script>
+			<div class="ya-share2"
+				data-counter=""
+				data-services="vkontakte,facebook,odnoklassniki,twitter,lj,telegram"
+				data-lang="ru"
+				data-size="s"
+				data-url="'.get_permalink().'"
+				data-title="'. get_the_title().'"
+				data-description=""
+				data-image="">
+			</div>
+		</div>';
 
 		return $content . $button_share;
 	}
@@ -23,6 +49,7 @@ Class POLITSTURM_FILTERS {
 
 add_action( 'after_setup_theme', array( 'POLITSTURM_FILTERS', 'content_width' ) );
 add_filter( 'excerpt_length', array( 'POLITSTURM_FILTERS', 'excerpt_length' ), 999 );
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'tags' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
 
 add_filter('excerpt_more', function($more) {
