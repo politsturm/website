@@ -28,6 +28,14 @@ Class POLITSTURM_FILTERS {
 		return $content . '<div class="separator"></div>';
 	}
 
+	public static function start_info_block( $content ) {
+		return $content . '<div class="info-block">';
+	}
+
+	public static function end_info_block( $content ) {
+		return $content . '</div>';
+	}
+
 	public static function ya_share( $content ) {
 		if( !is_single() ) return $content;
 
@@ -48,6 +56,10 @@ Class POLITSTURM_FILTERS {
 		return $content . $button_share;
 	}
 
+	public static function post_date( $content ) {
+		$date = '<div class="post-date">' . get_the_date('M d, Y') . '</div>';
+		return $content . $date;
+	}
 
 }
 
@@ -55,7 +67,11 @@ add_action( 'after_setup_theme', array( 'POLITSTURM_FILTERS', 'content_width' ) 
 add_filter( 'excerpt_length', array( 'POLITSTURM_FILTERS', 'excerpt_length' ), 999 );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'tags' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'separator' ) );
+
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'start_info_block' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'post_date' ) );
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
 
 add_filter('excerpt_more', function($more) {
 	return '';

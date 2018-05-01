@@ -30,3 +30,17 @@
 	background-color: #c8c8c8;
 	margin: 30px 0;
 }
+
+.post-date {
+	opacity: 0.67;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	line-height: 3.33;
+	letter-spacing: 0.4px;
+	color: rgba(0, 0, 0, 0.67);
+}
+
+.info-block {
+	display: flex;
+	justify-content: space-between;
+}
