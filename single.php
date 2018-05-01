@@ -18,33 +18,35 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+			<h2 class="related-title"> Похожие материалы </h2>
 			<div class="related-container">
-
-				<h2 class="related-title"> Похожие материалы </h2>
-
 					<?php
 					$this_id = get_the_ID();
 					$tagss = wp_get_post_terms($this_id, 'post_tag', array("fields" => "ids"));
 
 					$args = array(
-					'post_type' => 'post',
-					'meta_key' => 'choce',
-					'meta_value' => 's1',
-					'showposts' => '3',
-					'post__not_in' => array($this_id),
-					'orderby' => 'rand ',
-					'tag__in' => $tagss
+						'post_type' => 'post',
+						'meta_key' => 'choce',
+						'meta_value' => 's1',
+						'showposts' => '3',
+						'post__not_in' => array($this_id),
+						'orderby' => 'rand ',
+						'tag__in' => $tagss
 					);
 					$query = new WP_Query ( $args );
 
-					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
-					get_template_part( 'template-parts/content-related', get_post_format() ); ?>
+					if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) : $query->the_post();
+							get_template_part( 'template-parts/content-related', get_post_format() );
+						endwhile;
 
-					<?php endwhile;
-					wp_reset_postdata();
-					else : ?>
-					<p><?php _e( 'Подходящих материалов не найдено' ); ?></p>
-					<?php endif; ?>
+						wp_reset_postdata();
+					} else {
+						echo '<p>';
+						_e( 'Подходящих материалов не найдено' );
+						echo '</p>';
+					}
+					?>
 			</div>
 
 		</main><!-- #main -->
