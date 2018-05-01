@@ -45,6 +45,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 @import "assets/css/svg_icons.css";
 @import "assets/css/news.css";
+@import "assets/css/single.css";
 
 .news-loadmore {
 	background-color: #454545;
