@@ -24,6 +24,10 @@ Class POLITSTURM_FILTERS {
 		return $content . $tags;
 	}
 
+	public static function separator( $content ) {
+		return $content . '<div class="separator"></div>';
+	}
+
 	public static function ya_share( $content ) {
 		if( !is_single() ) return $content;
 
@@ -50,6 +54,7 @@ Class POLITSTURM_FILTERS {
 add_action( 'after_setup_theme', array( 'POLITSTURM_FILTERS', 'content_width' ) );
 add_filter( 'excerpt_length', array( 'POLITSTURM_FILTERS', 'excerpt_length' ), 999 );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'tags' ) );
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'separator' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
 
 add_filter('excerpt_more', function($more) {
