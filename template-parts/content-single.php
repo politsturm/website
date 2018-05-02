@@ -56,12 +56,12 @@
 
 		</div>
 
-
-
 		<h1 itemprop="headline name" class="content-title-single">
 			<?php the_title(); ?>
 		</h1>
-
+		<div class="post-date post-date-mobile">
+			<?php echo get_the_date('M d, Y'); ?>
+		</div>
 		<div class="content-image-single">
 			<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
 		</div>

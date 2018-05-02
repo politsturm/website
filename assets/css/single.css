@@ -35,7 +35,6 @@
 	opacity: 0.67;
 	font-family: 'Open Sans';
 	font-size: 15px;
-	line-height: 3.33;
 	letter-spacing: 0.4px;
 	color: rgba(0, 0, 0, 0.67);
 }
@@ -43,6 +42,21 @@
 .info-block {
 	display: flex;
 	justify-content: space-between;
+}
+
+.post-date-mobile {
+	display: none;
+}
+
+@media screen and (max-width:950px) {
+	.post-date {
+		display: none;
+	}
+
+	.post-date-mobile {
+		display: flex;
+		flex-direction: row-reverse;
+	}
 }
 
 .content-post-single {
@@ -57,6 +71,9 @@
 	font-family: 'Open Sans', sans-serif;
 	font-size: 40px;
 	font-weight: 600;
+
+	margin-top: 20px;
+	margin-bottom: 35px;
 }
 
 .content-post-single p {
@@ -65,7 +82,7 @@
 
 .content-image-single {
 	text-align: center;
-	margin: 45px 0;
+	margin: 5px 0;
 }
 
 .content-summary-single p img {
@@ -99,14 +116,10 @@
 	border-radius: 50%;
 }
 
-.content-title-single {
-	margin-top: 20px;
-	margin-bottom: 5px;
-}
-
 .content-tags-single {
 
 }
+
 .content-tag {
 	display: inline-block;
 	list-style: none;
@@ -176,4 +189,3 @@
 .comments-area {
 	padding: 15px;
 }
-
