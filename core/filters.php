@@ -17,10 +17,10 @@ Class POLITSTURM_FILTERS {
 		$tags = implode(' ', array_map(function($tag) {
 			$url = '/tag/' . $tag->slug;
 			$name = $tag->name;
-			return '<a href="' . $url . '" class="tag">' . $name . '</a>';
+			return '<a href="' . $url . '" class="content-tag">' . $name . '</a>';
 		}, $tags));
 
-		$tags = '<div class="tags">' . $tags . '</div>';
+		$tags = '<div class="content-tags-single">' . $tags . '</div>';
 
 		return $content . $tags;
 	}
