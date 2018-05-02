@@ -1,6 +1,10 @@
 .main-support {
 	text-align: center;
 	margin: 75px 0;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 0.6px;
 }
 
 .main-support a {
