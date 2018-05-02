@@ -21,75 +21,43 @@ get_header(); ?>
 				<div class="top-white-background"> </div>
 				<div class="mp-top-container">
 					<div class="top-hitems">
-					<?php $query = new WP_Query('meta_key=choce&meta_value=s1&showposts=2'); 
+					<?php $query = new WP_Query('meta_key=choce&meta_value=s1&showposts=2');
 					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-					
+
 					<div class="top-hitem" itemscope itemtype=http://schema.org/Article>
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' );?>" width="100%"  hspace="0" vspace="0" style="display:block;">
-						
-						<!-- Начало микроразметки -->
-							<div class="microrazmetka" style="display:none;">
-								<?php $iurl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-								<span itemprop="headline name"> <?php the_title(); ?></span>
-								<span itemprop="datePublished"> <?php echo get_the_date('Y-M-D'); ?></span>
-								<span itemprop="description"> <?php echo get_the_excerpt(); ?> </span>
-								<span itemprop="image"><?php echo $iurl; ?></span>
-								<span style="display:none;" itemprop="keywords"><?php echo get_the_tag_list( '', ', ' ); ?> ,<?php echo get_the_category_list(', '); ?></span>
-								
-								<span style="display:none;" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization">
-									<span style="display:none;" itemprop="name">politsturm.com - Социалистический информационный ресурс</span>
-									<img src="https://politsturm.com/wp-content/uploads/2017/02/Без-имени-1.png" style="display:none;" itemprop="logo">
-									<span style="display:none;" itemprop="email">politsturm@gmail.com</span>
-									<a href="https://politsturm.com/" itemprop="url" style="display:none;">politsturm.com - Социалистический информационный ресурс</a>
-									<span style="display:none;" itemprop="address">USSR</span>
-									<span style="display:none;" itemprop="telephone">+79192335725</span>
-								</span>
-							</div>
-						<!-- Конец микроразметки -->
-						
+
+						<?php
+							setup_postdata($post);
+							get_template_part('template-parts/microrazmetka');
+						?>
 					</div>
-					
-					<?php endwhile; 
+
+					<?php endwhile;
 					wp_reset_postdata();
 					else : ?>
 					<p><?php _e( 'Подходящих материалов не найдено' ); ?></p>
 					<?php endif; ?>
-					
+
 					</div>
-					
+
 					<?php $query = new WP_Query('meta_key=choce&meta_value=s2&showposts=1');
 					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-					
+
 					<div class="top-vitem" itemscope itemtype=http://schema.org/Article>
 						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' );?>" width="100%"  hspace="0" vspace="0" style="display:block;">
 					<div class="figcaption">
 						<h2><?php the_title(); ?></h2>
 						<p><?php echo get_the_excerpt(); ?></p>
 					</div></a>
-						
-						<!-- Начало микроразметки -->
-							<div class="microrazmetka" style="display:none;">
-								<?php $iurl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-								<span itemprop="headline name"> <?php the_title(); ?></span>
-								<span itemprop="datePublished"> <?php echo get_the_date('Y-M-D'); ?></span>
-								<span itemprop="description"> <?php echo get_the_excerpt(); ?> </span>
-								<span itemprop="image"><?php echo $iurl; ?></span>
-								<span style="display:none;" itemprop="keywords"><?php echo get_the_tag_list( '', ', ' ); ?> ,<?php echo get_the_category_list(', '); ?></span>
-								
-								<span style="display:none;" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization">
-									<span style="display:none;" itemprop="name">politsturm.com - Социалистический информационный ресурс</span>
-									<img src="https://politsturm.com/wp-content/uploads/2017/02/Без-имени-1.png" style="display:none;" itemprop="logo">
-									<span style="display:none;" itemprop="email">politsturm@gmail.com</span>
-									<a href="https://politsturm.com/" itemprop="url" style="display:none;">politsturm.com - Социалистический информационный ресурс</a>
-									<span style="display:none;" itemprop="address">USSR</span>
-									<span style="display:none;" itemprop="telephone">+79192335725</span>
-								</span>
-							</div>
-						<!-- Конец микроразметки -->
-						
+
+						<?php
+							setup_postdata($post);
+							get_template_part('template-parts/microrazmetka');
+						?>
 					</div>
-					
-					<?php endwhile; 
+
+					<?php endwhile;
 					wp_reset_postdata();
 					else : ?>
 					<p><?php _e( 'Подходящих материалов не найдено' ); ?></p>
@@ -118,7 +86,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="main-news">
 				<?php
 					while (have_posts()) {
