@@ -12,7 +12,8 @@
  * @package politsturm
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -21,47 +22,39 @@ get_header(); ?>
 				<div class="top-white-background"> </div>
 				<div class="mp-top-container">
 					<div class="top-hitems">
-					<?php $query = new WP_Query('meta_key=choce&meta_value=s1&showposts=2');
-					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-
-					<div class="top-hitem" itemscope itemtype=http://schema.org/Article>
-						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' );?>" width="100%"  hspace="0" vspace="0" style="display:block;">
-
 						<?php
-							setup_postdata($post);
-							get_template_part('template-parts/microrazmetka');
+							$query = new WP_Query('meta_key=choce&meta_value=s1&showposts=2');
+							if ($query->have_posts()) {
+								while ($query->have_posts()) {
+									$query->the_post();
+									get_template_part('template-parts/top_hitem');
+									get_template_part('template-parts/microrazmetka');
+								}
+							wp_reset_postdata();
+							} else {
+								echo '<p>';
+								_e( 'Подходящих материалов не найдено' );
+								echo '</p>';
+							}
 						?>
-					</div>
-
-					<?php endwhile;
-					wp_reset_postdata();
-					else : ?>
-					<p><?php _e( 'Подходящих материалов не найдено' ); ?></p>
-					<?php endif; ?>
 
 					</div>
 
-					<?php $query = new WP_Query('meta_key=choce&meta_value=s2&showposts=1');
-					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-
-					<div class="top-vitem" itemscope itemtype=http://schema.org/Article>
-						<a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' );?>" width="100%"  hspace="0" vspace="0" style="display:block;">
-					<div class="figcaption">
-						<h2><?php the_title(); ?></h2>
-						<p><?php echo get_the_excerpt(); ?></p>
-					</div></a>
-
-						<?php
-							setup_postdata($post);
-							get_template_part('template-parts/microrazmetka');
-						?>
-					</div>
-
-					<?php endwhile;
-					wp_reset_postdata();
-					else : ?>
-					<p><?php _e( 'Подходящих материалов не найдено' ); ?></p>
-					<?php endif; ?>
+					<?php
+						$query = new WP_Query('meta_key=choce&meta_value=s2&showposts=1');
+						if ($query->have_posts()) {
+							while ($query->have_posts()) {
+								$query->the_post();
+								get_template_part('template-parts/top_vitem');
+								get_template_part('template-parts/microrazmetka');
+							}
+							wp_reset_postdata();
+						} else {
+							echo '<p>';
+							_e('Подходящих материалов не найдено');
+							echo '</p>';
+						}
+					?>
 
 
 				</div>
