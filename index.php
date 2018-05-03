@@ -39,55 +39,55 @@ function load_top_posts($meta_value, $count, $class) {
 }
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-			<div class="mp-top padhed">
-				<div class="top-white-background"></div>
-				<div class="mp-top-container">
-					<div class="top-hitems">
-						<?php $h_ids = load_top_posts('s1', 2, 'hitem'); ?>
-					</div>
-					<?php $v_ids = load_top_posts('s2', 1, 'vitem'); ?>
+		<div class="mp-top padhed">
+			<div class="top-white-background"></div>
+			<div class="mp-top-container">
+				<div class="top-hitems">
+					<?php $h_ids = load_top_posts('s1', 2, 'hitem'); ?>
 				</div>
-				<div class="mnews">
-					<div class="news-title">Новости</div>
-
-					<?php
-						$args = array( 'numberposts' => 5, 'category' => 'news' );
-						$posts = get_posts( $args );
-						foreach($posts as $post) {
-							setup_postdata($post);
-							get_template_part('template-parts/news-post');
-						}
-						wp_reset_postdata();
-					?>
-
-					<div class="news-more">
-						<a href="/category/news/">
-							Больше новостей <span class="news-more-arrow">&gt;</span>
-						</a>
-					</div>
-				</div>
+				<?php $v_ids = load_top_posts('s2', 1, 'vitem'); ?>
 			</div>
+			<div class="mnews">
+				<div class="news-title">Новости</div>
 
-			<div class="main-news">
 				<?php
-					$top_ids = array_merge($h_ids, $v_ids);
-					global $wp_query;
-					$args = $wp_query->query_vars;
-					$args['post__not_in'] = $top_ids;
-					query_posts($args);
-					POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
-					while (have_posts()) {
-						the_post();
-						get_template_part('template-parts/article');
+					$args = array( 'numberposts' => 5, 'category' => 'news' );
+					$posts = get_posts( $args );
+					foreach($posts as $post) {
+						setup_postdata($post);
+						get_template_part('template-parts/news-post');
 					}
+					wp_reset_postdata();
 				?>
+
+				<div class="news-more">
+					<a href="/category/news/">
+						Больше новостей <span class="news-more-arrow">&gt;</span>
+					</a>
+				</div>
 			</div>
-			<div class="news-loadmore">Загрузить ещё</div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div>
+
+		<div class="main-news">
+			<?php
+				$top_ids = array_merge($h_ids, $v_ids);
+				global $wp_query;
+				$args = $wp_query->query_vars;
+				$args['post__not_in'] = $top_ids;
+				query_posts($args);
+				POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
+				while (have_posts()) {
+					the_post();
+					get_template_part('template-parts/article');
+				}
+			?>
+		</div>
+		<div class="news-loadmore">Загрузить ещё</div>
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
 get_footer();
