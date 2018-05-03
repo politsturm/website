@@ -2,8 +2,9 @@
 	$(document).ready(function () {
 		// const
 		var MAIN_MENU_NODE = $('.mmul');
-		var SEARCH_NODE = $('.header-right .search');
-		var SEACH_INPUT = $('.header-right .search input');
+		var SEARCH_NODE = $('.search');
+		var SEACH_INPUT = $('.search input');
+		var OVERLAY = $('.header-overlay');
 		var ANIMATION_PARAMS = {
 			duration: 200,
 			easing: 'linear',
@@ -16,23 +17,34 @@
 		$('.menu-item-has-children').click(showChilds);
 		$('.search-button').click(searchClick);
 
-		checkSearchValue();
-
-		SEACH_INPUT.on('focusout', inputListener);
-
 		// handlers
 		function openMenu() {
 			MAIN_MENU_NODE.fadeIn(ANIMATION_PARAMS);
+			OVERLAY.fadeIn(ANIMATION_PARAMS);
 		}
 
 		function closeMenu() {
 			MAIN_MENU_NODE.fadeOut(ANIMATION_PARAMS);
+			OVERLAY.fadeOut(ANIMATION_PARAMS);
 		}
 
-		function showChilds() {
-			$('.sub-menu').fadeOut(ANIMATION_PARAMS);
-			$(this).children('.sub-menu').fadeIn(ANIMATION_PARAMS);
+		function showChilds(event) {
+			var target = $(event.target).parent();
+			var hasChilds = target.hasClass('menu-item-has-children');
+
+			if (hasChilds) {
+				event.preventDefault();
+
+				target.hasClass('opened')
+					? target.removeClass('opened')
+					: target.addClass('opened');
+			}
 		}
+
+		// Search
+		checkSearchValue();
+
+		SEACH_INPUT.on('focusout', inputListener);
 
 		function searchClick(e) {
 			var isActive = SEARCH_NODE.hasClass('active');
