@@ -13,61 +13,52 @@
  */
 
 get_header();
+function load_top_posts($meta_value, $count, $class) {
+	$ids = array();
+	$query = new WP_Query(array(
+			'meta_key' => 'choce',
+			'meta_value' => $meta_value,
+			'showposts' => $count
+		)
+	);
+	if ($query->have_posts()) {
+		while ($query->have_posts()) {
+			$query->the_post();
+			get_template_part('template-parts/top_' . $class);
+			get_template_part('template-parts/microrazmetka');
+			$ids[] = get_the_ID();
+		}
+		wp_reset_postdata();
+	} else {
+		echo '<p>';
+		_e( 'Подходящих материалов не найдено' );
+		echo '</p>';
+	}
+
+	return $ids;
+}
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<div class="mp-top padhed">
-				<div class="top-white-background"> </div>
+				<div class="top-white-background"></div>
 				<div class="mp-top-container">
 					<div class="top-hitems">
-						<?php
-							$query = new WP_Query('meta_key=choce&meta_value=s1&showposts=2');
-							if ($query->have_posts()) {
-								while ($query->have_posts()) {
-									$query->the_post();
-									get_template_part('template-parts/top_hitem');
-									get_template_part('template-parts/microrazmetka');
-								}
-							wp_reset_postdata();
-							} else {
-								echo '<p>';
-								_e( 'Подходящих материалов не найдено' );
-								echo '</p>';
-							}
-						?>
-
+						<?php $h_ids = load_top_posts('s1', 2, 'hitem'); ?>
 					</div>
-
-					<?php
-						$query = new WP_Query('meta_key=choce&meta_value=s2&showposts=1');
-						if ($query->have_posts()) {
-							while ($query->have_posts()) {
-								$query->the_post();
-								get_template_part('template-parts/top_vitem');
-								get_template_part('template-parts/microrazmetka');
-							}
-							wp_reset_postdata();
-						} else {
-							echo '<p>';
-							_e('Подходящих материалов не найдено');
-							echo '</p>';
-						}
-					?>
-
-
+					<?php $v_ids = load_top_posts('s2', 1, 'vitem'); ?>
 				</div>
 				<div class="mnews">
 					<div class="news-title">Новости</div>
 
 					<?php
-						global $post;
 						$args = array( 'numberposts' => 5, 'category' => 'news' );
 						$posts = get_posts( $args );
-						foreach( $posts as $post ) {
+						foreach($posts as $post) {
 							setup_postdata($post);
-							get_template_part( 'template-parts/news-post' );
+							get_template_part('template-parts/news-post');
 						}
 						wp_reset_postdata();
 					?>
@@ -82,8 +73,15 @@ get_header();
 
 			<div class="main-news">
 				<?php
+					$top_ids = array_merge($h_ids, $v_ids);
+					global $wp_query;
+					$args = $wp_query->query_vars;
+					$args['post__not_in'] = $top_ids;
+					query_posts($args);
+					POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
 					while (have_posts()) {
-						get_template_part( 'template-parts/article' );
+						the_post();
+						get_template_part('template-parts/article');
 					}
 				?>
 			</div>
