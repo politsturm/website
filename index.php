@@ -53,15 +53,17 @@ function load_top_posts($meta_value, $count, $class) {
 			<div class="mnews">
 				<div class="news-title">Новости</div>
 
-				<?php
-					$args = array( 'numberposts' => 5, 'category' => 'news' );
-					$posts = get_posts( $args );
-					foreach($posts as $post) {
-						setup_postdata($post);
-						get_template_part('template-parts/news-post');
-					}
-					wp_reset_postdata();
-				?>
+				<div>
+					<?php
+						$args = array( 'numberposts' => 5, 'category' => 'news' );
+						$posts = get_posts( $args );
+						foreach($posts as $post) {
+							setup_postdata($post);
+							get_template_part('template-parts/news-post');
+						}
+						wp_reset_postdata();
+					?>
+				</div>
 
 				<div class="news-more">
 					<a href="/category/news/">
