@@ -914,10 +914,14 @@ a:active {
 	}
 }
 
-@media screen and (max-width:1200px) {
+/* 1260 is max-width of the '#page' */
+@media screen and (max-width:1260px) {
 	#page {
 		margin: 0 10px;
 	}
+}
+
+@media screen and (max-width:1200px) {
 	.mnews {
 		width: 262px !important;
 	}
@@ -934,6 +938,9 @@ a:active {
 }
 
 @media screen and (max-width:950px) {
+	#page {
+		margin: 0 auto;
+	}
 	#content {
 		margin: 0 15px;
 	}
