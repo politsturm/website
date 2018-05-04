@@ -883,13 +883,6 @@ a:active {
 	width: 27%;
 }
 
-@media screen and (max-width:1720px) {
-	.send {
-		margin-left: 40px;
-	}
-
-}
-
 @media screen and (max-width:1600px) {
 	.header-fb {
 		margin-right: 8px;
@@ -908,10 +901,6 @@ a:active {
 @media screen and (max-width:1350px) {
 	.menuTop li a {
 		font-size: 16px;
-	}
-	.send {
-		position: absolute !important;
-		right: 0;
 	}
 	.mnews .rt-tpg-container .rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height {
 		display: none;
@@ -969,8 +958,7 @@ a:active {
 		margin: 0 24px;
 	}
 
-	.header-right .search,
-	.header-right .send {
+	.header-right .search {
 		display: none;
 	}
 
@@ -1119,13 +1107,6 @@ a:active {
 		display: block;
 	}
 
-	body .send {
-		top: 25px;
-		right: initial;
-		position: relative !important;
-		margin-left: 10px;
-	}
-
 	.mmul > span {
 		display: block;
 		padding: 0 0 0 30px;
@@ -1172,9 +1153,6 @@ a:active {
 @media screen and (max-width:600px) {
 	.logo {
 		width: 140px;
-	}
-	body .send {
-		display: none;
 	}
 }
 
@@ -1268,28 +1246,6 @@ End of Header. Start of Main Page First Block
 }
 
 .mnews .rt-holder .rt-detail h2 a:hover {
-	opacity: 0.8;
-}
-
-.send {
-	position: relative;
-    display: inline-block;
-    margin-left: 50px;
-}
-
-.send a.send-mat {
-	background: red;
-	padding: 10px 13px;
-	margin: 5px;
-	box-shadow: 3px 3px 5px #BBB;
-	color: #fff;
-	font-size: 15px;
-    text-transform: uppercase;
-    padding: 7px 18px 8px;
-    text-decoration: none;
-}
-
-.send a.send-mat:hover {
 	opacity: 0.8;
 }
 
@@ -1513,32 +1469,6 @@ Footer
 	display: inline-block;
 }
 
-#footer .sendpost-link {
-	background: red;
-	padding: 10px 13px;
-	margin: 5px;
-	box-shadow: 3px 3px 5px #BBB;
-	font-size: 15px;
-	text-transform: uppercase;
-	text-align: center;
-	color: #fff;
-	display: inline-block;
-	text-decoration: none;
-}
-
-#footer .sup-btn {
-	background: red;
-	padding: 10px 13px;
-	margin: 5px;
-	box-shadow: 3px 3px 5px #BBB;
-	font-size: 15px;
-	text-transform: uppercase;
-	text-align: center;
-	color: #fff;
-	display: inline-block;
-	text-decoration: none;
-}
-
 #footer .widget_text {
 	margin-bottom: 20px;
 	position: relative;
@@ -1564,10 +1494,6 @@ Footer
 @media screen and (max-width:1366px) {
 	#footer {
 		font-size: 16px;
-	}
-
-	#footer .sup-btn {
-		font-size: 14px;
 	}
 
 	#footer .widgettitle {
