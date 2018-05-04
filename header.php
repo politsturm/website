@@ -56,6 +56,16 @@ $theme_url = get_template_directory_uri();
 						) ); 
 					?>
 					<div class="mmul-close"></div>
+					<div class="search-mob-wrapper">
+						<div class="search">
+							<form id="searchform" name="search" action="<?php echo home_url( '/' ) ?>" role="search" method="get" class="search-form">
+								<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="Поиск" id="s" class="search-input">
+								<button id="searchsubmit" class="search-button">
+									<span class="search-icon"></span>
+								</button>
+							</form>
+						</div>
+					</div>
 					</ul>
 				</div>
 			</div>
@@ -79,6 +89,7 @@ $theme_url = get_template_directory_uri();
 				</div>
 	        </div>
         </div>
+        <div class="header-overlay"></div>
 	</header><!-- #masthead -->
 	
 	<div class="site-branding" style="display:none;">
