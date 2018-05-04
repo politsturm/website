@@ -909,9 +909,6 @@ a:active {
 		position: absolute !important;
 		right: 0;
 	}
-	.menuTop li:after {
-		margin: 0 10px;
-	}
 	.mnews .rt-tpg-container .rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height {
 		display: none;
 	}
@@ -926,9 +923,6 @@ a:active {
 	}
 	.menuTop li a {
 		font-size: 13px;
-	}
-	.menuTop li:after {
-		margin: 0 6px;
 	}
 }
 
@@ -1024,7 +1018,7 @@ a:active {
 
 	.mob-menu-button .search-mob-wrapper {
 		width: 100%;
-		padding: 50px 40px 15px 30px;
+		padding: 50px 15px 15px 30px;
 		text-align: right;
 	}
 
@@ -1089,7 +1083,7 @@ a:active {
 		width: 20px;
 		height: 20px;
 		top: 26px;
-		right: 70px;
+		right: 40px;
 		background: url('images/icon-close.svg') no-repeat;
 		background-size: cover;
 		position: absolute;
@@ -1126,7 +1120,7 @@ a:active {
 
 	.mmul > span {
 		display: block;
-		padding: 0 30px 0 30px;
+		padding: 0 0 0 30px;
 	}
 
 	.header-right .search {
