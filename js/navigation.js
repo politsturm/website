@@ -48,8 +48,15 @@
 
 		function searchClick(e) {
 			var isActive = SEARCH_NODE.hasClass('active');
+			var anyValue = false;
 
-			if (isActive && SEACH_INPUT.val()) {
+			SEACH_INPUT.each(function () {
+				if ($(this).val()) {
+					anyValue = true;
+				}
+			});
+
+			if (isActive && anyValue) {
 				// let search happen
 				return;
 			}

@@ -804,7 +804,7 @@ a:active {
 	display: none;
 }
 
-.search {
+.search:not(body) {
 	display: inline-block;
 	vertical-align: middle;
 	max-width: 250px;
@@ -1172,9 +1172,6 @@ a:active {
 }
 
 @media screen and (max-width:600px) {
-	.header-right .search {
-		width: 100px;
-	}
 	.logo {
 		width: 140px;
 	}
