@@ -875,11 +875,15 @@ a:active {
 	pointer-events: none;
 }
 
+.mp-top-container {
+	width: 70%;
+}
+
+.mnews {
+	width: 27%;
+}
+
 @media screen and (max-width:1720px) {
-	.mp-top-container {
-		max-width: calc(100% - 382px);
-		width: auto;
-	}
 	.send {
 		margin-left: 40px;
 	}
@@ -922,12 +926,6 @@ a:active {
 }
 
 @media screen and (max-width:1200px) {
-	.mnews {
-		width: 262px !important;
-	}
-	.mp-top-container {
-		max-width: calc(100% - 262px);
-	}
 	.menuTop li a {
 		font-size: 13px;
 	}
@@ -1217,7 +1215,6 @@ End of Header. Start of Main Page First Block
 }
 
 .mp-top-container {
-	max-width: calc(100% - 382px);
 	z-index: 555;
 	position: relative;
 }
@@ -1247,10 +1244,6 @@ End of Header. Start of Main Page First Block
 
 .rt-news span {
 	color: #ff0000;
-}
-
-.mnews {
-	width: 382px;
 }
 
 .mnews .rt-tpg-isotope div.rt-equal-height:first-child .rt-holder .rt-detail h2 {
@@ -1426,9 +1419,6 @@ End of Header. Start of Main Page First Block
 		}
 
 @media screen and (max-width:1600px) {
-	.mp-top-container {
-		width: 70%;
-	}
 	.wrap {
 		width: 87%;
 	}
@@ -1446,18 +1436,6 @@ End of Header. Start of Main Page First Block
 		font-size: 14px;
 		padding: 20px 35px;
 		padding-top: 0px;
-	}
-}
-
-@media screen and (max-width:1350px) {
-	.mp-top-container {
-		width: 95%;
-	}
-}
-
-@media screen and (max-width:1050px) {
-	.mp-top-container {
-		width: 98%;
 	}
 }
 
