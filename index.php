@@ -55,10 +55,13 @@ function load_top_posts($meta_value, $count, $class) {
 
 				<div>
 					<?php
-						$args = array( 'numberposts' => 5, 'category' => 'news' );
-						$posts = get_posts( $args );
+						global $wp_query;
+						$args = $wp_query->query_vars;
+						$args['numberposts'] = 5;
+						$args['category'] = 'news';
+						query_posts( $args );
 						foreach($posts as $post) {
-							setup_postdata($post);
+							the_post();
 							get_template_part('template-parts/news-post');
 						}
 						wp_reset_postdata();
