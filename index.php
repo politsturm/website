@@ -56,11 +56,12 @@ function load_top_posts($meta_value, $count, $class) {
 				<div>
 					<?php
 						global $wp_query;
-						$args = $wp_query->query_vars;
-						$args['numberposts'] = 5;
+						$wp_args = $wp_query->query_vars;
+						$args = $wp_args;
+						$args['posts_per_page'] = 5;
 						$args['category'] = 'news';
-						query_posts( $args );
-						foreach($posts as $post) {
+						query_posts($args);
+						while (have_posts()) {
 							the_post();
 							get_template_part('template-parts/news-post');
 						}
@@ -79,8 +80,7 @@ function load_top_posts($meta_value, $count, $class) {
 		<div class="main-news">
 			<?php
 				$top_ids = array_merge($h_ids, $v_ids);
-				global $wp_query;
-				$args = $wp_query->query_vars;
+				$args = $wp_args;
 				$args['post__not_in'] = $top_ids;
 				query_posts($args);
 				POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
