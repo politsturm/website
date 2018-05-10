@@ -31,11 +31,9 @@ get_header(); ?>
 
 					$args = array(
 						'post_type' => 'post',
-						'meta_key' => 'choce',
-						'meta_value' => 's1',
 						'showposts' => '3',
 						'post__not_in' => array($this_id),
-						'orderby' => 'rand ',
+						'orderby' => 'rand',
 						'tag__in' => $tagss
 					);
 					$query = new WP_Query ( $args );
