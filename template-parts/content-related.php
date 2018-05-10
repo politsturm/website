@@ -14,7 +14,7 @@
 	<div class="related-post-image">
 
 		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail('full', array(
+			<?php the_post_thumbnail('medium_large', array(
 					'itemprop' => 'thumbnailUrl',
 					'alt' => get_the_title()
 				));
