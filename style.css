@@ -876,7 +876,11 @@ a:active {
 }
 
 .mp-top-container {
+	display: flex;
+	flex-direction: row;
 	width: 70%;
+	z-index: 555;
+	position: relative;
 }
 
 .mnews {
@@ -1192,11 +1196,6 @@ End of Header. Start of Main Page First Block
 	z-index: 1;
 }
 
-.mp-top-container {
-	z-index: 555;
-	position: relative;
-}
-
 .rt-holder .post-meta-user .fa-calendar:before {
 	display: none;
 }
@@ -1273,15 +1272,11 @@ End of Header. Start of Main Page First Block
 }
 
 .top-hitems {
-	width: 58.01%;
-	float: left;
+	display: flex;
+	flex-direction: column;
+	width: 58%;
 	box-sizing: border-box;
 	padding-right: 5px;
-}
-
-.top-hitem {
-	float: left;
-	position: relative;
 }
 
 .top-hitem:first-child {
@@ -1289,9 +1284,7 @@ End of Header. Start of Main Page First Block
 }
 
 .top-vitem {
-	float:left;
-	width:40.01%;
-	position: relative;
+	width: 40%;
 }
 
 .figcaption,
