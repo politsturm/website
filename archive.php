@@ -22,6 +22,8 @@ get_header(); ?>
 
 				<div class="main-news">
 					<?php
+						global $wp_query;
+						POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
 						while (have_posts()) {
 							the_post();
 							get_template_part( 'template-parts/article' );
