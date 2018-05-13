@@ -1,5 +1,5 @@
-<article class="grid-post">
-	<a href="<?php the_permalink();?>">
+<a href="<?php the_permalink();?>">
+	<article class="grid-post">
 		<?php
 			$image = get_the_post_thumbnail_url($post->ID, 'medium');
 			if ($image) {
@@ -8,8 +8,8 @@
 				<?php
 			}
 		?>
-	</a>
-	<h2>
-		<?php the_title();?>
-	</h2>
-</article>
+		<h2>
+			<?php the_title();?>
+		</h2>
+	</article>
+</a>
