@@ -1,9 +1,11 @@
 .mnews {
 	display: flex;
 	flex-direction: column;
+}
 
-	/* FIXME */
-	zindex: 1;
+.news-posts {
+	overflow-x: scroll;
+	max-height: 460px;
 }
 
 .news-post {

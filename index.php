@@ -53,7 +53,7 @@ function load_top_posts($meta_value, $count, $class) {
 			<div class="mnews">
 				<div class="news-title">Новости</div>
 
-				<div>
+				<div class="news-posts">
 					<?php
 						global $wp_query;
 						$wp_args = $wp_query->query_vars;
