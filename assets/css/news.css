@@ -1,9 +1,6 @@
 .mnews {
 	display: flex;
 	flex-direction: column;
-
-	/* FIXME */
-	zindex: 1;
 }
 
 .news-posts {
