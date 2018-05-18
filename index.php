@@ -58,7 +58,7 @@ function load_top_posts($meta_value, $count, $class) {
 						global $wp_query;
 						$wp_args = $wp_query->query_vars;
 						$args = $wp_args;
-						$args['posts_per_page'] = 5;
+						$args['posts_per_page'] = 4;
 						$args['category_name'] = 'news';
 						query_posts($args);
 						while (have_posts()) {
