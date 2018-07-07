@@ -9,7 +9,7 @@
 
 /** Require theme files **/
 
-require_once ( 'core/register_theme.php');
+require_once( 'core/register_theme.php');
 
 require_once( 'assets/assets.php' );
 

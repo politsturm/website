@@ -74,6 +74,55 @@ add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'post_date' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
 
+add_filter( 'the_content', 'modify_images', 100 );
+
+function modify_images( $content ) {
+    if ( ! preg_match_all( '/<img [^>]+>/', $content, $matches ) ) {
+        return $content;
+    }
+
+    $selected_images = $attachment_ids = array();
+
+    foreach ( $matches[0] as $image ) {
+        if ( preg_match( '/size-([a-z]+)/i', $image, $class_size ) && preg_match( '/wp-image-([0-9]+)/i', $image, $class_id ) && $image_size = $class_size[1] && $attachment_id = absint( $class_id[1] ) ) {
+            /*
+             * If exactly the same image tag is used more than once, overwrite it.
+             * All identical tags will be replaced later with 'str_replace()'.
+             */
+            $selected_images[ $image ] = $attachment_id;
+            // Overwrite the ID when the same image is included more than once.
+            $attachment_ids[ $attachment_id ] = true;
+        }
+    }
+    foreach ( $selected_images as $image => $attachment_id ) {
+        $content = str_replace( $image, modify_image_tag( $image, $attachment_id, $image_size ), $content );
+    }
+
+    return $content;
+}
+
+function modify_image_tag( $image, $attachment_id, $image_size ) {
+    $image_src = preg_match( '/src="([^"]+)"/', $image, $match_src ) ? $match_src[1] : '';
+    list( $image_src ) = explode( '?', $image_src );
+
+    // Return early if we couldn't get the image source.
+    if ( ! $image_src ) {
+        return $image;
+    }
+    //Get attachment meta for size
+    $size_large  = wp_get_attachment_image_src( $attachment_id, 'large' );
+    $size_large  = $size_large ? $size_large[0] : '';
+
+    // Add 'data' attributes
+    $image = preg_replace( '/<img ([^>]+?)[\/ ]*>/', '<img $1' . $attr . ' />', $image );
+
+    //Append <a> tag
+    $r_image = sprintf( '<a id="image-%d" href='. $size_large .' data-fancybox="gallery">', $image_size, $attachment_id );
+    $r_image .= $image . '</a>';
+
+    return $r_image;
+}
+
 add_filter('excerpt_more', function($more) {
 	return '';
 });
