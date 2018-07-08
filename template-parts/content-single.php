@@ -45,11 +45,15 @@
 			<?php echo get_the_date('M d, Y'); ?>
 		</div>
 		<div class="content-image-single">
-			<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
+			<?php 
+				echo "<a data-fancybox='gallery' rel='group' href='" . get_the_post_thumbnail_url( get_the_ID(), 'full' ) . "'>"; 
+			?>
+				<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
+			</a>
 		</div>
 
 		<div itemprop="articleBody">
-		<?php the_content(); ?>
+			<?php the_content(); ?>
 		</div>
 
 	</div>
