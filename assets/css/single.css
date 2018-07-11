@@ -103,6 +103,16 @@
 	border-radius: 50%;
 }
 
+.content-summary-single a {
+	color: #0033cc;
+}
+
+.content-summary-single a:hover,
+.content-summary-single a:focus,
+.content-summary-single a:active {
+	color: #0066cc;
+}
+
 .content-tags-single {
 	display: flex;
 	flex-direction: row;
@@ -117,9 +127,8 @@
 
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
-	color: #515151;
+	color: #515151 !important;
 }
-
 
 .share {
 	background-color: #f5f5f5;

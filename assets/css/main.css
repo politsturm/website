@@ -515,21 +515,6 @@ a {
 	text-decoration: none;
 }
 
-.content-summary-single a {
-	color: #0033cc;
-}
-
-.content-summary-single a:hover,
-.content-summary-single a:focus,
-.content-summary-single a:active {
-	color: #0066cc;
-}
-
-
-a:visited {
-
-}
-
 a:hover,
 a:focus,
 a:active {
