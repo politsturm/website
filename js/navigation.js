@@ -14,7 +14,7 @@
 		// events
 		$('.mob-menu-button').click(openMenu);
 		$('.mmul-close').click(closeMenu);
-		$('.menu-item-has-children').click(showChilds);
+		$('.menu__arrow').click(showChilds);
 		$('.search-button').click(searchClick);
 
 		// handlers
@@ -33,8 +33,6 @@
 			var hasChilds = target.hasClass('menu-item-has-children');
 
 			if (hasChilds) {
-				event.preventDefault();
-
 				target.hasClass('opened')
 					? target.removeClass('opened')
 					: target.addClass('opened');
