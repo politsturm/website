@@ -55,7 +55,8 @@ $theme_url = get_template_directory_uri();
 						wp_nav_menu( array(
 						'theme_location'  => 'primary',
 						'container'       => false,
-						'items_wrap'      => '<span>%3$s</span>'
+						'items_wrap'      => '<span>%3$s</span>',
+						'after'           => '<div class="menu__arrow"></div>'
 						) ); 
 					?>
 					<div class="mmul-close"></div>
@@ -78,7 +79,8 @@ $theme_url = get_template_directory_uri();
 						wp_nav_menu( array(
 						'theme_location'  => 'primary',
 						'container'       => false,
-						'items_wrap'      => '<ul>%3$s</ul>'
+						'items_wrap'      => '<ul>%3$s</ul>',
+						'after'           => '<div class="menu__arrow"></div>'
 						) ); 
 					?>
 				</div>
