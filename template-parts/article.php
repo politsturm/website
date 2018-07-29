@@ -4,7 +4,7 @@
 		if ( in_category( 'video' )) { ?>
 			<?php
 				$content = get_the_content();
-				preg_match_all('/https.*\?v\=(.*)[\s|\n]/i', $content, $match);
+				preg_match_all('/https.*\?v\=(.[0-9a-zA-Z]+)/i', $content, $match);
 				$youtube_link = $match[1][0];
 			?>
 
