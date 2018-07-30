@@ -62,6 +62,24 @@ Class POLITSTURM_FILTERS {
 		return $content . $date;
 	}
 
+	public static function skip_tag($tag_name) {
+		return function ($query) use ($tag_name) {
+			$field = 'tag__not_in';
+			$not_tags = $query->get($field);
+			if ($not_tags == "") {
+				$not_tags = array();
+			}
+
+			$tag = get_term_by('slug', $tag_name, 'post_tag')->term_id;
+			if (!in_array($tag, $not_tags)) {
+				array_push($not_tags, $tag);
+			}
+
+			if ($query->is_home() && $query->is_main_query()) {
+				$query->set($field, $not_tags);
+			}
+		};
+	}
 }
 
 add_action( 'after_setup_theme', array( 'POLITSTURM_FILTERS', 'content_width' ) );
@@ -75,6 +93,10 @@ add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'post_date' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
 
 add_filter( 'the_content', 'modify_images', 100 );
+
+add_filter( 'pre_get_posts', function($query) {
+	POLITSTURM_FILTERS::skip_tag('leftview')($query);
+});
 
 function modify_images( $content ) {
     if ( ! preg_match_all( '/<img [^>]+>/', $content, $matches ) ) {

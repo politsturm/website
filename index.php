@@ -60,6 +60,7 @@ function load_top_posts($meta_value, $count, $class) {
 						$args = $wp_args;
 						$args['posts_per_page'] = 4;
 						$args['category_name'] = 'news';
+						$args['tag__not_in'] = array(); # Show LeftView
 						query_posts($args);
 						while (have_posts()) {
 							the_post();
