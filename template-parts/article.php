@@ -4,8 +4,9 @@
 		if ( in_category( 'video' )) { ?>
 			<?php
 				$content = get_the_content();
-				preg_match_all('/https.*\?v\=(.[0-9a-zA-Z]+)/i', $content, $match);
-				$youtube_link = $match[1][0];
+				preg_match_all('/https.*\?v\=(.[0-9a-zA-Z]+)|https.*\.be\/(.[0-9a-zA-Z]+)/i', $content, $match);
+
+				$youtube_link = empty($match[1][0]) ? $match[2][0] : $match[1][0];
 			?>
 
 			<iframe width="100%" height="250" src="https://www.youtube.com/embed/<?php echo $youtube_link;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
