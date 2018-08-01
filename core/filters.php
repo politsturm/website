@@ -95,7 +95,8 @@ add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
 add_filter( 'the_content', 'modify_images', 100 );
 
 add_filter( 'pre_get_posts', function($query) {
-	POLITSTURM_FILTERS::skip_tag('leftview')($query);
+	$func = POLITSTURM_FILTERS::skip_tag('leftview');
+	$func($query);
 });
 
 function modify_images( $content ) {
