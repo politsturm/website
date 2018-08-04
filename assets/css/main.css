@@ -80,7 +80,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	letter-spacing: 0.6px;
 }
 
-.grid-post img {
+.grid-post img,
+.article__video {
 	border-radius: 10px;
 }
 
