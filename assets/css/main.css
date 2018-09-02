@@ -1133,12 +1133,28 @@ a:active {
 		margin-left: 10px;
 	}
 
-	.mp-top-container {
-		display: none;
-	}
-
 	body .mnews {
 		width: 100% !important;
+	}
+
+	.mp-top-container {
+		width: 100%;
+		flex-wrap: wrap;
+		order: 1;
+	}
+
+	.mp-top-container .top-hitems {
+		padding-right: 0;
+	}
+
+	.mp-top-container .top-hitem,
+	.mp-top-container .top-hitem:first-child {
+		margin-bottom: 10px;
+		border-radius: 10px;
+	}
+
+	.top-vitem {
+		border-radius: 10px;
 	}
 
 	.mob-menu-button .sub-menu {
