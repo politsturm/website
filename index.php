@@ -83,6 +83,8 @@ function load_top_posts($meta_value, $count, $class) {
 				$top_ids = array_merge($h_ids, $v_ids);
 				$args = $wp_args;
 				$args['post__not_in'] = $top_ids;
+				$args['posts_per_page'] = 9;
+
 				query_posts($args);
 				POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
 				while (have_posts()) {

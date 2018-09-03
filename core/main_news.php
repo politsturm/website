@@ -27,6 +27,7 @@ class POLITSTURM_MAIN_NEWS {
 		$args = json_decode( stripslashes( $_POST['query'] ), true );
 		$args['paged'] = $_POST['page'] + 1;
 		$args['post_status'] = 'publish';
+		$args['posts_per_page'] = 6;
 
 		query_posts($args);
 
