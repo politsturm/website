@@ -95,6 +95,7 @@
 
 		// up-button
 		var upButton = $('.up-button');
+		var buttonText = $('.up-button__text');
 		var prevPos;
 
 		$(window).on('scroll', scrollListener);
@@ -106,6 +107,7 @@
 			if (fromTop >= 300) {
 				upButton.removeClass('up-button_hidden');
 				upButton.removeClass('up-button_down');
+				buttonText.text('Наверх');
 			} else if (fromTop <= 300 && fromTop > 50) {
 				upButton.addClass('up-button_hidden');
 			}
@@ -120,6 +122,7 @@
 				$(document).scrollTop(prevPos);
 			} else {
 				$(document).scrollTop(0);
+				buttonText.text('');
 				upButton.addClass('up-button_down');
 			}
 		}

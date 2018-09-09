@@ -3,7 +3,7 @@
 	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 80px;
+	width: 85px;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 	opacity: .6;
@@ -11,14 +11,16 @@
 
 .up-button:hover {
 	opacity: 1;
+	background: #e6e6e6;
 }
 
 .up-button_hidden {
 	opacity: 0;
+	pointer-events: none;
 }
 
-.up-button_down .up-button__text {
-	color: #fff;
+.up-button_down {
+	background: transparent;
 }
 
 .up-button_down .up-button__text:before {
@@ -41,4 +43,10 @@
 	background-image: url('./images/up-button.svg');
 	background-repeat: no-repeat;
 	background-size: 100%;
+}
+
+@media screen and (max-width: 950px) {
+	.up-button {
+		display: none;
+	}
 }
