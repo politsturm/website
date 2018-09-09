@@ -92,5 +92,36 @@
 				closeSearch();
 			}
 		}
+
+		// up-button
+		var upButton = $('.up-button');
+		var prevPos;
+
+		$(window).on('scroll', scrollListener);
+		upButton.on('click', upButtonClickHandler);
+
+		function scrollListener() {
+			var fromTop = $(document).scrollTop();
+
+			if (fromTop >= 300) {
+				upButton.removeClass('up-button_hidden');
+				upButton.removeClass('up-button_down');
+			} else if (fromTop <= 300 && !prevPos) {
+				upButton.addClass('up-button_hidden');
+			}
+		}
+
+		function upButtonClickHandler() {
+			if (!prevPos) {
+				prevPos = $(document).scrollTop();
+			}
+
+			if ($(document).scrollTop() === 0) {
+				$(document).scrollTop(prevPos);
+			} else {
+				$(document).scrollTop(0);
+				upButton.addClass('up-button_down');
+			}
+		}
 	});
 })(jQuery);
