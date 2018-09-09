@@ -106,7 +106,7 @@
 			if (fromTop >= 300) {
 				upButton.removeClass('up-button_hidden');
 				upButton.removeClass('up-button_down');
-			} else if (fromTop <= 300 && !prevPos) {
+			} else if (fromTop <= 300 && fromTop > 50) {
 				upButton.addClass('up-button_hidden');
 			}
 		}
