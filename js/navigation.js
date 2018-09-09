@@ -114,11 +114,11 @@
 		}
 
 		function upButtonClickHandler() {
-			if (!prevPos) {
+			if (!upButton.hasClass('up-button_down')) {
 				prevPos = $(document).scrollTop();
 			}
 
-			if ($(document).scrollTop() === 0) {
+			if ($(document).scrollTop() <= 50) {
 				$(document).scrollTop(prevPos);
 			} else {
 				$(document).scrollTop(0);
