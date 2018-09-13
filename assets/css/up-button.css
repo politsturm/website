@@ -1,6 +1,6 @@
 .up-button {
 	position: fixed;
-	left: 0;
+	right: 0;
 	top: 0;
 	bottom: 0;
 	width: 85px;
@@ -21,6 +21,12 @@
 
 .up-button_down {
 	background: transparent;
+}
+
+.up-button__text {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
 .up-button_down .up-button__text:before {
