@@ -1,0 +1,52 @@
+.up-button {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 85px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	opacity: .6;
+}
+
+.up-button:hover {
+	opacity: 1;
+	background: #e6e6e6;
+}
+
+.up-button_hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.up-button_down {
+	background: transparent;
+}
+
+.up-button_down .up-button__text:before {
+	transform: rotate(180deg);
+}
+
+.up-button__text {
+	font-family: Open Sans,sans-serif;
+	font-size: 12px;
+	transform: scale(.9);
+	padding: 20px 0 0 10px;
+}
+
+.up-button__text:before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 10px;
+	margin-right: 5px;
+	background-image: url('./images/up-button.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+@media screen and (max-width: 950px) {
+	.up-button {
+		display: none;
+	}
+}
