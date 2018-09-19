@@ -452,29 +452,6 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul,
-ol {
-	margin-top: 0;
-	margin-bottom: 0px;
-	list-style: none;
-	padding: 0;
-}
-
-ul,
-li {
-	list-style: none;
-}
-
-ol {
-	list-style: none;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-bottom: 0px;
-}
-
 dt {
 	font-weight: bold;
 }
@@ -564,6 +541,12 @@ a:active {
 	height: 70px;
 	width: 100%;
 	margin-bottom: 20px;
+}
+
+.site-header li,
+.site-header ol,
+.site-header ul {
+	list-style: none;
 }
 
 .page-header {
@@ -1443,6 +1426,12 @@ Footer
 #footer a {
 	text-decoration: none;
 	color: #000000;
+}
+
+#footer li,
+#footer ol,
+#footer ul {
+	list-style: none;
 }
 
 .footer-wrap {
