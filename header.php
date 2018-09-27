@@ -10,6 +10,7 @@
  */
 
 $theme_url = get_template_directory_uri();
+$favicon_url = $theme_url."/assets/img/favicon/"
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -18,18 +19,22 @@ $theme_url = get_template_directory_uri();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
-<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $theme_url; ?>/assets/img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="<?php echo $theme_url; ?>/assets/img/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $favicon_url; ?>/apple-touch-icon.png?v=2b0WvGmNYO">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $favicon_url; ?>/favicon-32x32.png?v=2b0WvGmNYO">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $favicon_url; ?>/favicon-16x16.png?v=2b0WvGmNYO">
+<link rel="manifest" href="<?php echo $favicon_url; ?>/site.webmanifest?v=2b0WvGmNYO">
+<link rel="mask-icon" href="<?php echo $favicon_url; ?>/safari-pinned-tab.svg?v=2b0WvGmNYO" color="#525252">
+<link rel="shortcut icon" href="<?php echo $favicon_url; ?>/favicon.ico?v=2b0WvGmNYO">
+<meta name="apple-mobile-web-app-title" content="Politsturm">
+<meta name="application-name" content="Politsturm">
+<meta name="msapplication-TileColor" content="#e00028">
+<meta name="theme-color" content="#ffffff">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-<meta name="apple-mobile-web-app-title" content="Politsturm">
-<meta name="application-name" content="Politsturm">
 <meta name="yandex-verification" content="9749765212bb996c" />
 
 <?php wp_head(); ?>
@@ -48,7 +53,7 @@ $theme_url = get_template_directory_uri();
 						<path d="M92.425 25.483l-1.218-.96-2.946 2.935L130.327 70l3.3-2.991-28.624-28.898 11.27-10.591s2.988-3.826 4.98-5.385c1.99-1.559 2.474-2.012 2.474-2.012l-2.361 4.223 4.922-3.005s3.897 6.632 5.69 6.207c1.792-.425 12.29-8.87 12.346-9.21.057-.34-.512-3.884.342-4.507.853-.624 2.788-.17 2.788-.17l2.93-4.478s-4.41 2.295-4.78 2.664c-.37.368-1.194.623-1.194.623s-.91-1.332.227-2.21c1.138-.879 3.386-2.58 3.386-2.58s-5.15 1.361-5.49 1.56c-.342.198-3.3 1.955-3.3 1.955s-.408-2.913.655-5.128c1.062-2.215 1.175-2.342 1.175-2.342l-2.478 1.227s-.661-.984.021-2.6C139.29.737 139.687 0 139.687 0s-3.641 3.344-4.608 3.826c-.968.482-7.227 5.527-7.227 5.527s-.825-1.756-1.736-3.124v-.001a3.37 3.37 0 0 0-.074-.11l-.012-.017-.03-.04c-1.229-1.674-3.29-1.03-3.29-1.03s-9.363 3.768-9.925 4.167c-.408.29-.858 1.565-1.074 2.24-.139.436-.146.397.091.772l1.571 2.476-2.808-2.051s-.133.053-.588.186c-.454.133-2.406.347-2.406.347l-1.525.932s-.478.061-.721.08c-.244.018-.65.153-.65.153zm9.795-2.951s3.556-1.247 4.864.057c1.309 1.303-.455 2.012-1.422 1.587-.967-.425-1.195-.567-1.622-.794-.426-.227-1.82-.85-1.82-.85zm25.12-1.644s5.69-2.976 6.06-.794c.37 2.183-1.906 6.094-1.906 6.094l-2.874-3.571c-.227-.284-1.28-1.729-1.28-1.729zm-4.381-7.482l1.85 1.87s-1.31.312-1.537-.141c-.227-.454-.313-1.73-.313-1.73zm17.07 1.814s1.337 3.23-.114 4.11c-1.451.878-1.536.453-1.28-.653.186-.805.918-2.832 1.394-3.457zm-6.544-5.074l1.878 1.36-1.337.624-1.48-1.303z" fill="#d5001f" fill-rule="evenodd"/>
 					</svg>
 				</a></div>
-				
+
 				<div class="mob-menu-button">
 					<ul class="mmul">
 					<?php
@@ -57,7 +62,7 @@ $theme_url = get_template_directory_uri();
 						'container'       => false,
 						'items_wrap'      => '<span>%3$s</span>',
 						'after'           => '<div class="menu__arrow"></div>'
-						) ); 
+						) );
 					?>
 					<div class="mmul-close"></div>
 					<div class="search-mob-wrapper">
@@ -81,7 +86,7 @@ $theme_url = get_template_directory_uri();
 						'container'       => false,
 						'items_wrap'      => '<ul>%3$s</ul>',
 						'after'           => '<div class="menu__arrow"></div>'
-						) ); 
+						) );
 					?>
 				</div>
 				<div class="search">
@@ -96,7 +101,7 @@ $theme_url = get_template_directory_uri();
         </div>
         <div class="header-overlay"></div>
 	</header><!-- #masthead -->
-	
+
 	<div class="site-branding" style="display:none;">
 		<?php
 		if ( is_front_page() && is_home() ) : ?>
