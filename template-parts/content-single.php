@@ -45,15 +45,30 @@
 			<?php echo get_the_date('M d, Y'); ?>
 		</div>
 		<div class="content-image-single">
-			<?php 
-				echo "<a data-fancybox='gallery' rel='group' href='" . get_the_post_thumbnail_url( get_the_ID(), 'full' ) . "'>"; 
+			<?php
+				echo "<a data-fancybox='gallery' rel='group' href='" . get_the_post_thumbnail_url( get_the_ID(), 'full' ) . "'>";
 			?>
 				<?php the_post_thumbnail('full', array('itemprop' => 'thumbnailUrl', 'alt' => get_the_title() ) ); ?>
 			</a>
 		</div>
 
+		<?php
+			$content = get_the_content();
+			$content = apply_filters( 'the_content', $content );
+			$content = str_replace( ']]>', ']]&gt;', $content );
+			$count = str_word_count(strip_tags($content), 0, ' ');
+			$READING_SPEED = 160; // words per minute
+			$reading_time = round($count / $READING_SPEED);
+		?>
+		<div class="content-reading-time">
+		Среднее время чтения:
+		<?php
+			echo $reading_time;
+			echo _n(' минута', ' минуты', $reading_time);
+		?>
+		</div>
 		<div itemprop="articleBody">
-			<?php the_content(); ?>
+			<?php echo $content; ?>
 		</div>
 
 	</div>
