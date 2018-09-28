@@ -95,7 +95,6 @@
 
 		// up-button
 		var upButton = $('.up-button');
-		var buttonText = $('.up-button__text');
 		var prevPos;
 
 		$(window).on('scroll', scrollListener);
@@ -121,7 +120,6 @@
 				$(document).scrollTop(prevPos);
 			} else {
 				$(document).scrollTop(0);
-				buttonText.text('');
 				upButton.addClass('up-button_down');
 			}
 		}
