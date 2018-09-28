@@ -3,7 +3,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	width: 85px;
+	width: 90px;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 	opacity: .6;
@@ -23,29 +23,28 @@
 	background: transparent;
 }
 
-.up-button__text {
+.up-button__icon {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
 }
 
-.up-button_down .up-button__text:before {
+.up-button_down .up-button__icon:before {
 	transform: rotate(180deg);
 }
 
-.up-button__text {
-	font-family: Open Sans,sans-serif;
+.up-button__icon {
+	font-family: Open Sans, sans-serif;
 	font-size: 12px;
-	transform: scale(.9);
-	padding: 20px 0 0 10px;
+	padding: 35px 0;
+	text-align: center;
 }
 
-.up-button__text:before {
+.up-button__icon:before {
 	content: '';
 	display: inline-block;
-	width: 16px;
-	height: 10px;
-	margin-right: 5px;
+	width: 25px;
+	height: 20px;
 	background-image: url('./images/up-button.svg');
 	background-repeat: no-repeat;
 	background-size: 100%;

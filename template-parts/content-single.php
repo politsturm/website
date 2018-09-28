@@ -58,7 +58,7 @@
 
 	</div>
 
-<div class="up-button up-button_hidden"><div class="up-button__text">Наверх</div></div>
+<div class="up-button up-button_hidden"><div class="up-button__icon"></div></div>
 </article><!-- #article -->
 
 
