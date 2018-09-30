@@ -60,7 +60,7 @@
 	font-weight: 600;
 
 	margin-top: 20px;
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 }
 
 .content-post-single p {
@@ -193,6 +193,7 @@
 	letter-spacing: .4px;
 	color: rgba(0,0,0,.67);
 	text-align: right;
+	margin-bottom: 25px;
 }
 
 .content-time-icon {
