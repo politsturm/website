@@ -73,11 +73,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	margin-bottom: 10px;
 }
 
-.grid-post > h2 {
+.grid-post-title {
 	font-weight: normal;
 	text-align: center;
 	font-size: 19.5px;
 	letter-spacing: 0.6px;
+	display: none;
+}
+
+@media screen and (max-width:950px) {
+	.grid-post-title {
+		display: block;
+	}
 }
 
 .grid-post img,

@@ -21,7 +21,7 @@
 				}
 
 			?>
-			<h2>
+			<h2 class='grid-post-title'>
 				<?php the_title();?>
 			</h2>
 		<?php } ?>
