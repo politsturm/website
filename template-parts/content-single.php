@@ -52,9 +52,13 @@
 			if ($reading_time == 0)
 				$reading_time = 1;
 		?>
+<?php
+		/*
 		<div class="content-reading-time">
 			<span class="content-time-icon"></span> <?php echo $reading_time; ?> мин
 		</div>
+		 */
+?>
 
 		<div class="post-date post-date-mobile">
 			<?php echo get_the_date('M d, Y'); ?>
