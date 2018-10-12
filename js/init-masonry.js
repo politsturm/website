@@ -9,5 +9,7 @@ jQuery(window).load(function () {
 			gutter: 25,
 			percentPosition: true
 		});
+
+		window.masonryInstance = masonry;
 	}
 });
