@@ -31,9 +31,8 @@ jQuery(function($){
 				$('.main-news img').load(function () {
 					imagesLoaded++;
 					if (imagesLoaded === imageCount) {
-						masonryInstance
-							.masonry('reloadItems')
-							.masonry('layout'); 
+						masonryInstance.reloadItems();
+						masonryInstance.layout(); 
 					}
 				})
 				load_more_params.current_page++;
