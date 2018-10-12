@@ -7,6 +7,8 @@ jQuery(function($){
 			'query': load_more_params.posts,
 			'page': load_more_params.current_page
 		};
+
+		var masonryInstance = window.masonryInstance;
  
 		$.ajax({
 			url: load_more_params.ajaxurl,
@@ -29,7 +31,7 @@ jQuery(function($){
 				$('.main-news img').load(function () {
 					imagesLoaded++;
 					if (imagesLoaded === imageCount) {
-						$('.main-news')
+						masonryInstance
 							.masonry('reloadItems')
 							.masonry('layout'); 
 					}
