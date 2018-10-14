@@ -54,6 +54,11 @@
 	color: #1a1a1a;
 }
 
+.content-post-single h1,
+.content-post-single h2 {
+	font-family: 'Open Sans', sans-serif;
+}
+
 .content-title-single {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 40px;
