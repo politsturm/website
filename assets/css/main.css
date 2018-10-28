@@ -1314,6 +1314,11 @@ End of Header. Start of Main Page First Block
 	overflow: hidden;
 }
 
+.top-hitem__video {
+	display: block;
+	height: 253px;
+}
+
 .top-hitem img,
 .top-vitem img {
 	transition: transform .35s ease-in-out;
