@@ -13,8 +13,6 @@
 		<img src="https://politsturm.com/wp-content/uploads/2017/02/Без-имени-1.png" style="display:none;" itemprop="logo">
 		<span style="display:none;" itemprop="email">politsturm@gmail.com</span>
 		<a href="https://politsturm.com/" itemprop="url" style="display:none;">politsturm.com - Социалистический информационный ресурс</a>
-		<span style="display:none;" itemprop="address">USSR</span>
-		<span style="display:none;" itemprop="telephone">+79192335725</span>
 	</span>
 
 </div>
