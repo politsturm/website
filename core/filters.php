@@ -70,9 +70,9 @@ Class POLITSTURM_FILTERS {
 				$not_tags = array();
 			}
 
-            if (($term = get_term_by('slug', $tag_name, 'post_tag')) && !in_array($term->term_id, $not_tags)) {
-                array_push($not_tags, $term->term_id);
-            }
+			if (($term = get_term_by('slug', $tag_name, 'post_tag')) && !in_array($term->term_id, $not_tags)) {
+				array_push($not_tags, $term->term_id);
+			}
 
 			if ($query->is_home() && $query->is_main_query()) {
 				$query->set($field, $not_tags);
