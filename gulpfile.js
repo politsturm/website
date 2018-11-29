@@ -15,12 +15,7 @@ gulp.task('css', function () {
     ];
 
     return gulp.src('./assets/css/*.css')
-    	.pipe(concat('style.css'))
+        .pipe(concat('style.css'))
         .pipe(postcss(plugins))
         .pipe(gulp.dest('./'));
-});
-
-// watcher
-gulp.task('default', ['css'], function() {
-    gulp.watch(['./assets/css/*.css'], ['default']);
 });
