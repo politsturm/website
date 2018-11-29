@@ -1,15 +1,14 @@
 'use strict';
 
-var postcss = require('gulp-postcss');
-var gulp = require('gulp');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
-var concat = require('gulp-concat');
-
+const postcss = require('gulp-postcss');
+const gulp = require('gulp');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const concat = require('gulp-concat');
 
 // default css task
-gulp.task('css', function () {
-    var plugins = [
+exports.css = () => {
+    const plugins = [
         autoprefixer({browsers: ['last 1 version']}),
         cssnano()
     ];
@@ -18,9 +17,4 @@ gulp.task('css', function () {
     	.pipe(concat('style.css'))
         .pipe(postcss(plugins))
         .pipe(gulp.dest('./'));
-});
-
-// watcher
-gulp.task('default', ['css'], function() {
-    gulp.watch(['./assets/css/*.css'], ['default']);
-});
+};
