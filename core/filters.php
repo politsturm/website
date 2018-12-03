@@ -106,7 +106,11 @@ function modify_images( $content ) {
     $selected_images = $attachment_ids = array();
 
     foreach ( $matches[0] as $image ) {
-        if ( preg_match( '/size-([a-z]+)/i', $image, $class_size ) && preg_match( '/wp-image-([0-9]+)/i', $image, $class_id ) && $image_size = $class_size[1] && $attachment_id = absint( $class_id[1] ) ) {
+        if (
+            preg_match( '/size-([a-z]+)/i', $image, $class_size )
+            && preg_match( '/wp-image-([0-9]+)/i', $image, $class_id )
+            && $image_size = ($class_size[1] && $attachment_id = absint($class_id[1]))
+        ) {
             /*
              * If exactly the same image tag is used more than once, overwrite it.
              * All identical tags will be replaced later with 'str_replace()'.
