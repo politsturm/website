@@ -139,9 +139,6 @@ function modify_image_tag( $image, $attachment_id, $image_size ) {
     $size_large  = wp_get_attachment_image_src( $attachment_id, 'large' );
     $size_large  = $size_large ? $size_large[0] : '';
 
-    // Add 'data' attributes
-    $image = preg_replace( '/<img ([^>]+?)[\/ ]*>/', '<img $1' . $attr . ' />', $image );
-
     //Append <a> tag
     $r_image = sprintf( '<a id="image-%d" href='. $size_large .' data-fancybox="gallery">', $image_size, $attachment_id );
     $r_image .= $image . '</a>';
