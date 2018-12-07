@@ -18,9 +18,9 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-			<h2 class="main-support">
+			<div class="main-support">
 				Понравился материал? <a href="/podderzhat-nas">Поддержи издание</a>
-			</h2>
+			</div>
 
 			<div class="related-container">
 					<?php
