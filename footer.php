@@ -26,7 +26,6 @@
 				social("https://www.facebook.com/politsturm/", "Facebook",    "#facebook");
 				social("https://vk.com/politsturm",            "Вконтакте",   "#vk");
 				social("https://twitter.com/politsturm",       "Twitter",     "#twitter");
-				social("http://politshturm.livejournal.com/",  "LiveJournal", "#livejournal");
 				social("https://t.me/politsturm",              "Telegram",    "#telegram");
 			?>
 	  </ul>
