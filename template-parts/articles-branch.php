@@ -11,7 +11,7 @@
 		<iframe width="100%" height="420" class="article__video articles-branch__video" src="https://www.youtube.com/embed/<?php echo $youtube_link;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 	<?php } else {
-		$image = get_the_post_thumbnail_url($post->ID, 'medium');
+		$image = get_the_post_thumbnail_url($post->ID, 'large');
 
 		if ($image) {
 			?>
