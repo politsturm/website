@@ -24,6 +24,7 @@
 					get_template_part('template-parts/social') ;
 				}
 				social("https://www.facebook.com/politsturm/", "Facebook",    "#facebook");
+				social('https://www.youtube.com/channel/UCdWGGzM6fX5xVq1gDNZev0A', 'Youtube', '#youtube');
 				social("https://vk.com/politsturm",            "Вконтакте",   "#vk");
 				social("https://twitter.com/politsturm",       "Twitter",     "#twitter");
 				social("https://t.me/politsturm",              "Telegram",    "#telegram");
