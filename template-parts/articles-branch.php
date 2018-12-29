@@ -8,7 +8,7 @@
 			$youtube_link = empty($match[1][0]) ? $match[2][0] : $match[1][0];
 		?>
 
-		<iframe width="100%" height="479" class="article__video articles-branch__video" src="https://www.youtube.com/embed/<?php echo $youtube_link;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<iframe width="100%" height="420" class="article__video articles-branch__video" src="https://www.youtube.com/embed/<?php echo $youtube_link;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 	<?php } else {
 		$image = get_the_post_thumbnail_url($post->ID, 'medium');
