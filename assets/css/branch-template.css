@@ -18,6 +18,10 @@
 	width: 100%;
 }
 
+.branch-template__aside-col .aside-about {
+	margin-top: 50px;
+}
+
 .branch-card {
 	background: #fff;
 	border-radius: 10px;

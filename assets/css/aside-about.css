@@ -1,0 +1,23 @@
+.aside-about {
+	max-width: 190px;
+	margin: 10px auto;
+}
+
+.aside-social__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.aside-social a {
+	transition: opacity .2s ease-in-out;
+}
+
+.aside-social a:hover {
+	opacity: .6;
+}
+
+.aside-social svg {
+	height: 32px;
+	width: 100%;
+}

@@ -60,6 +60,7 @@ function load_top_posts($meta_value, $count, $class) {
 			</div>
 			<div class="branch-template__aside-col">
 				<?php get_template_part('template-parts/most-readable'); ?>
+				<?php get_template_part('template-parts/aside-about'); ?>
 			</div>
 		</div>
 	</main><!-- #main -->
