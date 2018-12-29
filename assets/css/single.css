@@ -185,22 +185,3 @@
 .comments-area {
 	padding: 15px;
 }
-
-.content-reading-time {
-	opacity: .67;
-	font-family: Open Sans,sans-serif;
-	font-size: 15px;
-	letter-spacing: .4px;
-	color: rgba(0,0,0,.67);
-	text-align: right;
-	margin-bottom: 25px;
-}
-
-.content-time-icon {
-	background-image: url('images/clock.svg');
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	position: relative;
-	top: 4px;
-}

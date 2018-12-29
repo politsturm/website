@@ -1,0 +1,16 @@
+.reading-time {
+	font-family: Open Sans,sans-serif;
+	letter-spacing: .4px;
+	display: flex;
+	align-items: center;
+}
+
+.reading-time:before {
+	content: '';
+	background-image: url('./images/clock.svg');
+	background-size: cover;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 2px;
+}

@@ -9,12 +9,13 @@
 
 /** Require theme files **/
 
-require_once( 'core/register_theme.php');
+require_once('core/register_theme.php');
 
-require_once( 'assets/assets.php' );
+require_once('assets/assets.php');
 
-require_once( 'core/customs.php' );
-require_once( 'core/widgets.php' );
-require_once( 'core/filters.php' );
-require_once( 'core/deregister.php' );
-require_once( 'core/main_news.php' );
+require_once('core/post-view-counter.php');
+require_once('core/customs.php');
+require_once('core/widgets.php');
+require_once('core/filters.php');
+require_once('core/deregister.php');
+require_once('core/main_news.php');

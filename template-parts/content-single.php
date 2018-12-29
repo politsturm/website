@@ -11,7 +11,6 @@
 
 <article itemscope itemtype=http://schema.org/Article id="post-<?php the_ID(); ?>" class="content-post-single">
 <meta itemprop="inLanguage" content="ru" />
-
 	<div class="content-upmeta-single">
 		<?php
 			setup_postdata($post);
@@ -41,24 +40,6 @@
 		<h1 itemprop="headline name" class="content-title-single">
 			<?php the_title(); ?>
 		</h1>
-
-		<?php
-			$content = get_the_content();
-			$content = apply_filters( 'the_content', $content );
-			$content = str_replace( ']]>', ']]&gt;', $content );
-			$count = str_word_count(strip_tags($content), 0, ' ');
-			$READING_SPEED = 160; // words per minute
-			$reading_time = round($count / $READING_SPEED);
-			if ($reading_time == 0)
-				$reading_time = 1;
-		?>
-<?php
-		/*
-		<div class="content-reading-time">
-			<span class="content-time-icon"></span> <?php echo $reading_time; ?> мин
-		</div>
-		 */
-?>
 
 		<div class="post-date post-date-mobile">
 			<?php echo get_the_date('M d, Y'); ?>

@@ -150,6 +150,11 @@ add_filter('excerpt_more', function($more) {
 	return '';
 });
 
+// branch pages
+add_filter('body_class', function($classes) {
+	return array_merge($classes, array('branch-theme'));
+});
+
 add_filter('get_the_archive_title', function( $title ){
 	return preg_replace('~^[^:]+: ~', '', $title );
 });
