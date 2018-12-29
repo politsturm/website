@@ -55,3 +55,11 @@
 		width: 90%;
 	}
 }
+
+.related-container-title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0.9px;
+}

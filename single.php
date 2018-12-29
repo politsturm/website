@@ -20,9 +20,13 @@ get_header(); ?>
 			?>
 
 			<div class="main-support">
-				Понравился материал? <a href="/podderzhat-nas">Поддержи издание</a>
+				Понравился материал?<br>
+				<a href="/podderzhat-nas">Поддержи «Политштурм»</a>
 			</div>
 
+			<div class="related-container-title">
+				Также читают:
+			</div>
 			<div class="related-container">
 					<?php
 					$this_id = get_the_ID();
@@ -43,6 +47,7 @@ get_header(); ?>
 						while ( $query->have_posts() ) : $query->the_post();
 							get_template_part( 'template-parts/content-related', get_post_format() );
 						endwhile;
+
 
 						wp_reset_postdata();
 					} else {

@@ -57,11 +57,6 @@ Class POLITSTURM_FILTERS {
 		return $content . $button_share;
 	}
 
-	public static function post_date( $content ) {
-		$date = '<div class="post-date">' . get_the_date('M d, Y') . '</div>';
-		return $content . $date;
-	}
-
 	public static function skip_tag($tag_name) {
 		return function ($query) use ($tag_name) {
 			$field = 'tag__not_in';
@@ -88,7 +83,6 @@ add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'separator' ) );
 
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'start_info_block' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
-add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'post_date' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
 
 add_filter( 'the_content', 'modify_images', 100 );
