@@ -28,7 +28,7 @@
 .branch-card__cover {
 	display: block;
 	background-size: 100%;
-	background-position: 50%;
+	background-position: 50% 0;
 	background-repeat: no-repeat;
 }
 
