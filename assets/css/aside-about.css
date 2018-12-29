@@ -21,3 +21,14 @@
 	height: 32px;
 	width: 100%;
 }
+
+.aside-footer {
+	margin-top: 45px;
+}
+
+.aside-footer li {
+	list-style-type:none;
+	font-size: 19px;
+	line-height: 24px;
+	padding: 10px;
+}
