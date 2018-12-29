@@ -33,7 +33,7 @@
 }
 
 .branch-card__image {
-	height: 420px;
+	max-height: 420px;
 	opacity: 0;
 }
 
@@ -47,17 +47,26 @@
 }
 
 .branch-card__read-more {
-	text-decoration: underline;
+	display: inline-block;
+	position: relative;
 }
 
-.branch-card__read-more:hover {
-	text-decoration: none;
+.branch-card__read-more:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	border-bottom: 1px solid #cfcfcf;
+	bottom: -2px;
+}
+
+.branch-card__read-more:hover:after {
+	opacity: 0;
 }
 
 .branch-card__info {
 	font-size: 12px;
 	color: #979797;
-	text-transform: uppercase;
 	display: flex;
 }
 
