@@ -4,10 +4,8 @@
 			<div class="branch-template__main-col">
 				<div>
 					<?php
-						$top_ids = array_merge($h_ids, $v_ids);
-						$args = $wp_args;
-						$args['post__not_in'] = $top_ids;
-						query_posts($args);
+						global $wp_query;
+						query_posts();
 						POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
 						while (have_posts()) {
 							the_post();
