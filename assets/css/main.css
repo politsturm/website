@@ -838,6 +838,10 @@ a:active {
 	outline: none;
 }
 
+.branch-theme .search input {
+	background-color: #fafafd;
+}
+
 .search button {
 	background: transparent;
 	padding: 0;
