@@ -77,3 +77,32 @@
 .branch-card__time {
 	margin-left: 30px;
 }
+
+/* Mobile */
+
+@media screen and (max-width: 950px) {
+	.branch-card__text {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.branch-card__title {
+		width: 100%;
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+
+	.branch-card__info {
+		order: 2;
+		width: 100%;
+	}
+
+	.branch-card__excerpt {
+		width: 100%;
+		font-size: 15px;
+	}
+
+	.branch-card__read-more {
+		display: none;
+	}
+}

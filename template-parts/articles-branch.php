@@ -29,7 +29,9 @@
 								<?php get_template_part('template-parts/reading-time'); ?>
 							</div>
 						</div>
-						<p class="branch-card__excerpt"><?php the_excerpt();?></p>
+						<div class="branch-card__excerpt">
+							<?php the_excerpt();?>
+						</div>
 						<a href="<?php the_permalink();?>" class="branch-card__read-more">Читать далее</a>
 					</div>
 				</div>
