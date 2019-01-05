@@ -9,12 +9,14 @@ function appendHtml(el, str) {
 var BOTTOM_OFFSET = 500;
 
 window.onload = function() {
-	var listElm = document.querySelector('.branch-template__main-col');
+	var element = document.querySelector('.branch-template__main-col');
+	var loadInProcess = false;
 
 	function infLoadMore() {
 		loadMore({
 			success: function(data) {
-				appendHtml(listElm, data);
+				appendHtml(element, data);
+				loadInProcess = false;
 			},
 			end: function() { }
 		});
@@ -22,8 +24,11 @@ window.onload = function() {
 
 	// Detect when scrolled to bottom.
 	window.onscroll = function() {
-		var position = window.innerHeight + window.scrollY + BOTTOM_OFFSET;
-		if (position >= document.body.offsetHeight) {
+		var rect = element.getBoundingClientRect();
+		var bottom = + element.offsetTop + rect.height - BOTTOM_OFFSET;
+		var position = window.scrollY + window.innerHeight;
+		if (position >= bottom && !loadInProcess) {
+			loadInProcess = true;
 			infLoadMore();
 		}
 	};
