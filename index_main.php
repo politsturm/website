@@ -44,9 +44,10 @@
 				$args['post__not_in'] = $top_ids;
 				query_posts($args);
 				LOAD_MORE::update_posts_load_more($wp_query);
+				$template_name = POLITSTURM_BRANCH::get_article_template_name();
 				while (have_posts()) {
 					the_post();
-					get_template_part('template-parts/article');
+					get_template_part('template-parts/'.$template_name);
 				}
 			?>
 		</div>
