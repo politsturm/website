@@ -19,7 +19,7 @@
 }
 
 .content-info {
-	width: 720px;
+	max-width: 720px;
 	margin: 0 auto;
 	display: flex;
 }
@@ -75,7 +75,7 @@
 	margin-left: auto;
 	margin-right: auto;
 
-	width: 720px;
+	max-width: 720px;
 }
 
 .content-post-single p {
@@ -236,4 +236,22 @@
 	font-weight: bold;
 	line-height: 1.45;
 	letter-spacing: normal;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 950px) {
+	.content-title-single {
+		font-size: 22px;
+		font-weight: 600;
+		letter-spacing: -0.26px;
+	}
+
+	.content-post-single p {
+		font-size: 15px;
+	}
+
+	.main-support a {
+		font-size: 18px;
+	}
 }
