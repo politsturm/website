@@ -14,16 +14,28 @@ class LOAD_MORE {
 		));
 	}
 
+	private static function get_template_name($site_type) {
+		switch ($site_type) {
+			case 'main':
+				return 'article';
+			case 'branch':
+				return 'articles-branch';
+		}
+		return 'article';
+	}
+
 	public static function load_more_ajax_handler() {
 		$args = json_decode( stripslashes( $_POST['query'] ), true );
 		$args['paged'] = $_POST['page'] + 1;
 		$args['post_status'] = 'publish';
 
+		$template_name = LOAD_MORE::get_template_name($_POST['site_type']);
+
 		query_posts($args);
 
 		while (have_posts()) {
 			the_post();
-			get_template_part('template-parts/article');
+			get_template_part('template-parts/'.$template_name);
 		}
 		die;
 	}
