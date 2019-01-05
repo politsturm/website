@@ -19,7 +19,6 @@ function loadMore(callbacks) {
 	formData.append('action', 'loadmore');
 	formData.append('query', load_more_params.posts);
 	formData.append('page', load_more_params.current_page);
-	formData.append('site_type', 'branch');
 
 	xhr.send(formData);
 }

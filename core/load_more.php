@@ -14,14 +14,15 @@ class LOAD_MORE {
 		));
 	}
 
-	private static function get_template_name($site_type) {
+	private static function get_site_type($site_type) {
 		switch ($site_type) {
-			case 'main':
-				return 'article';
-			case 'branch':
-				return 'articles-branch';
+		case 'branch':
+			return SiteType::BranchSite;
+		case 'main':
+			return SiteType::MainSite;
 		}
-		return 'article';
+
+		return SiteType::UnknownType;
 	}
 
 	public static function load_more_ajax_handler() {
@@ -29,7 +30,7 @@ class LOAD_MORE {
 		$args['paged'] = $_POST['page'] + 1;
 		$args['post_status'] = 'publish';
 
-		$template_name = LOAD_MORE::get_template_name($_POST['site_type']);
+		$template_name = POLITSTURM_BRANCH::get_article_template_name();
 
 		query_posts($args);
 
