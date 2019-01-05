@@ -16,8 +16,11 @@
 				<div class="news-loadmore">Загрузить ещё</div>
 			</div>
 			<div class="branch-template__aside-col">
-				<?php get_template_part('template-parts/most-readable'); ?>
-				<?php get_template_part('template-parts/aside-about'); ?>
+				<?php
+					get_template_part('template-parts/most-readable');
+					get_template_part('template-parts/main-link');
+					get_template_part('template-parts/aside-about');
+				?>
 			</div>
 		</div>
 	</main><!-- #main -->
