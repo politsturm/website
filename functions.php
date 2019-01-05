@@ -22,4 +22,5 @@ require_once('core/deregister.php');
 require_once('core/load_more.php');
 require_once('core/main_news.php');
 
+require_once('core/infinite_scroll.php');
 require_once('branch_settings.php');
