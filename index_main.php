@@ -43,7 +43,7 @@
 				$args = $wp_args;
 				$args['post__not_in'] = $top_ids;
 				query_posts($args);
-				POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
+				LOAD_MORE::update_posts_load_more($wp_query);
 				while (have_posts()) {
 					the_post();
 					get_template_part('template-parts/article');
