@@ -8,10 +8,15 @@
 	background-color: #f5f8fa;
 	padding: 20px;
 	margin: 0;
+	font-size: 19px;
 }
 
 .most-readable__item {
 	margin-bottom: 30px;
+}
+
+.most-readable__item-title {
+	font-size: 19px;
 }
 
 .most-readable__item:last-child {
