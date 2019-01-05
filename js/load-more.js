@@ -1,27 +1,24 @@
 function loadMore(callbacks) {
-	var data = {
-		'action': 'loadmore',
-		'query': load_more_params.posts,
-		'page': load_more_params.current_page
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', load_more_params.ajaxurl);
+	xhr.onload = function() {
+		if (xhr.status !== 200) {
+			callbacks.end();
+			return;
+		}
+
+		callbacks.success(xhr.responseText);
+		load_more_params.current_page++;
+
+		if (load_more_params.current_page === load_more_params.max_page) {
+			callbacks.end();
+		}
 	};
 
-	jQuery.ajax({
-		url: load_more_params.ajaxurl,
-		data: data,
-		type: 'POST',
-		beforeSend: callbacks.beforeSend,
-		success: function(data) {
-			if (!data) {
-				callbacks.end();
-				return;
-			}
+	var formData = new FormData();
+	formData.append('action', 'loadmore');
+	formData.append('query', load_more_params.posts);
+	formData.append('page', load_more_params.current_page);
 
-			callbacks.success(data);
-			load_more_params.current_page++;
-
-			if (load_more_params.current_page === load_more_params.max_page) {
-				callbacks.end();
-			}
-		}
-	});
+	xhr.send(formData);
 }

@@ -4,10 +4,8 @@ jQuery(function($){
 		var button = $(this);
 		var masonryInstance = window.masonryInstance;
 
+		button.text('Загрузка...');
 		loadMore({
-			beforeSend: function (xhr) {
-				button.text('Загрузка...');
-			},
 			success: function(data) {
 				button.text('Загрузить ещё');
 				$('.main-news').append(data);
