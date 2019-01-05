@@ -13,6 +13,7 @@ window.onload = function() {
 	var loadInProcess = false;
 
 	function infLoadMore() {
+		loadInProcess = true;
 		loadMore({
 			success: function(data) {
 				appendHtml(element, data);
@@ -28,7 +29,6 @@ window.onload = function() {
 		var bottom = + element.offsetTop + rect.height - BOTTOM_OFFSET;
 		var position = window.scrollY + window.innerHeight;
 		if (position >= bottom && !loadInProcess) {
-			loadInProcess = true;
 			infLoadMore();
 		}
 	};

@@ -6,10 +6,6 @@
 					global $wp_query;
 					query_posts($wp_args);
 					LOAD_MORE::update_posts_load_more($wp_query);
-					while (have_posts()) {
-						the_post();
-						get_template_part('template-parts/articles-branch');
-					}
 				?>
 			</div>
 			<div class="branch-template__aside-col">

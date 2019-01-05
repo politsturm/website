@@ -5,7 +5,7 @@ class LOAD_MORE {
 	public static function update_posts_load_more($query) {
 		wp_enqueue_script('load-more', get_stylesheet_directory_uri().'/js/load-more.js');
 
-		$page = $query->get('paged') ? $query->get('paged') : 1;
+		$page = $query->get('paged') ? $query->get('paged') : 0;
 		wp_localize_script('load-more', 'load_more_params', array(
 			'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
 			'posts' => json_encode($query->query_vars),
