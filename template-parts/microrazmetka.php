@@ -3,7 +3,7 @@
 
 	<?php $iurl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 	<span itemprop="headline name"> <?php the_title(); ?></span>
-	<span itemprop="datePublished"> <?php echo get_the_date(Y-M-D); ?></span>
+	<span itemprop="datePublished"> <?php echo get_the_date('Y-M-D'); ?></span>
 	<span itemprop="description"> <?php echo get_the_excerpt(); ?> </span>
 	<span itemprop="image"><?php echo $iurl; ?></span>
 	<span style="display:none;" itemprop="keywords"><?php echo get_the_tag_list( '', ', ' ); ?> ,<?php echo get_the_category_list(', '); ?></span>

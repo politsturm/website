@@ -48,7 +48,7 @@
 
 			<div class="autor-box-right">
 				<span class="author-posts-single" itemprop="name"><?php echo get_the_author_meta('display_name'); ?></span><br>
-				<span class="content-date-single" itemprop="datePublished"><?php echo get_the_date(Y-M-D); ?></span>
+				<span class="content-date-single" itemprop="datePublished"><?php echo get_the_date('Y-M-D'); ?></span>
 			</div>
 
 			</div>
