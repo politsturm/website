@@ -5,7 +5,7 @@
 				<div>
 					<?php
 						global $wp_query;
-						query_posts();
+						query_posts($wp_args);
 						POLITSTURM_MAIN_NEWS::update_posts_load_more($wp_query);
 						while (have_posts()) {
 							the_post();
