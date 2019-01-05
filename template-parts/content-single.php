@@ -59,7 +59,7 @@
 			</a>
 		</div>
 		<div class="content-text" itemprop="articleBody">
-			<?php echo $content; ?>
+			<?php the_content(); ?>
 		</div>
 
 	</div>
