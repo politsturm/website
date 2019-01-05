@@ -5,7 +5,7 @@
 
 	background-color: #fff;
 	position: relative;
-	padding-top: 50px;
+	padding-top: 60px;
 	padding-bottom: 50px;
 	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
@@ -24,6 +24,10 @@
 	list-style: none;
 }
 
+#footer ul {
+	margin: 0;
+}
+
 .footer-wrap {
 	margin: 0px auto;
 	overflow: hidden;
@@ -34,7 +38,6 @@
 }
 
 .footer-area {
-	padding: 15px;
 	float:left;
 }
 
