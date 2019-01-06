@@ -821,7 +821,7 @@ a:active {
 }
 
 .search input {
-	background-color: #fff;
+	background-color: transparent;
 	border-top: none;
 	display: block;
 	pointer-events: none;
@@ -836,10 +836,6 @@ a:active {
 	line-height: 16px;
 	color: #000;
 	outline: none;
-}
-
-.branch-theme .search input {
-	background-color: #fafafd;
 }
 
 .search button {
