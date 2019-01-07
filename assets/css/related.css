@@ -14,18 +14,12 @@
 }
 
 .related-post-image {
+	height: 210px;
 }
 
 .related-post-image img {
 	object-fit: cover;
 	border-radius: 10px;
-
-	/*
-	max-width:230px;
-	max-height:95px;
-	width: auto;
-	height: auto;
-	*/
 	height: 100%;
 }
 
