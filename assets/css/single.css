@@ -10,11 +10,15 @@
 }
 
 .main-support {
-	margin: 75px auto;
-	max-width: 515px;
+	margin: 40px auto;
+	max-width: 719px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 25px;
 	letter-spacing: 0.6px;
+
+	background-color: #f5f8fa;
+	border-radius: 10px;
+	padding: 36px 100px;
 }
 
 .main-support a {
