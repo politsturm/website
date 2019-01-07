@@ -21,9 +21,9 @@
 				}
 
 			?>
-			<h2>
-				<?php the_title();?>
-			</h2>
 		<?php } ?>
+		<h2>
+			<?php the_title();?>
+		</h2>
 	</article>
 </a>
