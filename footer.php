@@ -15,7 +15,7 @@
 
 <div id="footer">
 	<div class="footer-wrapper">
-		<div class="social">
+		<div class="footer-wrapper__social social">
 			<ul>
 				<?php
 					function social($url, $title, $svg_id) {
@@ -33,10 +33,10 @@
 		  </ul>
 		</div>
 
-		<div class="footer-wrap">
-			<div class="footer-area"><?php dynamic_sidebar('footer-1'); ?></div>
-			<div class="footer-area"><?php dynamic_sidebar('footer-2'); ?></div>
-			<div class="footer-area"><?php dynamic_sidebar('footer-3'); ?></div>
+		<div class="footer-wrapper__links">
+			<div class="footer-wrapper__link"><?php dynamic_sidebar('footer-1'); ?></div>
+			<div class="footer-wrapper__link"><?php dynamic_sidebar('footer-2'); ?></div>
+			<div class="footer-wrapper__link"><?php dynamic_sidebar('footer-3'); ?></div>
 		</div>
 	</div>
 </div>
