@@ -32,15 +32,19 @@
 				</h2>
 				<div class="branch-card__info">
 					<div class="branch-card__date"><?php echo get_the_date('d M, Y'); ?></div>
-					<div class="branch-card__time">
-						<?php get_template_part('template-parts/reading-time'); ?>
-					</div>
-				</div>
-				<div class="branch-card__excerpt">
-					<?php the_excerpt();?>
+<?php
+					if (!in_category('video')) { ?>
+						<div class="branch-card__time">
+							<?php get_template_part('template-parts/reading-time'); ?>
+						</div>
+<?php
+					} ?>
 				</div>
 <?php
 			if (!in_category('video')) { ?>
+				<div class="branch-card__excerpt">
+					<?php the_excerpt();?>
+				</div>
 				<a href="<?php the_permalink();?>" class="branch-card__read-more">Читать далее</a>
 <?php
 			} ?>
