@@ -180,6 +180,11 @@
 	display: none;
 }
 
+.mmul.active,
+.mmul.active .mob-menu-button ul {
+	display:  block;
+}
+
 @media screen and (max-width:1350px) {
 	.menuTop li a {
 		font-size: 16px;
@@ -198,6 +203,10 @@
 @media screen and (max-width:950px) {
 	.menuTop {
 		display: none;
+	}
+
+	.menu__arrow {
+		display: block;
 	}
 
 	.mob-menu-button ul {

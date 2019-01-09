@@ -766,6 +766,10 @@ a:active {
 		background-color: rgba(0,0,0,.2);
 	}
 
+	.header-overlay.active {
+		display: block;
+	}
+
 	.search-mob-wrapper .search {
 		max-width: 100%;
 		width: 100%;

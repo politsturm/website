@@ -5,11 +5,6 @@
 		var SEARCH_NODE = $('.search');
 		var SEACH_INPUT = $('.search input');
 		var OVERLAY = $('.header-overlay');
-		var ANIMATION_PARAMS = {
-			duration: 200,
-			easing: 'linear',
-			queue: false
-		};
 
 		// events
 		$('.mob-menu-button').click(openMenu);
@@ -19,13 +14,15 @@
 
 		// handlers
 		function openMenu() {
-			MAIN_MENU_NODE.fadeIn(ANIMATION_PARAMS);
-			OVERLAY.fadeIn(ANIMATION_PARAMS);
+			MAIN_MENU_NODE.addClass('active');
+			OVERLAY.addClass('active');
 		}
 
-		function closeMenu() {
-			MAIN_MENU_NODE.fadeOut(ANIMATION_PARAMS);
-			OVERLAY.fadeOut(ANIMATION_PARAMS);
+		function closeMenu(event) {
+			event.stopPropagation();
+
+			MAIN_MENU_NODE.removeClass('active');
+			OVERLAY.removeClass('active');
 		}
 
 		function showChilds(event) {
