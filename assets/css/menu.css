@@ -115,6 +115,11 @@
 	margin-top: 2px;
 }
 
+.menu-item-has-children:hover:before,
+.menu-item-has-children:hover:after {
+	opacity: 1;
+}
+
 /* to prevent hover cancel */
 .menu-item-has-children:hover .sub-menu:before {
 	content: '';
