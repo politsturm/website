@@ -199,6 +199,14 @@
 }
 
 @media screen and (max-width:950px) {
+	.branch-template__aside-col {
+		display: none;
+	}
+
+	.home.branch-theme #footer {
+		display: none;
+	}
+
 	.menuTop {
 		display: none;
 	}
