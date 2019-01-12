@@ -26,11 +26,12 @@
 	color: #080808;
 	text-decoration: none;
 	text-transform: capitalize;
-	font-size: 17px;
+	font-size: 15px;
 	letter-spacing: 0.6px;
 	line-height: 21px;
 	font-weight: 600;
 	outline: none;
+	white-space: nowrap;
 }
 
 .menuTop a:hover {
@@ -57,13 +58,12 @@
 	display: none;
 	position: relative;
 	width: auto;
-	padding: 0 10px;
-	min-width:100%;
+	padding: 5px 30px;
+	min-width: 100%;
 	left: 0;
 	margin: 0 -15px;
 	margin-top: 8px;
 	background-color: #fff;
-	box-shadow: 0 0 1px 1px rgba(0,0,0,.2);
 	border-radius: 5px;
 }
 
@@ -100,12 +100,14 @@
 	top: 4px;
 }
 
+/* border for menu arrow */
+/*
 .menu-item-has-children:before {
 	border: 10px solid;
 	border-color: #ccc transparent;
 	border-top-width: 0;
 	margin-left: -9px;
-}
+}*/
 
 .menu-item-has-children:after {
 	border: 9px solid;
@@ -134,7 +136,7 @@
 .menuTop ul.sub-menu a {
 	font-family: 'Open Sans',sans-serif;
 	color: rgba(0,0,0,.6);
-	font-size: 16px;
+	font-size: 15px;
 	margin: 20px 0;
 }
 
@@ -161,11 +163,6 @@
 	margin-top: 0;
 }
 
-.menuTop li li {
-	float: none;
-	min-width: 200px;
-}
-
 .menuTop li li a {
 	padding: 0.8vw;
 	display: block;
@@ -187,7 +184,7 @@
 
 @media screen and (max-width:1350px) {
 	.menuTop li a {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	.mnews .rt-tpg-container .rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height {
 		display: none;
@@ -197,6 +194,7 @@
 @media screen and (max-width:1200px) {
 	.menuTop li a {
 		font-size: 13px;
+		white-space: normal;
 	}
 }
 
