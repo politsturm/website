@@ -533,18 +533,6 @@ a:active {
 	margin: 0 auto;
 }
 
-.site-header {
-	height: 70px;
-	width: 100%;
-	margin-bottom: 20px;
-}
-
-.site-header li,
-.site-header ol,
-.site-header ul {
-	list-style: none;
-}
-
 .page-header {
 	text-align: center;
 }
@@ -564,7 +552,7 @@ a:active {
 }
 
 .logo a {
-	width: 120px;
+	width: 129px;
 	display: block;
 }
 
@@ -747,11 +735,6 @@ a:active {
 	.mp-top {
 		box-shadow: none !important;
 		background-color: none !important;
-	}
-
-	.site-header {
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-		background-color: #fff;
 	}
 
 	.header-overlay {
@@ -1165,8 +1148,6 @@ End of Header. Start of Main Page First Block
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -1179,7 +1160,6 @@ End of Header. Start of Main Page First Block
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
 	clear: both;
