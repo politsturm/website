@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'BankGothicCMdBT-Medium';
+	font-family: 'BankGothicCMdBT';
 	src: url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.eot?#iefix') format('embedded-opentype'),
 	     url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.otf')  format('opentype'),
 	     url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.woff') format('woff'),
@@ -11,7 +11,7 @@
 
 .logo-branch_name {
 	display: block;
-	font-family: BankGothicCMdBT-Medium;
+	font-family: 'BankGothicCMdBT';
 	font-size: 14px;
 	letter-spacing: 0.7px;
 }
