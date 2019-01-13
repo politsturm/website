@@ -656,8 +656,8 @@ a:active {
 }
 
 .search-icon {
-	width: 100%;
-	height: 100%;
+	width: 15px;
+	height: 15px;
 	vertical-align: middle;
 	display: inline-block;
 	background-image: url('images/header/search.svg');
