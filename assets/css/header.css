@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'BankGothicCMdBT-Medium';
+	src: url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.otf')  format('opentype'),
+	     url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.woff') format('woff'),
+	     url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.ttf')  format('truetype'),
+	     url('fonts/BankGothicCMdBT/BankGothicCMdBT-Medium.svg#ProximaNovaT-Thin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.logo-branch_name {
+	display: block;
+	font-family: BankGothicCMdBT-Medium;
+	font-size: 14px;
+	letter-spacing: 0.7px;
+}
+
+.site-header {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.site-header li,
+.site-header ol,
+.site-header ul {
+	list-style: none;
+}
+
+/* Remove? */
+.site-header:before,
+.site-header:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+/* Remove? */
+.site-header:after {
+	clear: both;
+}
+
+@media screen and (max-width:950px) {
+	.logo-branch_name {
+		display: none;
+	}
+
+	.site-header {
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+	}
+}
+
