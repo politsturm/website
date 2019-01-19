@@ -4,7 +4,6 @@
 			<div class="branch-template__main-col">
 				<?php
 					global $wp_query;
-					query_posts($wp_args);
 					LOAD_MORE::update_posts_load_more($wp_query);
 				?>
 			</div>
@@ -16,5 +15,5 @@
 				?>
 			</div>
 		</div>
-	</main><!-- #main -->
-</div><!-- #primary -->
+	</main>
+</div>
