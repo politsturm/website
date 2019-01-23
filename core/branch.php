@@ -10,7 +10,7 @@ Class POLITSTURM_BRANCH {
 
 	public static function get_site_type() {
 		$site_type = get_option('site_type');
-		if (count($site_type) < 1) {
+		if (is_array($site_type) && count($site_type) < 1) {
 			return UnknownType;
 		}
 

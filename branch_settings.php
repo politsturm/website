@@ -66,7 +66,8 @@ class BranchSettingsPlugin {
 				'label' => 'Branch name',
 				'section' => 'branch_settings',
 				'type' => 'text',
-				'placeholder' => 'Russian',
+				'placeholder' => 'Россия',
+				'default' => 'Россия'
 			),
 			array(
 				'uid' => 'site_type',
@@ -136,11 +137,11 @@ class BranchSettingsPlugin {
 			break;
 		}
 
-		if( $helper = $arguments['helper'] ){
+		if( in_array('helper', $arguments) && $helper = $arguments['helper'] ){
 			printf( '<span class="helper"> %s</span>', $helper );
 		}
 
-		if( $supplimental = $arguments['supplimental'] ){
+		if( in_array('supplimental', $arguments) && $supplimental = $arguments['supplimental'] ){
 			printf( '<p class="description">%s</p>', $supplimental );
 		}
 
