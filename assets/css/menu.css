@@ -240,10 +240,8 @@
 		transition: transform .2s ease-in-out;
 	}
 
-	.mob-menu-button .search-mob-wrapper {
-		width: 100%;
-		padding: 50px 15px 15px 30px;
-		text-align: right;
+	.mnews .rt-tpg-container .rt-equal-height+.rt-equal-height+.rt-equal-height+.rt-equal-height {
+		display: none;
 	}
 
 	.mob-menu-button .menu-item-has-children.opened > a {

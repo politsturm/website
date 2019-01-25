@@ -77,11 +77,12 @@ $favicon_url = $theme_url."/assets/img/favicon/"
 					<div class="search-mob-wrapper">
 						<div class="search">
 							<form id="searchform" name="search" action="<?php echo home_url( '/' ) ?>" role="search" method="get" class="search-form">
-								<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="Поиск" id="s" class="search-input">
+								<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="Поиск..." id="s" class="search-input">
 								<button id="searchsubmit" class="search-button">
 									<span class="search-icon"></span>
 								</button>
 							</form>
+							<div class="search__close"></div>
 						</div>
 					</div>
 					</ul>
@@ -100,11 +101,12 @@ $favicon_url = $theme_url."/assets/img/favicon/"
 				</div>
 				<div class="search">
 					<form id="searchform" name="search" action="<?php echo home_url( '/' ) ?>" role="search" method="get" class="search-form">
-						<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="Поиск" id="s" class="search-input">
+						<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="Поиск..." id="s" class="search-input">
 						<button id="searchsubmit" class="search-button">
 							<span class="search-icon"></span>
 						</button>
 					</form>
+					<div class="search__close"></div>
 				</div>
 	        </div>
         </div>

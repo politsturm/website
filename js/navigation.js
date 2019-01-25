@@ -11,6 +11,7 @@
 		$('.mmul-close').click(closeMenu);
 		$('.menu__arrow').click(showChilds);
 		$('.search-button').click(searchClick);
+		$('.search__close').click(closeSearch);
 
 		// handlers
 		function openMenu() {
@@ -72,14 +73,6 @@
 
 		function closeSearch() {
 			SEARCH_NODE.removeClass('active');
-		}
-
-		function checkSearchValue() {
-			var value = SEACH_INPUT.val();
-
-			if (value) {
-				openSearch();
-			}
 		}
 
 		function inputListener(e) {
