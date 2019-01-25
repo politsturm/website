@@ -138,12 +138,16 @@
 
 @media screen and (max-width:399px) {
 	.search.active #searchform {
-		width: 80%;
+		width: 90%;
 	}
 
 	.search__close {
 		top: 42px;
 		right: 19px;
+	}
+
+	.search input {
+		font-size: 20px;
 	}
 
 	.header-right .search {
