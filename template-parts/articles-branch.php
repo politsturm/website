@@ -45,7 +45,9 @@
 				<div class="branch-card__excerpt">
 					<?php the_excerpt();?>
 				</div>
-				<a href="<?php the_permalink();?>" class="branch-card__read-more">Читать далее</a>
+				<a href="<?php the_permalink();?>" class="branch-card__read-more">
+				<?php _e('Read more', 'politsturm') ?>
+				</a>
 <?php
 			} ?>
 			</div>

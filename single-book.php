@@ -45,8 +45,8 @@ get_header(); ?>
 					<?php endwhile; 
 					wp_reset_postdata();
 					else : ?>
-					<p><?php _e( 'Подходящих материалов не найдено' ); ?></p>
-					<?php endif; ?>	
+					<p><?php _e( 'No suitable materials found' ); ?></p>
+					<?php endif; ?>
 			</div>
 
 		</main><!-- #main -->

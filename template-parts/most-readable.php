@@ -1,5 +1,7 @@
 <div class="most-readable">
-	<h3 class="most-readable__title">Самое Читаемое</h3>
+	<h3 class="most-readable__title">
+		<?php _e('Most readable', 'politsturm'); ?>
+	</h3>
 	<div class="most-readable__content">
 		<?php
 			$args = array(

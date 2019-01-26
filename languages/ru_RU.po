@@ -19,27 +19,24 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
 #: index.php:22 single-book.php:48 single-pow.php:48 single.php:55
-#@ _e
 msgid "No suitable materials found"
-msgstr ""
+msgstr "Подходящих материалов не найдено"
 
 #: template-parts/articles-branch.php:49
-#@ _e
 msgid "Read more"
-msgstr ""
+msgstr "Читать далее"
 
 #: template-parts/content-none.php:21
-#@ _e
+#, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content.php:33
-#@ _e
+#, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: template-parts/most-readable.php:3
-#@ _e
 msgid "Most readable"
-msgstr ""
+msgstr "Самое читаемое"

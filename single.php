@@ -52,7 +52,7 @@ get_header(); ?>
 						wp_reset_postdata();
 					} else {
 						echo '<p>';
-						_e( 'Подходящих материалов не найдено' );
+						_e(  'No suitable materials found' );
 						echo '</p>';
 					}
 					?>

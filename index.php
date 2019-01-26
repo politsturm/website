@@ -19,7 +19,7 @@ function load_top_posts($meta_value, $count, $class) {
 		wp_reset_postdata();
 	} else {
 		echo '<p>';
-		_e( 'Подходящих материалов не найдено' );
+		_e( 'No suitable materials found' );
 		echo '</p>';
 	}
 
