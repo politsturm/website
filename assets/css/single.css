@@ -246,14 +246,37 @@
 	.content-title-single {
 		font-size: 22px;
 		font-weight: 600;
+		line-height: 30px;
 		letter-spacing: -0.26px;
+		margin: 10px auto 20px auto;
+	}
+
+	.content-image-single {
+		margin-bottom: 0;
+	}
+
+	.content-tags-single {
+		margin-top: 50px;
 	}
 
 	.content-post-single p {
 		font-size: 15px;
 	}
 
+	.main-support {
+		padding: 40px;
+	}
+
 	.main-support a {
 		font-size: 18px;
+	}
+
+	.related-container-title {
+		font-size: 22px;
+		margin-top: 50px;
+	}
+
+	.related-post-title {
+		font-size: 20px;
 	}
 }

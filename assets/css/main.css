@@ -648,6 +648,8 @@ a:active {
 	.logo {
 		padding-top: 0px;
 		float: left;
+		position: relative;
+		top: -6px;
 	}
 
 	.header-wrap {
