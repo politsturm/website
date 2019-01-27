@@ -34,5 +34,10 @@ window.onload = function() {
 	};
 
 	// Initially load some items.
+
+	if (typeof loadMore === 'undefined') {
+		return; // if has no loadMore function in scope
+	}
+
 	infLoadMore();
 };
