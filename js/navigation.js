@@ -38,7 +38,6 @@
 		}
 
 		// Search
-		checkSearchValue();
 
 		SEACH_INPUT.on('focusout', inputListener);
 
