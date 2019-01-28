@@ -11,6 +11,7 @@
 
 .aside-social a {
 	transition: opacity .2s ease-in-out;
+	margin-right: 12px;
 }
 
 .aside-social a:hover {
