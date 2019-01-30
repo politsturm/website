@@ -157,3 +157,7 @@
 	}
 }
 
+/* Hide footer on branch index page */
+.home.branch-theme #footer {
+	display: none;
+}
