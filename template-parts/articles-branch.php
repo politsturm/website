@@ -2,7 +2,7 @@
 <?php
 	if ( in_category( 'video' )) {
 		$content = get_the_content();
-		preg_match_all('/https.*\?v\=(.[0-9a-zA-Z]+)|https.*youtu\.be\/(.[0-9a-zA-Z\-]+)/i', $content, $match);
+		preg_match_all('/https.*\?v\=(.[_0-9a-zA-Z]+)|https.*youtu\.be\/(.[_0-9a-zA-Z\-]+)/i', $content, $match);
 
 		$youtube_link = empty($match[1][0]) ? $match[2][0] : $match[1][0];
 		$src = 'src="https://www.youtube.com/embed/'.$youtube_link.'"';
