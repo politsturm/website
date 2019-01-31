@@ -43,3 +43,7 @@ msgstr ""
 #@ _e
 msgid "Most readable"
 msgstr ""
+
+#: template-parts/reading-time.php:12
+msgid "min"
+msgstr ""

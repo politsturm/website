@@ -9,4 +9,4 @@
 		$reading_time = 1;
 ?>
 
-<div class="reading-time"><?php echo $reading_time; ?> мин</div>
+<div class="reading-time"><?php _e('min'); </div>
