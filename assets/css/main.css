@@ -734,6 +734,7 @@ End of Header. Start of Main Page First Block
 	overflow: hidden;
 	margin-bottom: 70px;
 	position: relative;
+	z-index: 1;
 	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	box-shadow: #d0d0d0 0px 0px 50px;
