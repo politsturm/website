@@ -83,6 +83,11 @@
 	margin-left: 30px;
 }
 
+.search.articles-branch {
+	max-width: 852px;
+	margin: 0 auto;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 950px) {
