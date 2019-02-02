@@ -27,7 +27,7 @@ get_header(); ?>
 			</div>
 
 			<div class="related-container-title">
-				<?php _e('More:'); ?>
+				<?php _e('More:', 'politsturm'); ?>
 			</div>
 			<div class="related-container">
 					<?php
@@ -54,7 +54,7 @@ get_header(); ?>
 						wp_reset_postdata();
 					} else {
 						echo '<p>';
-						_e(  'No suitable materials found' );
+						_e('No suitable materials found', 'politsturm');
 						echo '</p>';
 					}
 					?>

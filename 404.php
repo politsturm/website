@@ -17,7 +17,7 @@ get_header(); ?>
 				<?php _e('Error', 'politsturm'); ?> 404
 			</h1>
 			<span class="nfdesc">
-				<?php _e('Nothing found on this link. We recommend to return to the home page or use the search.'); ?>
+				<?php _e('Nothing found on this link. We recommend to return to the home page or use the search.', 'politsturm'); ?>
 			</span>
 
 		</main><!-- #main -->

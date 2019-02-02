@@ -32,7 +32,7 @@ get_header(); ?>
 					}
 				?>
 			</div>
-			<div class="news-loadmore"><?php _e('Load more'); ?></div>
+			<div class="news-loadmore"><?php _e('Load more', 'politsturm'); ?></div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -31,7 +31,7 @@
 
 				<div class="news-more">
 					<a href="/category/news/">
-						<?php _e('More news'); ?> <span class="news-more-arrow">&gt;</span>
+						<?php _e('More news', 'politsturm'); ?> <span class="news-more-arrow">&gt;</span>
 					</a>
 				</div>
 			</div>
@@ -52,7 +52,7 @@
 			?>
 		</div>
 		<div class="news-loadmore">
-			<?php _e('Load more'); ?>
+			<?php _e('Load more', 'politsturm'); ?>
 		</div>
 	</main><!-- #main -->
 </div><!-- #primary -->
