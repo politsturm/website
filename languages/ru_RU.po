@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-02-02 18:01+0300\n"
-"PO-Revision-Date: 2019-02-02 18:02+0300\n"
+"POT-Creation-Date: 2019-02-02 21:01+0300\n"
+"PO-Revision-Date: 2019-02-02 21:02+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -29,6 +29,10 @@ msgid ""
 msgstr ""
 "По данной ссылке ничего не найдено. Рекомендуем вернуться на главную или "
 "воспользоваться поиском."
+
+#: header.php:80 header.php:104
+msgid "Search..."
+msgstr "Поиск..."
 
 #: index.php:22 single-book.php:48 single-pow.php:48 single.php:57
 msgid "No suitable materials found"
