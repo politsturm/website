@@ -16,21 +16,7 @@
 <div id="footer">
 	<div class="footer-wrapper">
 		<div class="footer-wrapper__social social">
-			<ul>
-				<?php
-					function social($url, $title, $svg_id) {
-						set_query_var("url", $url);
-						set_query_var("title", $title);
-						set_query_var("svg_id", $svg_id);
-						get_template_part('template-parts/social') ;
-					}
-					social("https://www.facebook.com/politsturm/", "Facebook",    "#facebook");
-					social('https://www.youtube.com/channel/UCdWGGzM6fX5xVq1gDNZev0A', 'Youtube', '#youtube');
-					social("https://vk.com/politsturm",            "Вконтакте",   "#vk");
-					social("https://twitter.com/politsturm",       "Twitter",     "#twitter");
-					social("https://t.me/politsturm",              "Telegram",    "#telegram");
-				?>
-		  </ul>
+			<?php include('template-parts/social-icons.php'); ?>
 		</div>
 
 		<div class="footer-wrapper__links">

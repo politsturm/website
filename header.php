@@ -75,19 +75,7 @@ $favicon_url = $theme_url."/assets/img/favicon/"
 					?>
 					<div class="mmul-close"></div>
 					<div class="mob-social">
-						<?php
-						function render_social_icon ($url, $title, $svg_id) {
-							set_query_var('url', $url);
-							set_query_var('title', $title);
-							set_query_var('svg_id', $svg_id);
-							get_template_part('template-parts/social');
-						}
-						render_social_icon('https://www.facebook.com/politsturm/', 'Facebook',    '#facebook');
-						render_social_icon('https://www.youtube.com/channel/UCdWGGzM6fX5xVq1gDNZev0A', 'Youtube', '#youtube');
-						render_social_icon('https://vk.com/politsturm',            'Вконтакте',   '#vk');
-						render_social_icon('https://twitter.com/politsturm',       'Twitter',     '#twitter');
-						render_social_icon('https://t.me/politsturm',              'Telegram',    '#telegram');
-						?>
+						<?php include('template-parts/social-icons.php'); ?>
 					</div>
 					</ul>
 				</div>
