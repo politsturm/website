@@ -74,16 +74,20 @@ $favicon_url = $theme_url."/assets/img/favicon/"
 						) );
 					?>
 					<div class="mmul-close"></div>
-					<div class="search-mob-wrapper">
-						<div class="search">
-							<form id="searchform" name="search" action="<?php echo home_url( '/' ) ?>" role="search" method="get" class="search-form">
-								<input type="text" value="<?php echo get_search_query(); ?>" name="s" placeholder="<?php _e('Search...', 'politsturm'); ?>" id="s" class="search-input">
-								<button id="searchsubmit" class="search-button">
-									<span class="search-icon"></span>
-								</button>
-							</form>
-							<div class="search__close"></div>
-						</div>
+					<div class="mob-social">
+						<?php
+						function render_social_icon ($url, $title, $svg_id) {
+							set_query_var('url', $url);
+							set_query_var('title', $title);
+							set_query_var('svg_id', $svg_id);
+							get_template_part('template-parts/social');
+						}
+						render_social_icon('https://www.facebook.com/politsturm/', 'Facebook',    '#facebook');
+						render_social_icon('https://www.youtube.com/channel/UCdWGGzM6fX5xVq1gDNZev0A', 'Youtube', '#youtube');
+						render_social_icon('https://vk.com/politsturm',            'Вконтакте',   '#vk');
+						render_social_icon('https://twitter.com/politsturm',       'Twitter',     '#twitter');
+						render_social_icon('https://t.me/politsturm',              'Telegram',    '#telegram');
+						?>
 					</div>
 					</ul>
 				</div>
