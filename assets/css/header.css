@@ -41,6 +41,10 @@
 }
 
 @media screen and (max-width:950px) {
+	.branch-theme .logo {
+		margin: auto;
+	}
+
 	.logo-branch_name {
 		display: none;
 	}
