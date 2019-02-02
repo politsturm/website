@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-01-31 08:20+0300\n"
-"PO-Revision-Date: 2019-01-31 08:21+0300\n"
+"POT-Creation-Date: 2019-02-02 18:01+0300\n"
+"PO-Revision-Date: 2019-02-02 18:02+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -18,9 +18,45 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: index.php:22 single-book.php:48 single-pow.php:48 single.php:55
+#: 404.php:17
+msgid "Error"
+msgstr "Ошибка"
+
+#: 404.php:20
+msgid ""
+"Nothing found on this link. We recommend to return to the home page or use "
+"the search."
+msgstr ""
+"По данной ссылке ничего не найдено. Рекомендуем вернуться на главную или "
+"воспользоваться поиском."
+
+#: index.php:22 single-book.php:48 single-pow.php:48 single.php:57
 msgid "No suitable materials found"
 msgstr "Подходящих материалов не найдено"
+
+#: index_main.php:34
+msgid "More news"
+msgstr "Больше новостей"
+
+#: index_main.php:55 search_main.php:35
+msgid "Load more"
+msgstr "Читать далее"
+
+#: search_branch.php:7 search_main.php:18
+msgid "Results:"
+msgstr "Результаты поиска:"
+
+#: single.php:23
+msgid "Enjoyed the material?"
+msgstr "Понравился материал?"
+
+#: single.php:25
+msgid "Support us!"
+msgstr "Поддержи «Политштурм»"
+
+#: single.php:30
+msgid "More:"
+msgstr "Также читают:"
 
 #: template-parts/articles-branch.php:49
 msgid "Read more"

@@ -13,9 +13,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<img class="nflogo" src="http://politsturm.com/wp-content/themes/politsturm/images/biglogo-eng-black.png">
-			<h1 class="nftitle"> Ошибка 404 </h1>
-			<span class="nfdesc"> По данной ссылке ничего не найдено. Рекомендуем вернуться на главную или воспользоваться поиском. </span>
-			
+			<h1 class="nftitle">
+				<?php _e('Error', 'politsturm'); ?> 404
+			</h1>
+			<span class="nfdesc">
+				<?php _e('Nothing found on this link. We recommend to return to the home page or use the search.'); ?>
+			</span>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

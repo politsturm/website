@@ -2,7 +2,12 @@
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Результаты поиска: %s', 'politsturm' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title">
+					<?php
+						_e('Results:', 'politsturm');
+						echo ' <span>' . get_search_query() . '</span>';
+					?>
+				</h1>
 			</header>
 		<div class="branch-template">
 			<div class="branch-template__main-col">

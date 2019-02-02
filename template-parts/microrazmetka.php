@@ -1,4 +1,3 @@
-<!-- Начало микроразметки -->
 <div class="microrazmetka" style="display:none;">
 
 	<?php $iurl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
@@ -22,4 +21,3 @@
 	</span>
 
 </div>
-<!-- Конец микроразметки -->

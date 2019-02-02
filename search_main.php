@@ -13,7 +13,12 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Результаты поиска: %s', 'politsturm' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title">
+					<?php
+						_e('Results:', 'politsturm');
+						echo ' <span>' . get_search_query() . '</span>';
+					?>
+				</h1>
 			</header><!-- .page-header -->
 
 			<div class="main-news">
@@ -27,7 +32,7 @@ get_header(); ?>
 					}
 				?>
 			</div>
-			<div class="news-loadmore">Загрузить ещё</div>
+			<div class="news-loadmore"><?php _e('Load more'); ?></div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

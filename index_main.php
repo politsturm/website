@@ -31,7 +31,7 @@
 
 				<div class="news-more">
 					<a href="/category/news/">
-						Больше новостей <span class="news-more-arrow">&gt;</span>
+						<?php _e('More news'); ?> <span class="news-more-arrow">&gt;</span>
 					</a>
 				</div>
 			</div>
@@ -51,6 +51,8 @@
 				}
 			?>
 		</div>
-		<div class="news-loadmore">Загрузить ещё</div>
+		<div class="news-loadmore">
+			<?php _e('Load more'); ?>
+		</div>
 	</main><!-- #main -->
 </div><!-- #primary -->

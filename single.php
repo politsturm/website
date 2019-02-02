@@ -20,12 +20,14 @@ get_header(); ?>
 			?>
 
 			<div class="main-support">
-				Понравился материал?<br>
-				<a href="/podderzhat-nas">Поддержи «Политштурм»</a>
+				<?php _e('Enjoyed the material?', 'politsturm'); ?><br>
+				<a href="/support-us">
+					<?php _e('Support us!', 'politsturm'); ?>
+				</a>
 			</div>
 
 			<div class="related-container-title">
-				Также читают:
+				<?php _e('More:'); ?>
 			</div>
 			<div class="related-container">
 					<?php
