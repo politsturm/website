@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-02-02 21:01+0300\n"
-"PO-Revision-Date: 2019-02-02 21:02+0300\n"
+"POT-Creation-Date: 2019-02-03 13:54+0300\n"
+"PO-Revision-Date: 2019-02-03 13:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -30,7 +30,7 @@ msgstr ""
 "По данной ссылке ничего не найдено. Рекомендуем вернуться на главную или "
 "воспользоваться поиском."
 
-#: header.php:80 header.php:104
+#: header.php:96
 msgid "Search..."
 msgstr "Поиск..."
 
@@ -78,9 +78,12 @@ msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: template-parts/most-readable.php:3
-msgid "Most readable"
+msgid "Popular"
 msgstr "Самое читаемое"
 
 #: template-parts/reading-time.php:12
 msgid "min"
 msgstr "мин"
+
+#~ msgid "Most readable"
+#~ msgstr "Самое читаемое"

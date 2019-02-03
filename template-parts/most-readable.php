@@ -1,6 +1,6 @@
 <div class="most-readable">
 	<h3 class="most-readable__title">
-		<?php _e('Most readable', 'politsturm'); ?>
+		<?php _e('Popular', 'politsturm'); ?>
 	</h3>
 	<div class="most-readable__content">
 		<?php
