@@ -101,6 +101,17 @@
 	top: 4px;
 }
 
+.search-mobile-menu {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.search-mobile-menu .search-icon {
+	height: 21px;
+}
+
 /* border for menu arrow */
 /*
 .menu-item-has-children:before {
@@ -215,6 +226,10 @@
 }
 
 @media screen and (max-width:950px) {
+	.search-mobile-menu {
+		display: block;
+	}
+
 	.branch-template__aside-col {
 		display: none;
 	}
@@ -308,7 +323,7 @@
 		position: absolute;
 		width: 20px;
 		height: 20px;
-		top: 26px;
+		top: 15px;
 	}
 
 	.mmul-close {

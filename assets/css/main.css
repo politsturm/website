@@ -553,8 +553,13 @@ a:active {
 
 .logo {
 	z-index: 3;
+	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.logo svg {
+	height: 31px;
 }
 
 .logo-text {
