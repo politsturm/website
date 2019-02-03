@@ -134,15 +134,13 @@
 		top: 25px;
 		margin-left: 10px;
 	}
-}
 
-@media screen and (max-width:399px) {
 	.search.active #searchform {
 		width: 90%;
 	}
 
 	.search__close {
-		top: 42px;
+		top: 15px;
 		right: 19px;
 	}
 
