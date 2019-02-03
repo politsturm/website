@@ -553,13 +553,8 @@ a:active {
 
 .logo {
 	z-index: 3;
-	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
-}
-
-.logo svg {
-	height: 31px;
 }
 
 .logo-text {
@@ -635,6 +630,14 @@ a:active {
 	}
 	#content {
 		margin: 0 15px;
+	}
+
+	.logo {
+		text-align: center;
+	}
+
+	.logo svg {
+		height: 31px;
 	}
 
 	.grid-post {
