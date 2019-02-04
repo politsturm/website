@@ -82,7 +82,9 @@ add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'tags' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'separator' ) );
 
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'start_info_block' ) );
-add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
+if (POLITSTURM_BRANCH::get_site_type() == SiteType::MainSite) {
+	add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
+}
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
 
 add_filter( 'the_content', 'modify_images', 100 );
