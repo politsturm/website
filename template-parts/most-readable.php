@@ -9,11 +9,6 @@
 				'orderby' => 'meta_value_num',
 				'meta_key' => 'post_views_count',
 				'order' => 'DESC',
-				'date_query' => array(
-					array(
-						'after' => '1 month ago'
-					)
-				)
 			);
 			$query = new WP_Query($args);
 			while ($query->have_posts()) : $query->the_post();
