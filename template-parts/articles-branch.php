@@ -11,12 +11,10 @@
 		$image = get_the_post_thumbnail_url($post->ID, 'large');
 
 		if ($image) {
-			// the_permalink()
-			$link = esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) );
 			$html =
-			'<a href="'.$link.'" class="branch-card__cover" style="background-image: url('.$image.')">
+			'<div class="branch-card__cover" style="background-image: url('.$image.')">
 				<img class="branch-card__image" src="'.$image.'" width="100%"  hspace="0" vspace="0" style="display:block;">
-			</a>';
+			</div>';
 		} else {
 			$html = '';
 		}
@@ -24,6 +22,7 @@
 
 	if ($html) {
 ?>
+	<a href="<?php the_permalink();?>">
 		<div class="branch-card">
 			<?php echo $html; ?>
 			<div class="branch-card__text">
@@ -45,13 +44,11 @@
 				<div class="branch-card__excerpt">
 					<?php the_excerpt();?>
 				</div>
-				<a href="<?php the_permalink();?>" class="branch-card__read-more">
-				<?php _e('Read more', 'politsturm') ?>
-				</a>
 <?php
 			} ?>
 			</div>
 		</div>
+	</a>
 <?php
 	} ?>
 </article>
