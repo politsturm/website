@@ -6,7 +6,13 @@ abstract class SiteType {
 	const BranchSite = 2;
 }
 
-Class POLITSTURM_BRANCH {
+class Social {
+	public $url;
+	public $title;
+	public $svg_id;
+}
+
+class POLITSTURM_BRANCH {
 
 	public static function get_site_type() {
 		$site_type = get_option('site_type');
@@ -26,6 +32,33 @@ Class POLITSTURM_BRANCH {
 
 	public static function get_branch_name() {
 		return get_option('branch_name');
+	}
+
+	public static function get_social_networks() {
+		$raw_networks = get_option('social_networks_list');
+		if (!is_string($raw_networks))
+			return array();
+
+		$networks = array();
+		$networks_lines = explode(PHP_EOL, $raw_networks);
+		foreach ($networks_lines as $line) {
+			if ($line === "") {
+				continue;
+			}
+
+			$values = explode(',', $line);
+			if (count($values) != 3) {
+				continue;
+			}
+
+			$network = new Social();
+			$network->url = trim($values[0]);
+			$network->title = trim($values[1]);
+			$network->svg_id = trim($values[2]);
+			array_push($networks, $network);
+		}
+
+		return $networks;
 	}
 
 	public static function get_article_template_name() {

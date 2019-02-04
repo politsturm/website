@@ -80,6 +80,14 @@ class BranchSettingsPlugin {
 				),
 				'default' => array('main')
 			),
+			array(
+				'uid' => 'social_networks_list',
+				'label' => 'Social networks',
+				'section' => 'branch_settings',
+				'type' => 'textarea',
+				'placeholder' => 'https://URL,Name,#svg_id',
+				'default' => ''
+			),
 		);
 		foreach( $fields as $field ){
 
