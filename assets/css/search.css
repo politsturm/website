@@ -27,6 +27,8 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	padding: 0;
+	margin: 0;
 }
 
 .search__close {
@@ -34,12 +36,20 @@
 	height: 17px;
 	z-index: 1;
 	top: 40px;
-	right: 15%;
+	right: 10px;
 	background: url('images/icon-close.svg') no-repeat;
 	background-size: cover;
 	position: absolute;
 	display: none;
 	cursor: pointer;
+}
+
+.search__control-wrapper {
+	max-width: 1260px;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
 }
 
 .search.active .search__close {

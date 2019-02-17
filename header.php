@@ -110,7 +110,9 @@ $favicon_url = $theme_url."/assets/img/favicon/"
 							<span class="search-icon"></span>
 						</button>
 					</form>
-					<div class="search__close"></div>
+					<div class="search__control-wrapper">
+						<div class="search__close"></div>
+					</div>
 				</div>
 	        </div>
         </div>
