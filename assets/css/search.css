@@ -61,6 +61,7 @@
 	pointer-events: all;
 	width: 100%;
 	padding: 10px 50px;
+	margin: 0;
 }
 
 #searchform, .search-form {
