@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-02-03 13:54+0300\n"
-"PO-Revision-Date: 2019-02-03 13:54+0300\n"
+"POT-Creation-Date: 2019-02-24 18:53+0300\n"
+"PO-Revision-Date: 2019-02-24 18:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -30,11 +30,11 @@ msgstr ""
 "По данной ссылке ничего не найдено. Рекомендуем вернуться на главную или "
 "воспользоваться поиском."
 
-#: header.php:96
+#: header.php:86 header.php:108
 msgid "Search..."
 msgstr "Поиск..."
 
-#: index.php:22 single-book.php:48 single-pow.php:48 single.php:57
+#: index.php:22 single-book.php:48 single-pow.php:48 single.php:56
 msgid "No suitable materials found"
 msgstr "Подходящих материалов не найдено"
 
@@ -42,7 +42,7 @@ msgstr "Подходящих материалов не найдено"
 msgid "More news"
 msgstr "Больше новостей"
 
-#: index_main.php:55 search_main.php:35
+#: index_main.php:56 search_main.php:36
 msgid "Load more"
 msgstr "Читать далее"
 
@@ -50,21 +50,17 @@ msgstr "Читать далее"
 msgid "Results:"
 msgstr "Результаты поиска:"
 
-#: single.php:23
+#: single.php:22
 msgid "Enjoyed the material?"
 msgstr "Понравился материал?"
 
-#: single.php:25
+#: single.php:24
 msgid "Support us!"
 msgstr "Поддержи «Политштурм»"
 
-#: single.php:30
+#: single.php:29
 msgid "More:"
 msgstr "Также читают:"
-
-#: template-parts/articles-branch.php:49
-msgid "Read more"
-msgstr "Читать далее"
 
 #: template-parts/content-none.php:21
 #, php-format
@@ -77,6 +73,10 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
+#: template-parts/main-link.php:4
+msgid "// center"
+msgstr "// центр"
+
 #: template-parts/most-readable.php:3
 msgid "Popular"
 msgstr "Самое читаемое"
@@ -84,6 +84,9 @@ msgstr "Самое читаемое"
 #: template-parts/reading-time.php:12
 msgid "min"
 msgstr "мин"
+
+#~ msgid "Read more"
+#~ msgstr "Читать далее"
 
 #~ msgid "Most readable"
 #~ msgstr "Самое читаемое"

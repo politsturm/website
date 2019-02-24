@@ -19,7 +19,7 @@ function load_top_posts($meta_value, $count, $class) {
 		wp_reset_postdata();
 	} else {
 		echo '<p>';
-		_e( 'No suitable materials found' );
+		_e( 'No suitable materials found', 'politsturm' );
 		echo '</p>';
 	}
 
