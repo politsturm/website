@@ -82,7 +82,9 @@ add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'tags' ) );
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'separator' ) );
 
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'start_info_block' ) );
-if (POLITSTURM_BRANCH::get_site_type() == SiteType::MainSite) {
+
+// Disable yandex share for USA site
+if (POLITSTURM_BRANCH::get_branch_name() != 'U S A') {
 	add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
 }
 add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
