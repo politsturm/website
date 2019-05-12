@@ -84,6 +84,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	border-radius: 10px;
 }
 
+.featured__video {
+	border-radius: 15px;
+}
+
+.featured__title {
+	font-size: 32px;
+	font-family: 'Roboto';
+	font-weight: 500;
+}
+
 @font-face {
   font-family: 'ProximaNovaT-Thin';
   src: url('fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),  url('fonts/ProximaNovaT-Thin.otf')  format('opentype'),

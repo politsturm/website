@@ -12,7 +12,7 @@ function load_top_posts($meta_value, $count, $class) {
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
 			$query->the_post();
-			get_template_part('template-parts/top_' . $class);
+			get_template_part('template-parts/featured');
 			get_template_part('template-parts/microrazmetka');
 			$ids[] = get_the_ID();
 		}

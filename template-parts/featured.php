@@ -10,7 +10,7 @@
 				$youtube_link = empty($match[1][0]) ? $match[2][0] : $match[1][0];
 			?>
 
-			<iframe width="100%" class="top-hitem__video" src="https://www.youtube.com/embed/<?php echo $youtube_link;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe width="100%" height="479px" class="featured__video" src="https://www.youtube.com/embed/<?php echo $youtube_link;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 		<?php } else { ?>
 			<a href="<?php the_permalink(); ?>">
@@ -18,6 +18,8 @@
 				<img src="<?php echo $url; ?>" width="100%"  hspace="0" vspace="0" style="display:block;">
 			</a>
 		<?php } ?>
-	<div><?php the_title(); ?></div>
+	<div class="featured__title">
+		<?php the_title(); ?>
+	</div>
 </div>
 
