@@ -64,12 +64,38 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 .main-news {
 	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.grid-post__wrapper {
+	max-width: 612px;
+	width: 100%;
+	display: block;
+	background: #fff;
+	margin-bottom: 25px;
 }
 
 .grid-post {
-	width: calc(33.33% - 17px);
+	background: #fff;
+	margin-bottom: 55px;
+	overflow: hidden;
 	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 10px;
+}
+
+.main-card__cover {
+	display: block;
+	background-size: 100%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.main-card__image {
+	max-height: 345px;
+	opacity: 0;
 }
 
 .grid-post > h2 {
