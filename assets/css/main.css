@@ -73,12 +73,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	max-width: 612px;
 	width: 100%;
 	display: block;
-	background: #fff;
-	margin-bottom: 25px;
 }
 
 .grid-post {
-	background: #fff;
 	margin-bottom: 55px;
 	overflow: hidden;
 	font-family: 'Open Sans', sans-serif;
