@@ -10,6 +10,21 @@
 				?>
 			</div>
 		</div>
+		<div class="main-news">
+			<?php
+				$top_ids = array_merge($h_ids, $v_ids);
+				$args = $wp_args;
+				$args['post__not_in'] = $top_ids;
+				query_posts($args);
+				$template_name = POLITSTURM_BRANCH::get_article_template_name();
+				while (have_posts()) {
+					the_post();
+					get_template_part('template-parts/'.$template_name);
+				}
+				$wp_query->set('paged', 1);
+				LOAD_MORE::update_posts_load_more($wp_query);
+			?>
+		</div>
 		<div class="news-loadmore">
 			<?php _e('Load more', 'politsturm'); ?>
 		</div>
