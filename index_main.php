@@ -1,3 +1,30 @@
+<?php
+function load_top_posts($meta_value, $count) {
+	$ids = array();
+	$query = new WP_Query(array(
+			'meta_key' => 'choce',
+			'meta_value' => $meta_value,
+			'showposts' => $count
+		)
+	);
+	if ($query->have_posts()) {
+		while ($query->have_posts()) {
+			$query->the_post();
+			get_template_part('template-parts/featured');
+			get_template_part('template-parts/microrazmetka');
+			$ids[] = get_the_ID();
+		}
+		wp_reset_postdata();
+	} else {
+		echo '<p>';
+		_e( 'No suitable materials found', 'politsturm' );
+		echo '</p>';
+	}
+
+	return $ids;
+}
+?>
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<div class="branch-template">
