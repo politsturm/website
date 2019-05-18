@@ -1,7 +1,7 @@
 <?php
 
 get_header();
-function load_top_posts($meta_value, $count, $class) {
+function load_top_posts($meta_value, $count) {
 	$ids = array();
 	$query = new WP_Query(array(
 			'meta_key' => 'choce',
