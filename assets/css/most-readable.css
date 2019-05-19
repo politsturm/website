@@ -37,6 +37,7 @@
 .most-readable__item-time {
 	font-size: 12px;
 	color: #838383;
+	text-transform: uppercase;
 }
 
 .most-readable__main-content {

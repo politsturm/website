@@ -32,7 +32,7 @@
 					<h4><?php the_title(); ?></h4>
 				</a>
 				<div class="most-readable__item-time">
-					<?php echo get_the_date('M d, Y'); ?>
+					<?php echo get_the_date('F d, Y'); ?>
 				</div>
 			</div>
 		<?php endwhile; ?>
