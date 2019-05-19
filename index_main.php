@@ -24,7 +24,7 @@ function load_top_posts($count) {
 	<main id="main" class="site-main" role="main">
 		<div class="branch-template">
 			<div class="branch-template__main-col">
-				<?php $h_ids = load_top_posts(1); ?>
+				<?php $top_ids = load_top_posts(1); ?>
 			</div>
 			<div class="branch-template__aside-col">
 				<?php
@@ -34,7 +34,6 @@ function load_top_posts($count) {
 		</div>
 		<div class="main-news">
 			<?php
-				$top_ids = array_merge($h_ids, $v_ids);
 				$args = $wp_args;
 				$args['post__not_in'] = $top_ids;
 				query_posts($args);
