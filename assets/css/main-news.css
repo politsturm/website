@@ -47,6 +47,22 @@
 	border-radius: 15px;
 }
 
+.featured__text {
+	padding-left: 35px;
+	padding-right: 25px;
+}
+
+.featured__category {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.featured__category > a {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #838383;
+}
+
 .featured__title {
 	font-size: 32px;
 	font-family: 'Roboto';

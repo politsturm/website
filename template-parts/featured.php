@@ -18,8 +18,20 @@
 				<img src="<?php echo $url; ?>" width="100%"  hspace="0" vspace="0" style="display:block;">
 			</a>
 		<?php } ?>
-	<div class="featured__title">
-		<?php the_title(); ?>
+	<div class="featured__text">
+		<div class="featured__category">
+			<?php
+				$category = get_the_category();
+				if ($category[0]) {
+					$link = get_category_link($category[0]->term_id);
+					$name = $category[0]->cat_name;
+					echo '<a href="'.$link.'">'.$name.'</a>';
+				}
+			?>
+		</div>
+		<div class="featured__title">
+			<?php the_title(); ?>
+		</div>
 	</div>
 </div>
 
