@@ -1,12 +1,7 @@
 <?php
-function load_top_posts($meta_value, $count) {
+function load_top_posts($count) {
 	$ids = array();
-	$query = new WP_Query(array(
-			'meta_key' => 'choce',
-			'meta_value' => $meta_value,
-			'showposts' => $count
-		)
-	);
+	$query = new WP_Query(array('showposts' => 1));
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
 			$query->the_post();
@@ -29,7 +24,7 @@ function load_top_posts($meta_value, $count) {
 	<main id="main" class="site-main" role="main">
 		<div class="branch-template">
 			<div class="branch-template__main-col">
-				<?php $h_ids = load_top_posts('s1', 1); ?>
+				<?php $h_ids = load_top_posts(1); ?>
 			</div>
 			<div class="branch-template__aside-col">
 				<?php
