@@ -31,9 +31,21 @@
 	opacity: 0;
 }
 
-.grid-post > h2 {
+.grid-post__text {
+	padding-left: 31px;
+	padding-right: 25px;
+}
+
+.grid-post__category {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #838383;
+}
+
+.grid-post__title {
 	font-weight: normal;
-	text-align: center;
 	font-size: 19.5px;
 	letter-spacing: 0.6px;
 }
@@ -55,9 +67,6 @@
 .featured__category {
 	margin-top: 20px;
 	margin-bottom: 10px;
-}
-
-.featured__category > a {
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #838383;

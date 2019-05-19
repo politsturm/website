@@ -20,14 +20,7 @@
 		<?php } ?>
 	<div class="featured__text">
 		<div class="featured__category">
-			<?php
-				$category = get_the_category();
-				if ($category[0]) {
-					$link = get_category_link($category[0]->term_id);
-					$name = $category[0]->cat_name;
-					echo '<a href="'.$link.'">'.$name.'</a>';
-				}
-			?>
+			<?php get_template_part('template-parts/category'); ?>
 		</div>
 		<div class="featured__title">
 			<?php the_title(); ?>
