@@ -1,8 +1,22 @@
 <div class="most-readable">
-	<h3 class="most-readable__title">
-		<?php _e('Popular', 'politsturm'); ?>
+	<?php
+		if (POLITSTURM_BRANCH::get_site_type() == SiteType::MainSite) {
+			$header_class = 'most-readable__main-title';
+			$header_text = __('Most popular', 'politsturm');
+			$content_class = 'most-readable__main-content';
+		} else {
+			$header_class = 'most-readable__branch-title';
+			$header_text = __('Popular', 'politsturm');
+			$content_class = 'most-readable__content';
+		}
+	?>
+	<h3 class="<?php echo $header_class; ?>">
+		<?php echo $header_text; ?>
 	</h3>
-	<div class="most-readable__content">
+	<?php if (POLITSTURM_BRANCH::get_site_type() == SiteType::MainSite) { ?>
+		<div class="most-readable__separator"></div>
+	<?php } ?>
+	<div class="<?php echo $content_class; ?>">
 		<?php
 			$args = array(
 				'posts_per_page' => '4',

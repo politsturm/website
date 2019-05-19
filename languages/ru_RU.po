@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-02-24 18:53+0300\n"
-"PO-Revision-Date: 2019-02-24 18:53+0300\n"
+"POT-Creation-Date: 2019-05-19 21:28+0300\n"
+"PO-Revision-Date: 2019-05-19 21:28+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -34,13 +34,9 @@ msgstr ""
 msgid "Search..."
 msgstr "Поиск..."
 
-#: index.php:22 single-book.php:48 single-pow.php:48 single.php:56
+#: index_main.php:20 single-book.php:48 single-pow.php:48 single.php:56
 msgid "No suitable materials found"
 msgstr "Подходящих материалов не найдено"
-
-#: index_main.php:34
-msgid "More news"
-msgstr "Больше новостей"
 
 #: index_main.php:56 search_main.php:36
 msgid "Load more"
@@ -77,13 +73,20 @@ msgstr ""
 msgid "// center"
 msgstr "// центр"
 
-#: template-parts/most-readable.php:3
+#: template-parts/most-readable.php:5
+msgid "Most popular"
+msgstr "Популярные материалы"
+
+#: template-parts/most-readable.php:7 template-parts/popular.php:3
 msgid "Popular"
 msgstr "Самое читаемое"
 
 #: template-parts/reading-time.php:12
 msgid "min"
 msgstr "мин"
+
+#~ msgid "More news"
+#~ msgstr "Больше новостей"
 
 #~ msgid "Read more"
 #~ msgstr "Читать далее"

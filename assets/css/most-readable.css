@@ -4,11 +4,22 @@
 	overflow: hidden;
 }
 
-.most-readable__title {
+.most-readable__main-title {
+	margin: 0;
+	font-size: 19px;
+}
+
+.most-readable__branch-title {
 	background-color: #f5f8fa;
 	padding: 20px;
 	margin: 0;
 	font-size: 19px;
+}
+
+.most-readable__separator {
+	background-color: #dbdbdb;
+	height: 1px;
+	margin: 8px 0;
 }
 
 .most-readable__item {
@@ -26,6 +37,10 @@
 .most-readable__item-time {
 	font-size: 12px;
 	color: #838383;
+}
+
+.most-readable__main-content {
+	padding: 20px 0;
 }
 
 .most-readable__content {

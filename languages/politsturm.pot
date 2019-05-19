@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-01-26 22:35+0300\n"
+"POT-Creation-Date: 2019-05-19 21:27+0300\n"
 "PO-Revision-Date: 2019-01-26 22:36+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,33 +19,67 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: js\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: index.php:22 single-book.php:48 single-pow.php:48 single.php:55
-#@ _e
+#: 404.php:17
+msgid "Error"
+msgstr ""
+
+#: 404.php:20
+msgid ""
+"Nothing found on this link. We recommend to return to the home page or "
+"use the search."
+msgstr ""
+
+#: header.php:86 header.php:108
+msgid "Search..."
+msgstr ""
+
+#: index_main.php:20 single-book.php:48 single-pow.php:48 single.php:56
 msgid "No suitable materials found"
 msgstr ""
 
-#: template-parts/articles-branch.php:49
-#@ _e
-msgid "Read more"
+#: index_main.php:56 search_main.php:36
+msgid "Load more"
+msgstr ""
+
+#: search_branch.php:7 search_main.php:18
+msgid "Results:"
+msgstr ""
+
+#: single.php:22
+msgid "Enjoyed the material?"
+msgstr ""
+
+#: single.php:24
+msgid "Support us!"
+msgstr ""
+
+#: single.php:29
+msgid "More:"
 msgstr ""
 
 #: template-parts/content-none.php:21
-#@ _e
+#, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content.php:33
-#@ _e
+#, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/most-readable.php:3
-#@ _e
-msgid "Most readable"
+#: template-parts/main-link.php:4
+msgid "// center"
+msgstr ""
+
+#: template-parts/most-readable.php:5
+msgid "Most popular"
+msgstr ""
+
+#: template-parts/most-readable.php:7 template-parts/popular.php:3
+msgid "Popular"
 msgstr ""
 
 #: template-parts/reading-time.php:12
-#@ _e
 msgid "min"
 msgstr ""
