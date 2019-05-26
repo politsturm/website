@@ -11,6 +11,36 @@
 	display: block;
 }
 
+.news-loadmore__wrapper {
+	text-align: center;
+}
+
+.news-loadmore {
+	cursor: pointer;
+	background-color: #f5f8fa;
+	border-radius: 26px;
+	display: inline-block;
+	padding: 14px 40px;
+	transition: opacity .2s ease-in-out;
+}
+
+.news-loadmore:hover {
+	opacity: .8;
+}
+
+.news-loadmore:before {
+	content: '';
+    display: inline-block;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    width: 10px;
+    margin-right: 10px;
+    height: 10px;
+    position: relative;
+    top: -2px;
+    transform: rotate(45deg);
+}
+
 .grid-post {
 	margin-bottom: 55px;
 	overflow: hidden;

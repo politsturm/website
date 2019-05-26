@@ -46,8 +46,10 @@ function load_top_posts($count) {
 				LOAD_MORE::update_posts_load_more($wp_query);
 			?>
 		</div>
-		<div class="news-loadmore">
-			<?php _e('Load more', 'politsturm'); ?>
+		<div class="news-loadmore__wrapper">
+			<div class="news-loadmore">
+				<?php _e('Load more', 'politsturm'); ?>
+			</div>
 		</div>
 	</main><!-- #main -->
 </div><!-- #primary -->
