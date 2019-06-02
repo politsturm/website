@@ -23,7 +23,7 @@
 			$image = get_the_post_thumbnail_url($post->ID, 'medium_large');
 			if ($image) {
 ?>
-				<div class="main-card__cover" style="background-image: url(<?php echo $image ?>)">
+				<div class="main-card__cover lazy" style="background-image: url(<?php echo $image ?>)">
 					<img class="main-card__image" src="<?php echo $image ?>" width="100%"  hspace="0" vspace="0" style="display:block;">
 				</div>
 <?php

@@ -107,3 +107,8 @@
 	font-family: 'Roboto';
 	font-weight: 500;
 }
+
+.lazy {
+	background-image: none;
+	background-color: #F1F1FA;
+}
