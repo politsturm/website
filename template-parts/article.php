@@ -24,7 +24,7 @@
 			if ($image) {
 ?>
 				<div class="main-card__cover lazy" style="background-image: url(<?php echo $image ?>)">
-					<img class="main-card__image" src="<?php echo $image ?>" width="100%"  hspace="0" vspace="0" style="display:block;">
+					<img class="main-card__image" src="<?php echo $image ?>" width="100%"  hspace="0" vspace="0" style="display:block;" loading="lazy">
 				</div>
 <?php
 			}
