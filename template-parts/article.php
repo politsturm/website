@@ -20,7 +20,7 @@
 			</iframe>
 <?php
 		} else {
-			$image = get_the_post_thumbnail_url($post->ID, 'medium');
+			$image = get_the_post_thumbnail_url($post->ID, 'medium_large');
 			if ($image) {
 ?>
 				<div class="main-card__cover" style="background-image: url(<?php echo $image ?>)">
