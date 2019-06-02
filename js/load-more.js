@@ -10,7 +10,9 @@ function loadMore(callbacks) {
 		callbacks.success(xhr.responseText);
 		load_more_params.current_page++;
 
-		if (load_more_params.current_page === load_more_params.max_page) {
+		currentPage = parseInt(load_more_params.current_page);
+		maxPage = parseInt(load_more_params.max_page);
+		if (currentPage === maxPage) {
 			callbacks.end();
 		}
 	};
