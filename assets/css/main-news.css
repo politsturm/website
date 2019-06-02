@@ -109,6 +109,6 @@
 }
 
 .lazy {
-	background-image: none;
+	background-image: none !important;
 	background-color: #F1F1FA;
 }
