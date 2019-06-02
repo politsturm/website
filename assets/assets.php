@@ -8,7 +8,7 @@ Class POLITSTURM_ASSETS {
 
 
 	public static function scripts() {
-		wp_enqueue_script( 'politsturm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
+		wp_enqueue_script( 'politsturm-navigation', get_template_directory_uri() . '/js/index.js', array(), '', true );
 	}
 
 }
