@@ -1,3 +1,4 @@
+<a href="<?php the_permalink(); ?>">
 <div class="top-hitem" itemscope itemtype=http://schema.org/Article>
 	<?php
 		if ( in_category( 'video' )) { ?>
@@ -33,4 +34,4 @@
 		</div>
 	</div>
 </div>
-
+</a>
