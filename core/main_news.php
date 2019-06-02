@@ -2,7 +2,7 @@
 
 class POLITSTURM_MAIN_NEWS {
 	public static function init_load_more() {
-		wp_enqueue_script('load-more-masonry', get_stylesheet_directory_uri().'/js/load-more-masonry.js', array('jquery'));
+		wp_enqueue_script('load-more-button', get_stylesheet_directory_uri().'/js/load-more-button.js', array('jquery'));
 	}
 }
 
