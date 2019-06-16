@@ -112,3 +112,13 @@
 	background-image: none !important;
 	background-color: #F1F1FA;
 }
+
+@media screen and (max-width:950px) {
+	.featured__title {
+		font-size: 22px;
+	}
+
+	.main-card__image {
+		max-height: 100%;
+	}
+}
