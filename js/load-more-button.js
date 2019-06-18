@@ -8,6 +8,7 @@ jQuery(function($){
 			success: function(data) {
 				button.text('Загрузить ещё');
 				$('.main-news').append(data);
+				lazyLoad();
 			},
 			end: function() {
 				button.remove();
