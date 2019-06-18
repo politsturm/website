@@ -18,6 +18,7 @@ window.onload = function() {
 			success: function(data) {
 				appendHtml(element, data);
 				loadInProcess = false;
+				loadLazy();
 			},
 			end: function() { }
 		});

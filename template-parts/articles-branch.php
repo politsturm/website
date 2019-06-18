@@ -12,8 +12,8 @@
 
 		if ($image) {
 			$html =
-			'<div class="branch-card__cover" style="background-image: url('.$image.')">
-				<img class="branch-card__image" src="'.$image.'" width="100%"  hspace="0" vspace="0" style="display:block;">
+			'<div class="branch-card__cover lazy" style="background-image: url('.$image.')">
+				<img class="branch-card__image" src="'.$image.'" width="100%"  hspace="0" vspace="0" style="display:block;" loading="lazy">
 			</div>';
 		} else {
 			$html = '';
