@@ -88,6 +88,13 @@ class BranchSettingsPlugin {
 				'placeholder' => 'https://URL,Name,#svg_id',
 				'default' => ''
 			),
+			array(
+				'uid' => 'popular_timeout',
+				'label' => 'Max month count for "popular"',
+				'section' => 'branch_settings',
+				'type' => 'number',
+				'default' => '3'
+			),
 		);
 		foreach( $fields as $field ){
 

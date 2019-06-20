@@ -18,11 +18,20 @@
 	<?php } ?>
 	<div class="<?php echo $content_class; ?>">
 		<?php
+			$timeout = POLITSTURM_BRANCH::get_popular_timeout();
+			if ($timeout == '') {
+				$timeout = 3;
+			}
 			$args = array(
 				'posts_per_page' => '4',
 				'orderby' => 'meta_value_num',
 				'meta_key' => 'post_views_count',
 				'order' => 'DESC',
+				'date_query' => array(
+					array(
+						'after' => $timeout.' month ago'
+					)
+				)
 			);
 			$query = new WP_Query($args);
 			while ($query->have_posts()) : $query->the_post();

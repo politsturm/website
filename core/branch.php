@@ -34,6 +34,10 @@ class POLITSTURM_BRANCH {
 		return get_option('branch_name');
 	}
 
+	public static function get_popular_timeout() {
+		return get_option('popular_timeout');
+	}
+
 	public static function get_social_networks() {
 		$raw_networks = get_option('social_networks_list');
 		if (!is_string($raw_networks))
