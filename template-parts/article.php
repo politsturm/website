@@ -11,7 +11,7 @@
 ?>
 			<iframe
 				width="100%"
-				height="345"
+				height="305"
 				class="article__video"
 				src="https://www.youtube.com/embed/<?php echo $youtube_link;?>"
 				frameborder="0"
