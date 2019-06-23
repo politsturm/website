@@ -61,6 +61,10 @@
 	opacity: 0;
 }
 
+.main-card__image.main-card__featured {
+	max-height: 475px;
+}
+
 .grid-post__text {
 	padding-left: 31px;
 	padding-right: 25px;
