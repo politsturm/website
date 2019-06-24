@@ -61,7 +61,7 @@
 	opacity: 0;
 }
 
-.main-card__image.main-card__featured {
+.main-card__cover.main-card__featured {
 	max-height: 475px;
 }
 
