@@ -79,6 +79,10 @@
 	color: #1a1a1a;
 }
 
+.content-post-single li {
+	font-size: 19px;
+}
+
 .content-title-single {
 	font-family: 'Open Sans Bold', sans-serif;
 	font-size: 52px;
