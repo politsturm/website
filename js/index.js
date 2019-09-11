@@ -10,6 +10,12 @@ function loadLazy() {
 	}
 }
 
+function resetLazy() {
+	document
+		.querySelectorAll('.lazy')
+		.forEach(function(cover) {cover.classList.remove('lazy')})
+}
+
 function initLazyLoad() {
 	if ('IntersectionObserver' in window) {
 		imageObserver = new IntersectionObserver(function(entries, observer) {
@@ -54,7 +60,11 @@ function initLazyLoad() {
 		window.addEventListener('orientationChange', resetTimeout);
 	}
 
-	loadLazy()
+	setInterval(function () {
+		resetLazy();
+	}, 3000);
+
+	loadLazy();
 }
 
 (function ($) {
