@@ -35,6 +35,7 @@ $favicon_url = $theme_url."/assets/img/favicon/"
 <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<meta name="google-site-verification" content="rW8CC0xX27fdIHAH2xhwrFY9LE3wy98uhD8YVpxL7F4" />
 <meta name="yandex-verification" content="9749765212bb996c" />
 
 <?php wp_head(); ?>
