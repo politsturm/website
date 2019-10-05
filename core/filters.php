@@ -78,16 +78,17 @@ Class POLITSTURM_FILTERS {
 
 add_action( 'after_setup_theme', array( 'POLITSTURM_FILTERS', 'content_width' ) );
 add_filter( 'excerpt_length', array( 'POLITSTURM_FILTERS', 'excerpt_length' ), 999 );
-add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'tags' ) );
-add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'separator' ) );
+// Easy footnote filter has priority == 20
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'tags' ), 30 );
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'separator' ), 40 );
 
-add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'start_info_block' ) );
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'start_info_block' ), 50 );
 
 // Disable yandex share for USA site
 if (POLITSTURM_BRANCH::get_branch_name() != 'U S A') {
-	add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ) );
+	add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'ya_share' ), 51 );
 }
-add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ) );
+add_filter( 'the_content', array( 'POLITSTURM_FILTERS', 'end_info_block' ), 60 );
 
 add_filter( 'the_content', 'modify_images', 100 );
 
