@@ -112,8 +112,8 @@
 
 .featured__title {
 	font-size: 32px;
-	font-family: 'Roboto';
-	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
 }
 
 .lazy {
