@@ -1,19 +1,20 @@
 <?php
 
 $MORE_TAG_NOTICE = '<div class="error"><p>Запись не может быть опубликована. Добавте <a href="/more-tag.html">тэг "далее"</a> для указания места окончания аннотации</p></div>';
+$SUCCESS_PUBLISHED_ID = 6;
 
 add_action('admin_notices', 'custom_error_notice');
 add_action('save_post', 'forbid_to_save_without_more');
-add_filter('post_updated_messages', 'update_messages_for_notice');
+add_filter('post_updated_messages', 'remove_success_published_message');
 
 if (!session_id())
 	session_start();
 
-function update_messages_for_notice($msg) {
+function remove_success_published_message($msg) {
 	$notice = $_SESSION['admin_notices'];
 	if(!empty($notice)) {
-		unset($msg['post'][6]);
-		unset($msg['page'][6]);
+		unset($msg['post'][$SUCCESS_PUBLISHED_ID]);
+		unset($msg['page'][$SUCCESS_PUBLISHED_ID]);
 	}
 	return $msg;
 }
