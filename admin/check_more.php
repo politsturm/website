@@ -32,9 +32,6 @@ function custom_error_notice()
 function forbid_to_save_without_more($post_id)
 {
 	$post = get_post($post_id);
-	if ($post->post_status != 'publish' && $post->post_status != 'future') {
-		return true;
-	}
 
 	$pos = strpos($post->post_content, '<!--more-->');
 	if ($pos) {
@@ -42,8 +39,10 @@ function forbid_to_save_without_more($post_id)
 	}
 
 	$_SESSION['admin_notices'] .= $MORE_TAG_NOTICE;
+	$post = array('ID' => $post_id, 'post_status' => 'draft');
 
-	$post = array( 'ID' => $post_id, 'post_status' => 'draft');
+	remove_action('save_post', 'forbid_to_save_without_more');
 	wp_update_post($post);
+	add_action('save_post', 'forbid_to_save_without_more');
 	return false;
 }
