@@ -31,7 +31,10 @@ function custom_error_notice()
 
 function forbid_to_save_without_more($post_id)
 {
-	$MORE_TAG_NOTICE = '<div class="error"><p>Запись не может быть опубликована. Добавте <a href="/more-tag.html">тэг "далее"</a> для указания места окончания аннотации</p></div>';
+	$MORE_TAG_NOTICE = '<div class="error"><p>'.
+		__("Post can't be published.", 'politsturm').' '.
+		__('Add <a href="/more-tag.html">"more" tag</a> to specify place to cut an annotation.', 'politsturm').
+		'</p></div>';
 
 	$post = get_post($post_id);
 	$pos = strpos($post->post_content, '<!--more-->');
