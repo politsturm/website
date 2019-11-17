@@ -42,7 +42,7 @@ function forbid_to_save_without_more($post_id)
 		return true;
 	}
 
-	$_SESSION['admin_notices'] .= $MORE_TAG_NOTICE;
+	$_SESSION['admin_notices'] = $MORE_TAG_NOTICE;
 	$post = array('ID' => $post_id, 'post_status' => 'draft');
 
 	remove_action('save_post', 'forbid_to_save_without_more');
