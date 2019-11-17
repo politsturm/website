@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-11-16 10:30+0300\n"
-"PO-Revision-Date: 2019-11-16 10:31+0300\n"
+"PO-Revision-Date: 2019-11-17 18:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -31,8 +31,6 @@ msgstr ""
 "воспользоваться поиском."
 
 #: admin/check_more.php:35
-#, fuzzy
-#| msgid "Post can't be posted."
 msgid "Post can't be published."
 msgstr "Запись не может быть опубликована."
 
@@ -41,8 +39,8 @@ msgid ""
 "Add <a href=\"/more-tag.html\">\"more\" tag</a> to specify place to cut an "
 "annotation."
 msgstr ""
-"Добавте <a href=\"/more-tag.html\">тэг \"далее\"</a> для указания места "
-"окончания аннотации."
+"Добавте <a href=\"https://politsturm.com/more-tag.htmll\">тэг \"далее\"</"
+"a> для указания места окончания аннотации."
 
 #: header.php:87 header.php:109
 msgid "Search..."
