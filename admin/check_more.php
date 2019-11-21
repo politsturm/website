@@ -31,22 +31,35 @@ function custom_error_notice()
 
 function forbid_to_save_without_more($post_id)
 {
-	$MORE_TAG_NOTICE = '<div class="error"><p>'.
+	$MORE_TAG_ERROR = '<div class="error"><p>'.
 		__("Post can't be published.", 'politsturm').' '.
 		__('Add <a href="/more-tag.html">"more" tag</a> to specify place to cut an annotation.', 'politsturm').
 		'</p></div>';
+	$MORE_TAG_NOTICE = '<div class="notice"><p>'.
+		__("Don't forget to add <a href=\"/more-tag.html\">\"more\" tag</a> to specify place to cut an annotation.", 'politsturm').
+		'</p></div>';
+	$ALLOWED_STATUSES = array('draft', 'pending', 'private', 'trash', 'inherit');
 
 	$post = get_post($post_id);
-	$pos = strpos($post->post_content, '<!--more-->');
-	if ($pos) {
-		return true;
+	if ($post->post_status == 'auto-draft') {
+		$_SESSION['admin_notices'] = $MORE_TAG_NOTICE;
+		return;
 	}
 
-	$_SESSION['admin_notices'] = $MORE_TAG_NOTICE;
+	if (in_array($post->post_status, $ALLOWED_STATUSES)) {
+		return;
+	}
+
+	$pos = strpos($post->post_content, '<!--more-->');
+	if ($pos) {
+		return;
+	}
+
+	$_SESSION['admin_notices'] = $MORE_TAG_ERROR;
 	$post = array('ID' => $post_id, 'post_status' => 'draft');
 
 	remove_action('save_post', 'forbid_to_save_without_more');
 	wp_update_post($post);
 	add_action('save_post', 'forbid_to_save_without_more');
-	return false;
+	return;
 }
