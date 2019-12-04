@@ -39,7 +39,7 @@ msgid ""
 "Add <a href=\"/more-tag.html\">\"more\" tag</a> to specify place to cut an "
 "annotation."
 msgstr ""
-"Добавте <a href=\"https://politsturm.com/more-tag.htmll\">тэг \"далее\"</a> "
+"Добавте <a href=\"https://politsturm.com/more-tag.html\">тэг \"далее\"</a> "
 "для указания места окончания аннотации."
 
 #: admin/check_more.php:39
@@ -47,7 +47,7 @@ msgid ""
 "Don't forget to add <a href=\"/more-tag.html\">\"more\" tag</a> to specify "
 "place to cut an annotation."
 msgstr ""
-"Не забудьте добавить <a href=\"https://politsturm.com/more-tag.htmll\">тэг "
+"Не забудьте добавить <a href=\"https://politsturm.com/more-tag.html\">тэг "
 "\"далее\"</a> для указания места окончания аннотации."
 
 #: header.php:87 header.php:109
