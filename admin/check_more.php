@@ -41,6 +41,10 @@ function forbid_to_save_without_more($post_id)
 	$ALLOWED_STATUSES = array('draft', 'pending', 'private', 'trash', 'inherit');
 
 	$post = get_post($post_id);
+	if ($post->post_type != 'post') {
+		return;
+	}
+
 	if ($post->post_status == 'auto-draft') {
 		$_SESSION['admin_notices'] = $MORE_TAG_NOTICE;
 		return;
