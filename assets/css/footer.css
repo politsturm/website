@@ -162,6 +162,16 @@
 	.footer-wrapper__link {
 		width: 100%;
 	}
+
+	#footer .widget_text {
+		font-size: 12px;
+	}
+
+	.footer-wrapper__social {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px;
+	}
 }
 
 /* Hide footer on branch index page */
