@@ -1,7 +1,7 @@
 <?php
 function load_top_posts($count) {
 	$ids = array();
-	$query = new WP_Query(array('showposts' => 1));
+	$query = new WP_Query(array('showposts' => 1, 'category_name' => 'featured'));
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
 			$query->the_post();
