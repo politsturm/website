@@ -14,7 +14,7 @@
 			<iframe width="100%" height="479px" class="featured__video" src="https://www.youtube.com/embed/<?php echo $youtube_link;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 		<?php } else {
-			$image = get_the_post_thumbnail_url($post->ID, 'medium_large');
+			$image = get_the_post_thumbnail_url($post->ID, 'large');
 			if ($image) {
 ?>
 				<div class="main-card__cover main-card__featured" style="background-image: url(<?php echo $image ?>)">
