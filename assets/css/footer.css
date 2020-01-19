@@ -156,6 +156,10 @@
 }
 
 @media screen and (max-width:750px) {
+	#footer {
+		height: auto;
+	}
+
 	#footer .widgettitle {
 		font-size: 22px;
 	}
