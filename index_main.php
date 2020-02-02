@@ -2,6 +2,7 @@
 function load_top_posts($count) {
 	$ids = array();
 	$query = new WP_Query(array('showposts' => 1, 'category_name' => 'featured'));
+	$secondQuery = new WP_Query(array('showposts' => 1));
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
 			$query->the_post();
@@ -11,9 +12,13 @@ function load_top_posts($count) {
 		}
 		wp_reset_postdata();
 	} else {
-		echo '<p>';
-		_e( 'No suitable materials found', 'politsturm' );
-		echo '</p>';
+		while ($secondQuery->have_posts()) {
+			$secondQuery->the_post();
+			get_template_part('template-parts/featured');
+			get_template_part('template-parts/microrazmetka');
+			$ids[] = get_the_ID();
+		}
+		wp_reset_postdata();
 	}
 
 	return $ids;
