@@ -22,6 +22,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh $REMOTE_SERVER -i /tmp/deploy_rsa "cd $DEPLOY_PATH; git pull"
+  script: ssh $REMOTE_SERVER -i /tmp/deploy_rsa "cd $DEPLOY_PATH; git fetch origin master; git reset --hard origin/master"
   on:
     branch: master
