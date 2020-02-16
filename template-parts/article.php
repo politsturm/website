@@ -3,17 +3,13 @@
 <?php
 		if (in_category('video')) {
 			$content = get_the_content();
-			$youtube_regex = '/https.*\?v\=(.[_0-9a-zA-Z]+)|https.*youtu\.be\/(.[_0-9a-zA-Z\-]+)/i';
-
-			preg_match_all($youtube_regex, $content, $match);
-
-			$youtube_link = empty($match[1][0]) ? $match[2][0] : $match[1][0];
+			$youtube_code = get_youtube_code($content);
 ?>
 			<iframe
 				width="100%"
 				height="305"
 				class="article__video"
-				src="https://www.youtube.com/embed/<?php echo $youtube_link;?>"
+				src="https://www.youtube.com/embed/<?php echo $youtube_code;?>"
 				frameborder="0"
 				allow="autoplay; encrypted-media"
 				allowfullscreen>
