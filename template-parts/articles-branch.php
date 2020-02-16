@@ -2,10 +2,8 @@
 <?php
 	if ( in_category( 'video' )) {
 		$content = get_the_content();
-		preg_match_all('/https.*\?v\=(.[_0-9a-zA-Z]+)|https.*youtu\.be\/(.[_0-9a-zA-Z\-]+)/i', $content, $match);
-
-		$youtube_link = empty($match[1][0]) ? $match[2][0] : $match[1][0];
-		$src = 'src="https://www.youtube.com/embed/'.$youtube_link.'"';
+		$youtube_code = get_youtube_code($content);
+		$src = 'src="https://www.youtube.com/embed/'.$youtube_code.'"';
 		$html = '<iframe width="100%" height="420" class="article__video articles-branch__video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen '.$src.'></iframe>';
 	} else {
 		$image = get_the_post_thumbnail_url($post->ID, 'large');
