@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 12.13
+cache:
+  directories:
+    - node_modules
+before_script:
+  - "npm i"
+  - "npm i -g gulp-cli"
+script:
+  - "gulp css"
+after_success:
+  - "css updated successfully"
+
+before_deploy:
+  - echo "$SERVER_KNOWN_HOST" >> $HOME/.ssh/known_hosts
+  - openssl aes-256-cbc -K $encrypted_427e62b787d6_key -iv $encrypted_427e62b787d6_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/deploy_rsa
+  - ssh-add /tmp/deploy_rsa
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: ssh $REMOTE_SERVER -i /tmp/deploy_rsa "cd $DEPLOY_PATH; git pull"
+  on:
+    branch: master
