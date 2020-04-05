@@ -1,6 +1,6 @@
 <?php
-	$content = get_the_content();
-	$content = apply_filters( 'the_content', $content );
+	$post = get_post(get_the_ID());
+	$content = apply_filters('the_content', $post->post_content);
 	$content = str_replace( ']]>', ']]&gt;', $content );
 	$count = str_word_count(strip_tags($content), 0, ' ');
 	$READING_SPEED = 160; // words per minute
