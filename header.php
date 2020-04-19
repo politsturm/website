@@ -29,6 +29,7 @@ $favicon_url = $theme_url."/assets/img/favicon/"
 <meta name="application-name" content="Politsturm">
 <meta name="msapplication-TileColor" content="#e00028">
 <meta name="theme-color" content="#ffffff">
+<meta name="p:domain_verify" content="ce654f6dd5f4e3ccbfde11b182232dfe">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
